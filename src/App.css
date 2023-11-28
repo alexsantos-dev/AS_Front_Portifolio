@@ -1,0 +1,15 @@
+nav {
+  padding: 2em;
+  height: 6em;
+  border: solid 1px black;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  padding: 0 1em;
+}
