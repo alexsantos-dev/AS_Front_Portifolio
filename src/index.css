@@ -15,7 +15,7 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  color: #000;
+  color: #09182A;
 }
 
 html {
@@ -23,7 +23,6 @@ html {
 }
 
 body {
-  transition: all .4s ease-in-out;
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
   font-weight: 400;
