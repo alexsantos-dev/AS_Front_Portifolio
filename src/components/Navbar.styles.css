@@ -1,0 +1,66 @@
+nav {
+    padding: 2em;
+    height: 7em;
+    border-bottom: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+}
+
+ul {
+    /* border: solid 1px red; */
+    display: flex;
+    width: 33%;
+    align-items: center;
+    gap: 1em;
+    /* transition: all .4s ease-in-out; */
+}
+
+/* ul li:not(:last-child) {
+    padding-right: 1em;
+} */
+
+ul.logo {
+    justify-content: center;
+}
+
+ul.sections {
+    justify-content: right;
+}
+
+ul.contato {
+    justify-content: left;
+    gap: 1.6em;
+}
+
+ul.contato img {
+    width: 2em;
+}
+
+.logoIcon {
+    width: 3.6em;
+}
+
+main {
+    padding: 0 1em;
+}
+
+@media (max-width: 440px) {
+
+    nav {
+        flex-direction: row-reverse;
+    }
+
+    ul.sections {
+        display: none;
+    }
+
+    ul.contato {
+        justify-content: right;
+    }
+
+    ul.logo {
+        justify-content: left;
+    }
+}
