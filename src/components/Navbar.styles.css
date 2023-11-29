@@ -43,7 +43,7 @@ ul.contato li:hover {
 }
 
 ul.contato img {
-    width: 2em;
+    width: 2.6em;
 }
 
 ul.sections a {
@@ -61,7 +61,7 @@ ul.sections a::after {
     width: 0%;
     height: 4px;
     border-radius: 2px;
-    background-color: #09182A;
+    background-color: #585858;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -73,6 +73,7 @@ ul.sections a:hover {
 }
 
 ul.sections a:hover::after {
+    background-color: #09182A;
     width: 100%;
 }
 
