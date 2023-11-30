@@ -1,9 +1,17 @@
-import "./Navbar.styles.css";
+import { Nav } from "./Navbar.styled";
 
 function Navbar() {
   return (
-    <nav>
+    <Nav>
       <ul className="contato">
+        <li>
+          <button>
+            <img src="/contato.svg" alt="contato" title="Contato" />
+          </button>
+        </li>
+        <li>
+          <img src="/arrow-down.svg" />
+        </li>
         <li>
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
@@ -40,7 +48,7 @@ function Navbar() {
           <a href="#">Projetos</a>
         </li>
       </ul>
-    </nav>
+    </Nav>
   );
 }
 
