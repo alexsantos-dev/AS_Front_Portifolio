@@ -1,4 +1,5 @@
 import "./App.css";
+import { MobileFooter } from "./components/MobileFooter";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <Navbar />
       <main></main>
+      <MobileFooter />
     </>
   );
 }

@@ -166,5 +166,8 @@ export const Nav = styled.nav`
         animation: ${contatoItem} 1s ease-in-out;
       }
     }
+    ul.sections {
+      display: none;
+    }
   }
 `;
