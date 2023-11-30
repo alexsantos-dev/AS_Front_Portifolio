@@ -1,16 +1,26 @@
+import { useState } from "react";
 import { Nav } from "./Navbar.styled";
 
 function Navbar() {
+  const [isAtivo, setIsAtivo] = useState(false);
+
+  function ativo() {
+    setIsAtivo((prevIsAtivo) => !prevIsAtivo);
+  }
+
   return (
     <Nav>
-      <ul className="contato">
+      <ul className={`contato ${isAtivo ? "item-ativo" : ""}`}>
         <li>
-          <button>
-            <img src="/contato.svg" alt="contato" title="Contato" />
+          <button onClick={ativo} title="Contatos">
+            <img
+              src="/contato.svg"
+              alt="contato"
+              title="Contato"
+              className="contato-icon"
+            />
+            <img src="/arrow-down.svg" className="arrow-down" />
           </button>
-        </li>
-        <li>
-          <img src="/arrow-down.svg" />
         </li>
         <li>
           <a

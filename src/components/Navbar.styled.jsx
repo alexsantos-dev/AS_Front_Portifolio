@@ -1,7 +1,25 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const expandAnimation = keyframes`
+  from {
+    max-height: 87px;
+  }
+  to {
+    max-height: 386px;
+  }
+`;
+
+const contatoItem = keyframes`
+  0% {
+   opacity: 0;
+  }
+  100% {
+    opacity: 1;
+
+  }
+`;
 
 export const Nav = styled.nav`
-  position: relative;
   padding: 2em;
   height: 7em;
   border-bottom: inset 4px #000;
@@ -20,12 +38,12 @@ export const Nav = styled.nav`
       justify-content: center;
 
       .logoIcon {
-        width: 4.5em;
+        width: 5.4em;
       }
     }
 
     &.sections {
-      justify-content: flex-end;
+      justify-content: right;
 
       a {
         transition: 0.3s ease-in;
@@ -34,7 +52,7 @@ export const Nav = styled.nav`
         color: #585858;
 
         &:hover {
-          color: #09182a;
+          color: #000;
         }
 
         &::after {
@@ -50,7 +68,7 @@ export const Nav = styled.nav`
         }
 
         &:hover::after {
-          background-color: #09182a;
+          background-color: #000;
           width: 100%;
         }
       }
@@ -60,23 +78,15 @@ export const Nav = styled.nav`
       justify-content: flex-start;
       gap: 1.6em;
 
-      li:not(:first-child, :nth-child(2)) {
-        opacity: 70%;
+      li {
         transition: 0.3s ease-in;
-
+        opacity: 0.7;
         &:hover {
-          opacity: 100%;
+          opacity: 1;
         }
       }
 
-      li:nth-child(2) {
-        img {
-          width: 1em;
-        }
-      }
-
-      li:first-child,
-      li:nth-child(2) {
+      li:first-child {
         display: none;
       }
 
@@ -88,14 +98,22 @@ export const Nav = styled.nav`
         cursor: pointer;
         background: transparent;
         border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-        img {
-          width: 3.8em;
+        .contato-icon {
+          width: 3.4em;
+          z-index: -1;
+        }
+        .arrow-down {
+          margin-top: 0.1em;
+          width: 1.2em;
         }
       }
     }
   }
-
   @media (max-width: 884px) {
     flex-direction: row-reverse;
 
@@ -107,42 +125,46 @@ export const Nav = styled.nav`
 
     ul.contato {
       width: auto;
+      height: auto;
       gap: 0;
-      padding: 0.6em 0.4em;
       position: absolute;
       z-index: 10;
-      top: 1em;
+      top: 0.7em;
       right: 2em;
       background: #fff;
-      border: solid 4px #09182a;
-      border-radius: 36px;
+      border: solid 3px #000;
+      border-radius: 3em;
       flex-direction: column;
 
-      /* li {
+      li {
+        border-radius: 3em;
+        padding: 0.6em 1em;
+        opacity: 1;
+      }
+
+      li {
         display: none;
-        margin-bottom: 1em;
-      } */
+      }
 
       li:first-child {
-        margin-bottom: 0.5em;
+        display: block;
       }
+    }
 
-      li:nth-child(3),
-      li:nth-child(4) {
-        margin-bottom: 1em;
-      }
-
-      li:first-child,
-      li:nth-child(2) {
+    ul.item-ativo {
+      animation: ${expandAnimation} 0.5s ease-in-out;
+      li:not(:first-child) {
         display: block;
       }
       li:nth-child(2) {
-        margin-bottom: 0.5em;
+        animation: ${contatoItem} 0.3s ease-in-out;
+      }
+      li:nth-child(3) {
+        animation: ${contatoItem} 0.7s ease-in-out;
+      }
+      li:nth-child(4) {
+        animation: ${contatoItem} 1s ease-in-out;
       }
     }
-  }
-
-  ul.sections {
-    display: none;
   }
 `;
