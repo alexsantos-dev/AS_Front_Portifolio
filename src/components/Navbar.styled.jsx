@@ -19,12 +19,25 @@ const contatoItem = keyframes`
   }
 `;
 
+// export const NavContainer = styled.div`
+//   width: 100%;
+//   height: 6em;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: #fff;
+//   border-bottom: inset 4px #000;
+//   position: relative;
+// `;
+
 export const Nav = styled.nav`
   width: 100%;
-  padding: 2em;
-  height: 7em;
   background-color: #fff;
-  border-bottom: inset 4px #000;
+  border-bottom: 1px solid #000;
+  padding: 1em;
+  height: 6em;
+  top: 0;
+  left: 0;
   display: flex;
   position: fixed;
   align-items: center;
@@ -42,7 +55,7 @@ export const Nav = styled.nav`
       justify-content: center;
 
       .logoIcon {
-        width: 5.4em;
+        width: 5em;
       }
     }
 
@@ -80,7 +93,7 @@ export const Nav = styled.nav`
 
     &.contato {
       justify-content: flex-start;
-      gap: 1.6em;
+      /* gap: 1.6em; */
 
       li {
         transition: 0.3s ease-in;
@@ -97,25 +110,6 @@ export const Nav = styled.nav`
       img {
         width: 2.6em;
       }
-
-      button {
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .contato-icon {
-          width: 3.4em;
-          z-index: -1;
-        }
-        .arrow-down {
-          margin-top: 0.1em;
-          width: 1.2em;
-        }
-      }
     }
   }
   @media (max-width: 884px) {
@@ -124,38 +118,77 @@ export const Nav = styled.nav`
     ul.logo {
       /* border: solid 1px blue; */
       width: 100%;
-      justify-content: left;
+      justify-content: flex-start;
+
+      li {
+        .logoIcon {
+          margin-top: 0.4em;
+        }
+      }
     }
 
     ul.contato {
       width: auto;
       height: auto;
-      gap: 0;
+      gap: 0.5em;
       position: absolute;
       z-index: 10;
-      top: 0.7em;
-      right: 2em;
+      top: 0.72em;
+      right: 1em;
       background: #fff;
-      border: solid 3px #000;
-      border-radius: 3em;
-      flex-direction: column;
-
+      border: solid 2px #000;
+      border-radius: 6em;
+      flex-direction: row-reverse;
       li {
         border-radius: 3em;
-        padding: 0.6em 1em;
         opacity: 1;
+
+        button {
+          height: auto;
+          cursor: pointer;
+          background: transparent;
+          border: none;
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: center;
+          align-items: center;
+          border-radius: 6em;
+          padding: 1em 0.5em;
+          .contato-icon {
+            width: 3em;
+            z-index: -1;
+          }
+          .arrow-down {
+            transform: rotate(90deg);
+            width: 1em;
+            z-index: -1;
+          }
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       li {
         display: none;
       }
 
+      li:not(:first-child) {
+        padding: 0;
+      }
+
       li:first-child {
         display: block;
+      }
+      li:last-child {
+        margin-left: 1em;
       }
     }
 
     ul.item-ativo {
+      height: auto;
       animation: ${expandAnimation} 0.5s ease-in-out;
       li:not(:first-child) {
         display: block;
@@ -173,5 +206,8 @@ export const Nav = styled.nav`
     ul.sections {
       display: none;
     }
+  }
+
+  @media (min-width: 376px) {
   }
 `;

@@ -11,7 +11,7 @@ export const MobileFootCont = styled.nav`
   align-items: center;
   position: fixed;
   background-color: #fff;
-  border-top: inset 2px #000;
+  border-top: inset 3px #e4e4e4;
 
   ul {
     width: 80%;

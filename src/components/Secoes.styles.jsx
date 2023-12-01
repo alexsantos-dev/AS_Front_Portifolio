@@ -13,7 +13,6 @@ export const SecoesContainer = styled.div`
   padding: 1em 0;
 
   section {
-    border: solid 1px red;
     width: 80%;
     margin-bottom: 5em;
     h1 {
