@@ -62,6 +62,10 @@ p {
   letter-spacing: 0.1em;
 }
 
+img {
+  pointer-events: none;
+}
+
 /* Celulares pequenos*/
 
 @media (max-width: 320px) {
