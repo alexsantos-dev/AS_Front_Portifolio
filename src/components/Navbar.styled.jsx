@@ -157,7 +157,7 @@ export const Nav = styled.nav`
         display: block;
       }
       li:nth-child(2) {
-        animation: ${contatoItem} 0.3s ease-in-out;
+        animation: ${contatoItem} 0.5s ease-in-out;
       }
       li:nth-child(3) {
         animation: ${contatoItem} 0.7s ease-in-out;

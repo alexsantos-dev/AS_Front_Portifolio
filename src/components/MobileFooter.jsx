@@ -5,13 +5,28 @@ export function MobileFooter() {
     <MobileFootCont>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <button>
+            <a href="#">
+              <img src="/house.svg" alt="home" />
+              Home
+            </a>
+          </button>
         </li>
         <li>
-          <a href="#">Habilidades</a>
+          <button>
+            <a href="#">
+              <img src="/tools.svg" alt="habilidades" />
+              Habilidades
+            </a>
+          </button>
         </li>
         <li>
-          <a href="#">Projetos</a>
+          <button>
+            <a href="#">
+              <img src="/projects.svg" alt="projetos" className="projectIcon" />
+              Projetos
+            </a>
+          </button>
         </li>
       </ul>
     </MobileFootCont>
