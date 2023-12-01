@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
 
-function Navbar() {
+export function Navbar() {
   const [isAtivo, setIsAtivo] = useState(false);
 
   function ativo() {
@@ -49,17 +49,15 @@ function Navbar() {
       </ul>
       <ul className="sections">
         <li>
-          <a href="#">Home</a>
+          <a href="#Home">Home</a>
         </li>
         <li>
-          <a href="#">Habilidades</a>
+          <a href="#Habilidades">Habilidades</a>
         </li>
         <li>
-          <a href="#">Projetos</a>
+          <a href="#Projetos">Projetos</a>
         </li>
       </ul>
     </Nav>
   );
 }
-
-export default Navbar;

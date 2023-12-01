@@ -5,10 +5,11 @@ export const MobileFootCont = styled.nav`
   height: 5em;
   bottom: 0;
   left: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   border-top: inset 2px #000;
 
@@ -24,6 +25,7 @@ export const MobileFootCont = styled.nav`
         border: none;
         background: transparent;
         opacity: 0.7;
+        padding: 0.8em;
         a {
           display: flex;
           align-items: center;

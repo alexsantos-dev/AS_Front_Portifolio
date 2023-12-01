@@ -6,7 +6,7 @@ export function MobileFooter() {
       <ul>
         <li>
           <button>
-            <a href="#">
+            <a href="#Home">
               <img src="/house.svg" alt="home" />
               Home
             </a>
@@ -14,7 +14,7 @@ export function MobileFooter() {
         </li>
         <li>
           <button>
-            <a href="#">
+            <a href="#Habilidades">
               <img src="/tools.svg" alt="habilidades" />
               Habilidades
             </a>
@@ -22,7 +22,7 @@ export function MobileFooter() {
         </li>
         <li>
           <button>
-            <a href="#">
+            <a href="#Projetos">
               <img src="/projects.svg" alt="projetos" className="projectIcon" />
               Projetos
             </a>

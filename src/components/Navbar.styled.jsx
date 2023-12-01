@@ -20,13 +20,17 @@ const contatoItem = keyframes`
 `;
 
 export const Nav = styled.nav`
+  width: 100%;
   padding: 2em;
   height: 7em;
+  background-color: #fff;
   border-bottom: inset 4px #000;
   display: flex;
+  position: fixed;
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
+  z-index: 10;
 
   ul {
     display: flex;

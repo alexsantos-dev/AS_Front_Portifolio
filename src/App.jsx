@@ -1,12 +1,12 @@
-import "./App.css";
 import { MobileFooter } from "./components/MobileFooter";
-import Navbar from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
+import { Secoes } from "./components/Secoes";
 
 function App() {
   return (
     <>
       <Navbar />
-      <main></main>
+      <Secoes />
       <MobileFooter />
     </>
   );
