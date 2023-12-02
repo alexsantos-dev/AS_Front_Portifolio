@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MobileFootCont = styled.nav`
   width: 100%;
-  height: 5em;
+  height: 4em;
   bottom: 0;
   left: 0;
   z-index: 10;
@@ -10,11 +10,12 @@ export const MobileFootCont = styled.nav`
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #fff;
-  border-top: inset 3px #e4e4e4;
+  background-color: #05f2f2;
+  border-top: 2px solid #e4e4e4;
 
   ul {
     width: 80%;
+    max-width: 400px;
     height: 2.5em;
     display: flex;
     justify-content: space-between;
@@ -22,6 +23,7 @@ export const MobileFootCont = styled.nav`
 
     li {
       button {
+        outline: none;
         border: none;
         background: transparent;
         opacity: 0.7;
@@ -33,7 +35,7 @@ export const MobileFootCont = styled.nav`
           flex-direction: column;
 
           img {
-            width: 3em;
+            width: 2em;
 
             &.projectIcon {
               margin-left: 0.46em;

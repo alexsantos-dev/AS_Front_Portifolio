@@ -43,7 +43,7 @@ export function Navbar() {
       <ul className="logo">
         <li>
           <a href="#">
-            <img src="/logo.svg" alt="logo" className="logoIcon" />
+            <img src="/logo1.webp" alt="logo" className="logoIcon" />
           </a>
         </li>
       </ul>
