@@ -3,9 +3,29 @@ import { Nav } from "./Navbar.styled";
 
 export function Navbar() {
   const [isAtivo, setIsAtivo] = useState(false);
+  const [homeAtivo, setHomeAtivo] = useState(true);
+  const [habAtivo, setHabAtivo] = useState(false);
+  const [projAtivo, setProjAtivo] = useState(false);
 
   function ativo() {
     setIsAtivo((prevIsAtivo) => !prevIsAtivo);
+  }
+  function HomeAtivo() {
+    setHomeAtivo(true);
+    setHabAtivo(false);
+    setProjAtivo(false);
+  }
+
+  function HabAtivo() {
+    setHomeAtivo(false);
+    setHabAtivo(true);
+    setProjAtivo(false);
+  }
+
+  function ProjAtivo() {
+    setHomeAtivo(false);
+    setHabAtivo(false);
+    setProjAtivo(true);
   }
 
   return (
@@ -20,17 +40,17 @@ export function Navbar() {
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
-            <img src="/linkedin2.png" alt="linkedIn" title="LinkedIn" />
+            <img src="/linkedin.webp" alt="linkedIn" title="LinkedIn" />
           </a>
         </li>
         <li>
           <a href="https://github.com/alexsantos-dev" target="blank">
-            <img src="/github2.png" alt="github" title="Github" />
+            <img src="/github.webp" alt="github" title="Github" />
           </a>
         </li>
         <li>
           <a href="https://wa.me/+5598981630767" target="blank">
-            <img src="/whatsapp2.png" alt="whatsapp" title="Whatsapp" />
+            <img src="/whatsapp.webp" alt="whatsapp" title="Whatsapp" />
           </a>
         </li>
       </ul>
@@ -45,13 +65,28 @@ export function Navbar() {
 
       <ul className="sections">
         <li>
-          <a href="#Home">Home</a>
+          <a
+            href="#Home"
+            onClick={HomeAtivo}
+            className={`${homeAtivo ? "linkAtivo" : ""}`}>
+            Home
+          </a>
         </li>
         <li>
-          <a href="#Habilidades">Habilidades</a>
+          <a
+            href="#Habilidades"
+            onClick={HabAtivo}
+            className={`${habAtivo ? "linkAtivo" : ""}`}>
+            Habilidades
+          </a>
         </li>
         <li>
-          <a href="#Projetos">Projetos</a>
+          <a
+            href="#Projetos"
+            onClick={ProjAtivo}
+            className={`${projAtivo ? "linkAtivo" : ""}`}>
+            Projetos
+          </a>
         </li>
       </ul>
     </Nav>

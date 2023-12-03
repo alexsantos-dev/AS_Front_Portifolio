@@ -52,14 +52,25 @@ export const Nav = styled.nav`
       align-items: center;
       width: 19%;
       height: 100%;
+
+      a:first-child {
+        .linkAtivo {
+          color: #000;
+
+          &::after {
+            background-color: #000000;
+            width: 100%;
+          }
+        }
+      }
+
       a {
         transition: 0.3s ease-in;
         position: relative;
         color: #717171;
         height: 100%;
         padding: 0.7em 0;
-        &:hover,
-        &:active {
+        &:hover {
           color: #000000;
         }
 
@@ -75,8 +86,15 @@ export const Nav = styled.nav`
           transition: 0.4s ease-in-out;
         }
 
-        &:hover::after,
-        &:active::after {
+        &:hover::after {
+          background-color: #000000;
+          width: 100%;
+        }
+      }
+      .linkAtivo {
+        color: #000;
+
+        &::after {
           background-color: #000000;
           width: 100%;
         }

@@ -16,23 +16,36 @@ export const MobileFootCont = styled.nav`
   ul {
     width: 80%;
     max-width: 400px;
-    height: 2.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     li {
       button {
+        position: relative;
         outline: none;
         border: none;
         background: transparent;
-        opacity: 0.7;
+        opacity: 0.5;
         padding: 0.8em;
+        &::after {
+          content: "";
+          width: 0%;
+          height: 0.3em;
+          border-radius: 1em;
+          background-color: #ffffff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: 0.4s ease-in-out;
+        }
+
         a {
           display: flex;
           align-items: center;
           justify-items: center;
           flex-direction: column;
+          gap: 0.3em;
 
           img {
             width: 2em;
@@ -43,8 +56,16 @@ export const MobileFootCont = styled.nav`
           }
         }
       }
-      button:active {
+      .habBtn {
+        padding: 0.7em;
+      }
+      .ativo {
         opacity: 1;
+
+        &::after {
+          background-color: #000000;
+          width: 100%;
+        }
       }
     }
   }

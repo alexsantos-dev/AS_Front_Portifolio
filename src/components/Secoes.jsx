@@ -1,14 +1,20 @@
 import { SecoesContainer } from "./Secoes.styles";
 export function Secoes() {
   return (
-    <SecoesContainer>
-      <section id="Home">
+    <SecoesContainer id="Home">
+      <section>
         <h1>Home</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus
           quo quas ipsam tempore modi impedit, tenetur at. Numquam tempore neque
           et aliquid voluptatibus perferendis at alias voluptate doloribus
-          magnam.
+          magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          delectus quo quas ipsam tempore modi impedit, tenetur at. Numquam
+          tempore neque et aliquid voluptatibus perferendis at alias voluptate
+          doloribus magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nemo delectus quo quas ipsam tempore modi impedit, tenetur at.
+          Numquam tempore neque et aliquid voluptatibus perferendis at alias
+          voluptate doloribus magnam.
         </p>
       </section>
       <section id="Habilidades">
@@ -17,7 +23,13 @@ export function Secoes() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus
           quo quas ipsam tempore modi impedit, tenetur at. Numquam tempore neque
           et aliquid voluptatibus perferendis at alias voluptate doloribus
-          magnam.
+          magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          delectus quo quas ipsam tempore modi impedit, tenetur at. Numquam
+          tempore neque et aliquid voluptatibus perferendis at alias voluptate
+          doloribus magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nemo delectus quo quas ipsam tempore modi impedit, tenetur at.
+          Numquam tempore neque et aliquid voluptatibus perferendis at alias
+          voluptate doloribus magnam.
         </p>
       </section>
       <section id="Projetos">
@@ -26,7 +38,13 @@ export function Secoes() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus
           quo quas ipsam tempore modi impedit, tenetur at. Numquam tempore neque
           et aliquid voluptatibus perferendis at alias voluptate doloribus
-          magnam.
+          magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+          delectus quo quas ipsam tempore modi impedit, tenetur at. Numquam
+          tempore neque et aliquid voluptatibus perferendis at alias voluptate
+          doloribus magnam. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Nemo delectus quo quas ipsam tempore modi impedit, tenetur at.
+          Numquam tempore neque et aliquid voluptatibus perferendis at alias
+          voluptate doloribus magnam.
         </p>
       </section>
     </SecoesContainer>
