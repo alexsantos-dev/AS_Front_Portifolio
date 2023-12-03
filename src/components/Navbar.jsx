@@ -12,6 +12,11 @@ export function Navbar() {
     <Nav>
       <ul className={`contato ${isAtivo ? "item-ativo" : ""}`}>
         <li>
+          <button onClick={ativo} title="Contatos">
+            <img src="/telefone.png" alt="contato" title="Contato" />
+          </button>
+        </li>
+        <li>
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
@@ -29,15 +34,11 @@ export function Navbar() {
           </a>
         </li>
       </ul>
-      <div className={`btn ${isAtivo ? "btnOn" : ""}`}>
-        <button onClick={ativo} title="Contatos">
-          <img src="/telefone.png" alt="contato" title="Contato" />
-        </button>
-      </div>
+
       <ul className="logo">
         <li>
           <a href="#">
-            <img src="/logo1-79x72.webp" alt="logo" className="logoIcon" />
+            <img src="/logo3.webp" alt="logo" className="logoIcon" />
           </a>
         </li>
       </ul>
