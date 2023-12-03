@@ -1,9 +1,25 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+// 6cf5f5
+
+const container = keyframes`
+    0%{
+      transform: translateX(4em);
+      opacity: 0;
+    }
+    50%{
+      transform: translateX(2em);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+     transform: translateX(0);
+    }
+  `;
 
 export const Nav = styled.nav`
   width: 100%;
-  background-color: #000;
-  border-bottom: 2px inset #e4e4e4;
+  background-color: #fafafa;
   padding: 1em;
   height: 5.5em;
   top: 0;
@@ -14,8 +30,12 @@ export const Nav = styled.nav`
   justify-content: space-between;
   font-weight: 500;
   z-index: 10;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
-    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+  div.btn {
+    display: none;
+  }
+
   ul {
     display: flex;
     /* width: 33%; */
@@ -23,29 +43,30 @@ export const Nav = styled.nav`
     gap: 1em;
 
     &.logo {
-      width: 69%;
+      width: 10.5%;
       /* height: 4em; */
-      justify-content: center;
-
+      justify-content: right;
+      align-items: center;
       .logoIcon {
-        position: absolute;
-        top: 0;
+        width: 3em;
         /* background-color: #fff; */
       }
     }
 
     &.sections {
-      justify-content: right;
+      justify-content: space-between;
+      align-items: center;
       width: 19%;
-
+      height: 100%;
       a {
         transition: 0.3s ease-in;
         position: relative;
         padding-bottom: 0.6em;
-        color: #585858;
-
+        color: #bbbbbb;
+        height: 100%;
+        padding: 1em 0;
         &:hover {
-          color: #000;
+          color: #ffffff;
         }
 
         &::after {
@@ -53,7 +74,7 @@ export const Nav = styled.nav`
           width: 0%;
           height: 0.3em;
           border-radius: 1em;
-          background-color: #585858;
+          background-color: #000;
           position: absolute;
           bottom: 0;
           left: 0;
@@ -61,36 +82,45 @@ export const Nav = styled.nav`
         }
 
         &:hover::after {
-          background-color: #000;
+          background-color: #ffffff;
           width: 100%;
         }
       }
     }
 
     &.contato {
-      width: 12%;
-      justify-content: flex-start;
+      width: 10em;
+      height: 3em;
+
+      border-radius: 6em;
+      justify-content: center;
       /* gap: 1.6em; */
 
       &:hover > :not(:hover) {
-        opacity: 0.4;
-        transform: scale(0.9);
+        transform: scale(1);
+      }
+      &:hover > :hover {
+        opacity: 1;
+        transform: scale(1.1);
       }
 
       li {
-        transition: 0.3s ease-in;
-        opacity: 0.7;
+        transition: all 0.3s ease-in;
+        width: 100%;
         display: flex;
-        &:hover {
-          opacity: 1;
-        }
+        align-items: center;
+        opacity: 0.7;
+        justify-content: center;
+
         img {
           width: 2.6em;
         }
-      }
-
-      li:first-child {
-        display: none;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.6em;
+        }
       }
     }
   }
@@ -98,104 +128,106 @@ export const Nav = styled.nav`
     flex-direction: row-reverse;
 
     ul.logo {
-      /* border: solid 1px blue; */
       width: 100%;
-      justify-content: flex-start;
+      justify-content: left;
 
-      li {
-        .logoIcon {
-          margin-top: 0.4em;
+      .logoIcon {
+        margin-top: 0.4em;
+        margin-left: 1em;
+      }
+    }
+
+    div.btn {
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      z-index: 100;
+      /* height: 8em; */
+      padding: 0.56em;
+      display: block;
+      background: #00ffff;
+      border-radius: 6em;
+      margin-right: 1em;
+      border: solid 2px #000;
+
+      button {
+        z-index: 10;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 3em;
         }
       }
     }
 
+    div.btnOn {
+      padding: 0.56em;
+      border-radius: 0 6rem 6rem 0;
+      border-top: solid 2px #000;
+      border-right: solid 2px#000;
+      border-bottom: solid 2px #000;
+      border-left: solid 0 #000;
+    }
     ul.contato {
-      width: auto;
-      height: auto;
+      transition: all 0.2s ease-in;
+
+      display: none;
+      width: 4em;
+      justify-content: left;
+      height: 3em;
+      border-radius: 6em 0 0 6rem;
       gap: 0.5em;
       position: absolute;
       z-index: 10;
-      top: 10%;
-      right: 1em;
-      background: #05f2f2;
-      border: solid 2px #fff;
-      border-radius: 6em;
+      right: 4.17em;
+      background: #00ffff;
+      border: solid 2px #000;
       flex-direction: row-reverse;
+      padding: 1.8em 0.5em;
 
       &:hover > :not(:hover) {
         opacity: 1;
       }
 
       li {
-        border-radius: 3em;
         opacity: 1;
-
-        button {
-          z-index: 10;
-          height: auto;
-          cursor: pointer;
-          background: transparent;
-          border: none;
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: center;
-          align-items: center;
-          border-radius: 6em;
-          padding: 1em 0.5em;
-          .contato-icon {
-            width: 3em;
-            z-index: -1;
-          }
-          .arrow-down {
-            transform: rotate(90deg);
-            width: 1em;
-            z-index: -1;
-          }
-        }
-        a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
       }
 
       li {
         display: none;
-        border-radius: 50%;
       }
 
-      li:not(:first-child) {
+      li {
         padding: 0;
         position: absolute;
         z-index: -1;
       }
 
-      li:first-child {
-        display: block;
-      }
-      li:nth-child(2) {
-        background-color: #0e76a8;
-      }
-      li:nth-child(3) {
-        background-color: #fff;
-      }
       li:last-child {
-        margin-left: 1em;
-        background-color: #25d366;
+        margin-left: 0.2em;
       }
     }
 
     ul.item-ativo {
-      height: auto;
-      li:not(:first-child) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      right: 5.2em;
+      height: 3.6em;
+      animation: ${container} 0.4s ease-in-out;
+      li {
+        position: static;
         display: block;
+        transition: 1s ease-in-out;
       }
     }
     ul.sections {
       display: none;
     }
-  }
-
-  @media (min-width: 376px) {
   }
 `;

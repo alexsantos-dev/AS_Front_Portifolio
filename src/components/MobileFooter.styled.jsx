@@ -10,8 +10,8 @@ export const MobileFootCont = styled.nav`
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #05f2f2;
-  border-top: 2px solid #e4e4e4;
+  background-color: #8cdede;
+  border-top: 2px solid #609999;
 
   ul {
     width: 80%;
