@@ -28,9 +28,11 @@ export function MobileFooter() {
     <MobileFootCont>
       <ul>
         <li>
-          <button onClick={HomeAtivo} className={`${homeAtivo ? "ativo" : ""}`}>
-            <a href="#Home">
-              <img src="/house.svg" alt="home" />
+          <button
+            onClick={HomeAtivo}
+            className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
+            <a href="#Sobre">
+              <img src="/me.svg" alt="home" />
               Home
             </a>
           </button>

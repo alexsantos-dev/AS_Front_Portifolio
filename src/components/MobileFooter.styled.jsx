@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MobileFootCont = styled.nav`
   width: 100%;
-  height: 4em;
+  height: 5.4em;
   bottom: 0;
   left: 0;
   z-index: 10;
@@ -44,8 +44,10 @@ export const MobileFootCont = styled.nav`
           display: flex;
           align-items: center;
           justify-items: center;
+          font-weight: 600;
           flex-direction: column;
           gap: 0.3em;
+          color: #2e2473;
 
           img {
             width: 2em;
@@ -56,6 +58,9 @@ export const MobileFootCont = styled.nav`
           }
         }
       }
+      .sobreBtn {
+        padding-top: -1em;
+      }
       .habBtn {
         padding: 0.7em;
       }
@@ -63,9 +68,12 @@ export const MobileFootCont = styled.nav`
         opacity: 1;
 
         &::after {
-          background-color: #000000;
+          background-color: #2e2473;
           width: 100%;
         }
+      }
+      .sobreBtn::after {
+        top: 0.2em;
       }
     }
   }

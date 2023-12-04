@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   width: 100%;
   background-color: #f22786;
   padding: 1em;
-  height: 5.5em;
+  height: 6em;
   top: 0;
   left: 0;
   display: flex;
@@ -23,7 +23,7 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  border-bottom: solid 1px #909090;
+  border-bottom: solid 2px #2e2473;
   box-shadow: #909090 0px 2px 10px;
 
   div.btn {
@@ -33,14 +33,14 @@ export const Nav = styled.nav`
   ul {
     display: flex;
     /* width: 33%; */
+    height: 100%;
     align-items: center;
+    justify-content: space-around;
     gap: 1em;
 
     &.logo {
-      display: flex;
-      width: 13%;
-      justify-content: right;
-      align-items: center;
+      /* width: 26em; */
+      align-self: center;
       .logoIcon {
         width: 4.6em;
       }
@@ -49,18 +49,17 @@ export const Nav = styled.nav`
     &.sections {
       justify-content: space-between;
       align-items: center;
-      width: 19%;
-      height: 100%;
+      /* width: 19%; */
+      /* height: 100%; */
 
       a {
         transition: 0.3s ease-in;
         position: relative;
-        color: #434343;
-        height: 100%;
+        color: #cbcbcbe8;
         font-weight: 600;
-        padding: 0.7em 0;
+        padding: 0.7em 0.4em;
         &:hover {
-          color: #000000;
+          color: #fff;
         }
 
         &::after {
@@ -76,25 +75,23 @@ export const Nav = styled.nav`
         }
 
         &:hover::after {
-          background-color: #0d0d0d;
+          background-color: #f2f2f2;
           width: 100%;
         }
       }
       .linkAtivo {
-        color: #000;
+        color: #fff;
 
         &::after {
-          background-color: #0d0d0d;
+          background-color: #f2f2f2;
           width: 100%;
         }
       }
     }
 
     &.contato {
-      width: 10em;
-      height: 3em;
+      width: 18em;
       border-radius: 6em;
-      justify-content: center;
 
       &:hover > :not(:hover) {
         opacity: 0.7;
@@ -109,7 +106,8 @@ export const Nav = styled.nav`
       li {
         transition: 0.2s ease-in;
         border-radius: 6em;
-        width: 100%;
+        width: 2.1em;
+
         img {
           width: 3em;
         }
@@ -132,17 +130,18 @@ export const Nav = styled.nav`
     flex-direction: row-reverse;
 
     ul.logo {
-      width: 100%;
+      width: 90%;
       justify-content: left;
 
       .logoIcon {
         margin-top: 0.4em;
         /* margin-left: 1em; */
+        width: 4em;
       }
     }
     ul.contato {
-      width: 4.3em;
-      height: 4.3em;
+      width: 5em;
+      height: 5em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -153,11 +152,15 @@ export const Nav = styled.nav`
       border: inset 3px #0d0d0d;
       padding: 2em;
       flex-direction: row-reverse;
+
       &:hover > :not(:hover) {
         opacity: 1;
+        transform: scale(1);
       }
       &:hover > :hover {
         opacity: 1;
+        transform: scale(1.1);
+        box-shadow: #2e2473 0px 2px 10px;
       }
 
       li {
@@ -170,16 +173,13 @@ export const Nav = styled.nav`
       }
       li {
         button {
+          width: 2em;
           display: flex;
           align-items: center;
           justify-content: center;
           border: none;
           background: #fff;
           border-radius: 50%;
-
-          img {
-            width: 3.7em;
-          }
         }
       }
       li:not(:first-child) {
@@ -210,5 +210,9 @@ export const Nav = styled.nav`
     ul.sections {
       display: none;
     }
+  }
+
+  @media (min-width: 1280px) {
+    justify-content: space-around;
   }
 `;

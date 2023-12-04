@@ -66,7 +66,7 @@ export function Navbar() {
       <ul className="sections">
         <li>
           <a
-            href="#Home"
+            href="#Sobre"
             onClick={HomeAtivo}
             className={`${homeAtivo ? "linkAtivo" : ""}`}>
             Home
