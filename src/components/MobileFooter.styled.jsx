@@ -10,7 +10,7 @@ export const MobileFootCont = styled.nav`
   justify-content: center;
   align-items: center;
   position: fixed;
-  background-color: #f22e2e;
+  background-color: #ededed;
   border-top: 2px solid #2e2473;
 
   ul {
@@ -27,7 +27,7 @@ export const MobileFootCont = styled.nav`
         border: none;
         background: transparent;
         opacity: 0.5;
-        padding: 0.8em;
+        padding: 1.53em 0.8em;
         &::after {
           content: "";
           width: 0%;
@@ -57,12 +57,6 @@ export const MobileFootCont = styled.nav`
             }
           }
         }
-      }
-      .sobreBtn {
-        padding-top: -1em;
-      }
-      .habBtn {
-        padding: 0.7em;
       }
       .ativo {
         opacity: 1;

@@ -2,6 +2,20 @@ import styled, { keyframes } from "styled-components";
 
 // 6cf5f5
 
+const heartbeat = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    background: #0dff00 ;
+    box-shadow: #ff0000 0px 2px 10px;
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 const itemFade = keyframes`
   0%{
     opacity: 0;
@@ -55,6 +69,7 @@ export const Nav = styled.nav`
         position: relative;
         color: #cbcbcbe8;
         font-weight: 600;
+        font-size: 1.1em;
         padding: 0.7em 0.4em;
         &:hover {
           color: #fff;
@@ -146,7 +161,7 @@ export const Nav = styled.nav`
       transition: all 0.3s;
       border-radius: 6em;
       z-index: 10;
-      background: #05f2db;
+      background: #f1f1f1;
       border: inset 3px #0d0d0d;
       padding: 2em;
       flex-direction: row-reverse;
@@ -176,8 +191,10 @@ export const Nav = styled.nav`
           align-items: center;
           justify-content: center;
           border: none;
-          background: #fff;
           border-radius: 50%;
+        }
+        button.heartBeat {
+          animation: ${heartbeat} 2s infinite;
         }
       }
       li:not(:first-child) {

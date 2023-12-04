@@ -32,7 +32,10 @@ export function Navbar() {
     <Nav>
       <ul className={`contato ${isAtivo ? "item-ativo" : ""}`}>
         <li>
-          <button onClick={ativo} title="Contatos">
+          <button
+            onClick={ativo}
+            title="Contatos"
+            className={`${isAtivo ? "" : "heartBeat"}`}>
             <img src="/telefone.png" alt="contato" title="Contato" />
           </button>
         </li>
