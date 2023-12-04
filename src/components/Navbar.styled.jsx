@@ -13,7 +13,7 @@ const itemFade = keyframes`
 
 export const Nav = styled.nav`
   width: 100%;
-  background-color: #fff;
+  background-color: #f22786;
   padding: 1em;
   height: 5.5em;
   top: 0;
@@ -22,7 +22,6 @@ export const Nav = styled.nav`
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  font-weight: 500;
   z-index: 10;
   border-bottom: solid 1px #909090;
   box-shadow: #909090 0px 2px 10px;
@@ -53,22 +52,12 @@ export const Nav = styled.nav`
       width: 19%;
       height: 100%;
 
-      a:first-child {
-        .linkAtivo {
-          color: #000;
-
-          &::after {
-            background-color: #000000;
-            width: 100%;
-          }
-        }
-      }
-
       a {
         transition: 0.3s ease-in;
         position: relative;
-        color: #717171;
+        color: #434343;
         height: 100%;
+        font-weight: 600;
         padding: 0.7em 0;
         &:hover {
           color: #000000;
@@ -77,9 +66,9 @@ export const Nav = styled.nav`
         &::after {
           content: "";
           width: 0%;
-          height: 0.3em;
+          height: 0.35em;
           border-radius: 1em;
-          background-color: #ffffff;
+          background-color: transparent;
           position: absolute;
           bottom: 0;
           left: 0;
@@ -87,7 +76,7 @@ export const Nav = styled.nav`
         }
 
         &:hover::after {
-          background-color: #000000;
+          background-color: #0d0d0d;
           width: 100%;
         }
       }
@@ -95,7 +84,7 @@ export const Nav = styled.nav`
         color: #000;
 
         &::after {
-          background-color: #000000;
+          background-color: #0d0d0d;
           width: 100%;
         }
       }
@@ -114,17 +103,13 @@ export const Nav = styled.nav`
       &:hover > :hover {
         opacity: 1;
         transform: scale(1.1);
-        box-shadow: #909090 0px 2px 10px;
+        box-shadow: #05f2db 0px 2px 10px;
       }
 
       li {
         transition: 0.2s ease-in;
         border-radius: 6em;
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img {
           width: 3em;
         }
@@ -138,6 +123,9 @@ export const Nav = styled.nav`
       li:first-child {
         display: none;
       }
+      li:nth-child(3) {
+        background: #fff center center;
+      }
     }
   }
   @media (max-width: 884px) {
@@ -149,7 +137,7 @@ export const Nav = styled.nav`
 
       .logoIcon {
         margin-top: 0.4em;
-        margin-left: 1em;
+        /* margin-left: 1em; */
       }
     }
     ul.contato {
@@ -161,8 +149,8 @@ export const Nav = styled.nav`
       transition: all 0.3s;
       border-radius: 6em;
       z-index: 10;
-      background: #00ffffd1;
-      border: inset 1px #000;
+      background: #05f2db;
+      border: inset 3px #0d0d0d;
       padding: 2em;
       flex-direction: row-reverse;
       &:hover > :not(:hover) {
@@ -186,7 +174,7 @@ export const Nav = styled.nav`
           align-items: center;
           justify-content: center;
           border: none;
-          background: none;
+          background: #fff;
           border-radius: 50%;
 
           img {

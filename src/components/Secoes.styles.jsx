@@ -4,16 +4,16 @@ export const SecoesContainer = styled.div`
   width: 100%;
   position: relative;
   top: 5.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding-bottom: 4em;
+  background-color: #f2f2f2;
+
   section {
-    margin: 2em 0;
-    width: 80%;
-    max-width: 1000px;
+    border: solid 1px red;
+    margin: 0 auto 2em auto;
+    width: 90%;
+    max-width: 800px;
     h1 {
-      margin-top: 2.5em;
+      margin: 2.5em 0 2em 0;
       text-align: center;
     }
     p {

@@ -2,7 +2,7 @@ import { MobileFootCont } from "./MobileFooter.styled";
 import { useState } from "react";
 
 export function MobileFooter() {
-  const [homeAtivo, setHomeAtivo] = useState(false);
+  const [homeAtivo, setHomeAtivo] = useState(true);
   const [habAtivo, setHabAtivo] = useState(false);
   const [projAtivo, setProjAtivo] = useState(false);
 
