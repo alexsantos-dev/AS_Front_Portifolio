@@ -33,7 +33,7 @@ export function MobileFooter() {
             className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
             <a href="#Sobre">
               <img src="/me.svg" alt="home" />
-              Home
+              Sobre
             </a>
           </button>
         </li>

@@ -2,21 +2,25 @@ import { SecoesContainer } from "./Secoes.styles";
 export function Secoes() {
   return (
     <SecoesContainer>
-      <section id="bem-vindo">
-        <h1>Bem vindo(a) ao meu Portifólio 🚀✨</h1>
-      </section>
+      <div className="bg-nav-section">
+        <section id="bem-vindo">
+          <h1>Bem vindo(a) ao meu Portifólio 🚀✨</h1>
+        </section>
+      </div>
       <section id="Sobre">
         <h2>#Sobre</h2>
         <p>
-          Desenvolvedor comprometido com 5 meses de experiência prática.
-          Destaco-me pela participação ativa em projetos e treinamento em
-          versionamento de código com Git em equipe. Minha facilidade de
-          aprendizado, comunicação eficaz e compromisso contínuo com o
-          aprimoramento destacam minha confiança em contribuir para equipes de
-          programadores com paixão, determinação e uma mentalidade de
-          aprendizado constante. Comprometido em entregar soluções de alta
-          qualidade, com foco em segurança e experiência do usuário. Sempre em
-          busca de aprendizado e evolução na área de desenvolvimento web.
+          Olá, me chamo Alex, sou aspirante a desenvolvimento web fullstack,
+          atualmente com 19 anos. Em minha jornada, acumulei 5 meses de
+          experiência prática, destacando-me pela participação ativa em projetos
+          e treinamento em versionamento de código com Git em equipe. Minha
+          facilidade de aprendizado, comunicação eficaz e dedicação constante ao
+          aprimoramento refletem minha confiança em contribuir para equipes de
+          programadores profissionais. Com paixão, determinação e uma
+          mentalidade de aprendizado constante, busco entregar soluções de alta
+          qualidade. Estou sempre em busca de aprendizado e evolução na área de
+          desenvolvimento web. Fique à vontade para explorar e interagir com
+          meus projetos.
         </p>
         <p>
           Na seção de projetos, você pode curtir, compartilhar, acessar

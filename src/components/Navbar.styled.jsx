@@ -23,8 +23,6 @@ export const Nav = styled.nav`
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  border-bottom: solid 2px #2e2473;
-  box-shadow: #909090 0px 2px 10px;
 
   div.btn {
     display: none;
