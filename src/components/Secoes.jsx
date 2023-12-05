@@ -39,7 +39,7 @@ export function Secoes() {
         <div className="container">
           <div className="item">
             <figure>
-              <img src="/js.webp" alt="javascript logo" />
+              <img src="./src/assets/js.webp" alt="javascript logo" />
               <figcaption>Javascript</figcaption>
             </figure>
             <p>
@@ -50,7 +50,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/react.webp" alt="react logo" />
+              <img src="./src/assets/react.webp" alt="react logo" />
               <figcaption>React</figcaption>
             </figure>
             <p>
@@ -61,7 +61,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/node.webp" alt="node logo" />
+              <img src="./src/assets/node.webp" alt="node logo" />
               <figcaption>Node</figcaption>
             </figure>
             <p>
@@ -72,7 +72,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/express.webp" alt="express logo" />
+              <img src="./src/assets/express.webp" alt="express logo" />
               <figcaption>Express</figcaption>
             </figure>
             <p>
@@ -83,7 +83,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/rest-api.webp" alt="rest api logo" />
+              <img src="./src/assets/rest-api.webp" alt="rest api logo" />
               <figcaption>REST API</figcaption>
             </figure>
             <p>
@@ -98,7 +98,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/mongodb.webp" alt="mongodb  logo" />
+              <img src="./src/assets/mongodb.webp" alt="mongodb  logo" />
               <figcaption>MongoDB</figcaption>
             </figure>
             <p>
@@ -111,7 +111,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/git.webp" alt="git logo" />
+              <img src="./src/assets/git.webp" alt="git logo" />
               <figcaption>Git</figcaption>
             </figure>
             <p>
@@ -122,7 +122,10 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/styled-components.webp" alt="styled components logo" />
+              <img
+                src="./src/assets/styled-components.webp"
+                alt="styled components logo"
+              />
               <figcaption>Styled Components</figcaption>
             </figure>
             <p>
@@ -133,7 +136,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/css.webp" alt="css3 logo" />
+              <img src="./src/assets/css.webp" alt="css3 logo" />
               <figcaption>CSS3</figcaption>
             </figure>
             <p>
@@ -144,7 +147,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src="/html.webp" alt="html5 logo" />
+              <img src="./src/assets/html.webp" alt="html5 logo" />
               <figcaption>HTML5</figcaption>
             </figure>
             <p>
