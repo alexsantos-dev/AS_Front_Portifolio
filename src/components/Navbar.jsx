@@ -72,7 +72,7 @@ export function Navbar() {
             href="#Sobre"
             onClick={HomeAtivo}
             className={`${homeAtivo ? "linkAtivo" : ""}`}>
-            Home
+            Sobre
           </a>
         </li>
         <li>

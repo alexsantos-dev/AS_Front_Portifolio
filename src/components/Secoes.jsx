@@ -27,8 +27,8 @@ export function Secoes() {
         </p>
         <p>
           Na seção de projetos, você pode <span>curtir</span>,{" "}
-          <span>compartilhar</span>, acessar <span>repositórios</span> e ver a
-          <span>executar</span> cada projeto. Além disso, tem a opção de
+          <span>compartilhar</span>, acessar <span>repositórios</span> e{" "}
+          <span>executar</span> cada projeto. Além disso, você tem a opção de
           escolher entre as ordenações <span>&quot;Mais recentes&quot;</span> e{" "}
           <span>&quot;Mais Relevantes&quot;</span>. Fique à vontade para
           explorar e interagir com meus trabalhos.
@@ -36,29 +36,127 @@ export function Secoes() {
       </section>
       <section id="Habilidades">
         <h2>#Habilidades</h2>
-        <div className="Container">
-          <div>
+        <div className="container">
+          <div className="item">
             <figure>
-              <img src="" alt="" />
-              <figcaption></figcaption>
+              <img src="/js.webp" alt="javascript logo" />
+              <figcaption>Javascript</figcaption>
             </figure>
+            <p>
+              Linguagem de programação de alto nível, amplamente utilizada para
+              desenvolvimento web.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/react.webp" alt="react logo" />
+              <figcaption>React</figcaption>
+            </figure>
+            <p>
+              Biblioteca JavaScript para construir interfaces de usuário
+              reativas e eficientes.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/node.webp" alt="node logo" />
+              <figcaption>Node</figcaption>
+            </figure>
+            <p>
+              Ambiente de execução JavaScript do lado do servidor, permitindo o
+              desenvolvimento de aplicações web escaláveis.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/express.webp" alt="express logo" />
+              <figcaption>Express</figcaption>
+            </figure>
+            <p>
+              Framework para Node.js que simplifica o desenvolvimento de
+              aplicações web, fornecendo recursos adicionais.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/rest-api.webp" alt="rest api logo" />
+              <figcaption>REST API</figcaption>
+            </figure>
+            <p>
+              Arquitetura de comunicação entre sistemas, baseada em princípios
+              como{" "}
+              <a href="https://restfulapi.net/statelessness/" target="_blanck">
+                statelessness
+              </a>{" "}
+              e recursos representacionais.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/mongodb.webp" alt="mongodb  logo" />
+              <figcaption>MongoDB</figcaption>
+            </figure>
+            <p>
+              Banco de dados{" "}
+              <span title="Banco de dados não relacional">NoSQL</span> orientado
+              a documentos, adequado para armazenar grandes volumes de dados sem
+              esquema fixo.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/git.webp" alt="git logo" />
+              <figcaption>Git</figcaption>
+            </figure>
+            <p>
+              Sistema de controle de versão distribuído para rastrear alterações
+              no código-fonte durante o desenvolvimento de software.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/styled-components.webp" alt="styled components logo" />
+              <figcaption>Styled Components</figcaption>
+            </figure>
+            <p>
+              Biblioteca para React que permite escrever estilos CSS diretamente
+              em arquivos JavaScript, facilitando a estilização de componentes.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/css.webp" alt="css3 logo" />
+              <figcaption>CSS3</figcaption>
+            </figure>
+            <p>
+              Última versão do Cascading Style Sheets, linguagem usada para
+              estilizar elementos HTML em páginas web.
+            </p>
+          </div>
+          <hr />
+          <div className="item">
+            <figure>
+              <img src="/html.webp" alt="html5 logo" />
+              <figcaption>HTML5</figcaption>
+            </figure>
+            <p>
+              Quinta versão da linguagem de marcação utilizada para estruturar e
+              apresentar conteúdo na web.
+            </p>
           </div>
         </div>
       </section>
       <section id="Projetos">
         <h2>#Projetos</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus
-          quo quas ipsam tempore modi impedit, tenetur at. Numquam tempore neque
-          et aliquid voluptatibus perferendis at alias voluptate doloribus
-          magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-          delectus quo quas ipsam tempore modi impedit, tenetur at. Numquam
-          tempore neque et aliquid voluptatibus perferendis at alias voluptate
-          doloribus magnam. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Nemo delectus quo quas ipsam tempore modi impedit, tenetur at.
-          Numquam tempore neque et aliquid voluptatibus perferendis at alias
-          voluptate doloribus magnam.
-        </p>
+        <p></p>
       </section>
     </SecoesContainer>
   );
