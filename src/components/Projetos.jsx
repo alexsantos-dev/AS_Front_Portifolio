@@ -1,13 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import CoracaoAtivo from "../assets/coracao-ativo.webp";
+import Coracao from "../assets/coracao.webp";
+import Error from "../assets/error.svg";
 
 export function Projetos(props) {
   const [isAtivo, setIsAtivo] = useState(false);
+  const [imagensTecnologias, setImagensTecnologias] = useState({});
 
   function ativo() {
     setIsAtivo((prevIsAtivo) => !prevIsAtivo);
     const audio = new Audio("./src/assets/like-sound.mp3");
     isAtivo ? audio.pause() : audio.play();
   }
+
+  useEffect(() => {
+    // Função assíncrona para carregar as imagens das tecnologias
+    async function carregarImagensTecnologias() {
+      const imagens = {};
+      for (const tecnologia of props.tecnologiasUsadas) {
+        const tecnologiaFormatada = tecnologia.toLowerCase();
+        try {
+          const imagem = await import(`../assets/${tecnologiaFormatada}.webp`);
+          imagens[tecnologia] = imagem.default;
+        } catch (error) {
+          console.warn(
+            `Arquivo de imagem não encontrado para a tecnologia: ${tecnologia}`
+          );
+          imagens[tecnologia] = null;
+        }
+      }
+      setImagensTecnologias(imagens);
+    }
+
+    carregarImagensTecnologias();
+  }, [props.tecnologiasUsadas]);
 
   return (
     <div className="item">
@@ -17,16 +43,22 @@ export function Projetos(props) {
       <div className="descricao">
         <h3>{props.titulo}</h3>
         <p>{props.resumo}</p>
-        <h4>{props.tecnologiasUsadas}</h4>
+        <div className="tecnologias">
+          {props.tecnologiasUsadas.map((tecnologia, index) => (
+            <span key={index}>
+              {tecnologia}
+              <img
+                src={imagensTecnologias[tecnologia] || Error}
+                alt={tecnologia}
+              />
+            </span>
+          ))}
+        </div>
       </div>
       <div className="interacoes">
         <button onClick={ativo}>
           <img
-            src={`${
-              isAtivo
-                ? "./src/assets/coracao-ativo.webp"
-                : "./src/assets/coracao.webp"
-            }`}
+            src={`${isAtivo ? CoracaoAtivo : Coracao}`}
             className={`${isAtivo ? "ativo" : ""}`}
             alt="like"
           />

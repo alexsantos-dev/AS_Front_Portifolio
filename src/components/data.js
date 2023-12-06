@@ -12,7 +12,7 @@ export const projetos = [
         titulo: "alek2",
         resumo: "wfgrifwgfwibiguhwguohwguh",
         banner: "https://rockcontent.com/br/wp-content/uploads/sites/2/2020/04/modelo-de-projeto-1024x682.png.webp",
-        tecnologiasUsadas: ["html", "css", "javascript"],
+        tecnologiasUsadas: ["html", "css", "javascript", "react", "node"],
         likes: 2
     },
     {

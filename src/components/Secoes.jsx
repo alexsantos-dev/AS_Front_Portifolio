@@ -43,7 +43,7 @@ export function Secoes() {
         <div className="container">
           <div className="item">
             <figure>
-              <img src="./src/assets/js.webp" alt="javascript logo" />
+              <img src="./src/assets/javascript.webp" alt="javascript logo" />
               <figcaption>Javascript</figcaption>
             </figure>
             <p>

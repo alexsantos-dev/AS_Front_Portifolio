@@ -33,6 +33,7 @@ export const Container = styled.div`
     border-radius: 1em;
     background-color: #faebd7;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+
     .banner {
       border-radius: 1em 1em 0 0;
       display: flex;
@@ -47,24 +48,56 @@ export const Container = styled.div`
     }
     .descricao {
       background-color: #fff;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 40%;
+      height: 50%;
 
       h3,
-      h4,
       p {
+        width: 95%;
         text-align: center;
+      }
+
+      h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5%;
+      }
+      p {
+        height: 40%;
+      }
+
+      div.tecnologias {
+        height: 55%;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        span {
+          width: auto;
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          justify-content: left;
+
+          img {
+            display: flex;
+            width: 2em;
+          }
+        }
       }
     }
     .interacoes {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 20%;
+      height: 10%;
       width: 100%;
       padding: 0 1em;
       border-radius: 0 0 1em 1em;
