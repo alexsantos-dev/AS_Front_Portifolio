@@ -5,7 +5,10 @@ export function Projetos(props) {
 
   function ativo() {
     setIsAtivo((prevIsAtivo) => !prevIsAtivo);
+    const audio = new Audio("./src/assets/like-sound.mp3");
+    isAtivo ? audio.pause() : audio.play();
   }
+
   return (
     <div className="item">
       <div className="banner">
@@ -20,7 +23,9 @@ export function Projetos(props) {
         <button onClick={ativo}>
           <img
             src={`${
-              isAtivo ? "./src/assets/heart-fill.svg" : "./src/assets/heart.svg"
+              isAtivo
+                ? "./src/assets/coracao-ativo.webp"
+                : "./src/assets/coracao.webp"
             }`}
             className={`${isAtivo ? "ativo" : ""}`}
             alt="like"

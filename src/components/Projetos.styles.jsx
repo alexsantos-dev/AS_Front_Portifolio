@@ -13,7 +13,7 @@ const heartbeat = keyframes`
   }
 `;
 
-export const Container = styled.section`
+export const Container = styled.div`
   flex-wrap: wrap;
   width: 90%;
   display: flex;
@@ -103,7 +103,7 @@ export const Container = styled.section`
   }
   @media (min-width: 1280px) {
     .item {
-      width: 70%;
+      width: 40%;
     }
   }
 `;

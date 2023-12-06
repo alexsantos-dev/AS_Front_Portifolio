@@ -57,8 +57,9 @@ export const SecoesContainer = styled.div`
   }
 
   #Projetos {
+    border: solid 1px black;
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 1em;
     }
   }
   #Projetos > * {
@@ -158,6 +159,12 @@ export const SecoesContainer = styled.div`
   }
 
   @media (max-width: 884px) {
+    section#Projetos {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
     section#Sobre {
       margin-top: 0.2em;
       border-radius: 0 0 1em 1em;
