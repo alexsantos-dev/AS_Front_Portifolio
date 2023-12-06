@@ -1,4 +1,8 @@
+import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
+import { projetos } from "./data";
+import { Container } from "./Projetos.styles";
+
 export function Secoes() {
   return (
     <SecoesContainer>
@@ -159,7 +163,18 @@ export function Secoes() {
       </section>
       <section id="Projetos">
         <h2>#Projetos</h2>
-        <p></p>
+        <Container>
+          {projetos.map((projeto) => (
+            <Projetos
+              key={projeto.id}
+              titulo={projeto.titulo}
+              resumo={projeto.resumo}
+              banner={projeto.banner}
+              tecnologiasUsadas={projeto.tecnologiasUsadas}
+              likes={projeto.likes}
+            />
+          ))}
+        </Container>
       </section>
     </SecoesContainer>
   );

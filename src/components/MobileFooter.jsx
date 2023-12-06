@@ -26,40 +26,34 @@ export function MobileFooter() {
 
   return (
     <MobileFootCont>
-      <ul>
-        <li>
-          <button
-            onClick={HomeAtivo}
-            className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
-            <a href="#Sobre">
-              <img src="./src/assets/me.svg" alt="home" />
-              Sobre
-            </a>
-          </button>
-        </li>
-        <li>
-          <button
-            onClick={HabAtivo}
-            className={`habBtn ${habAtivo ? "ativo" : ""}`}>
-            <a href="#Habilidades">
-              <img src="./src/assets/tools.svg" alt="habilidades" />
-              Habilidades
-            </a>
-          </button>
-        </li>
-        <li>
-          <button onClick={ProjAtivo} className={`${projAtivo ? "ativo" : ""}`}>
-            <a href="#Projetos">
-              <img
-                src="./src/assets/projects.svg"
-                alt="projetos"
-                className="projectIcon"
-              />
-              Projetos
-            </a>
-          </button>
-        </li>
-      </ul>
+      <div>
+        <button
+          onClick={HomeAtivo}
+          className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
+          <a href="#Sobre">
+            <img src="./src/assets/me.svg" alt="home" />
+            Sobre
+          </a>
+        </button>
+
+        <button
+          onClick={HabAtivo}
+          className={`habBtn ${habAtivo ? "ativo" : ""}`}>
+          <a href="#Habilidades">
+            <img src="./src/assets/tools.svg" alt="habilidades" />
+            Habilidades
+          </a>
+        </button>
+
+        <button
+          onClick={ProjAtivo}
+          className={`projectBtn ${projAtivo ? "ativo" : ""}`}>
+          <a href="#Projetos">
+            <img src="./src/assets/projects.svg" alt="projetos" />
+            Projetos
+          </a>
+        </button>
+      </div>
     </MobileFootCont>
   );
 }

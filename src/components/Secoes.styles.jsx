@@ -14,10 +14,6 @@ export const SecoesContainer = styled.div`
     border-radius: 1em;
     padding: 5em 0;
     margin: 0 auto 2em auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     span {
       font-style: italic;
@@ -50,17 +46,34 @@ export const SecoesContainer = styled.div`
     }
   }
 
+  #Sobre,
+  #Habilidades,
+  #Projetos,
+  #bem-vindo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Projetos {
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  #Projetos > * {
+    box-shadow: none;
+  }
+
   section#bem-vindo {
-    border-radius: 2em 2em 0 0;
+    border-radius: 0.4em;
     width: 100%;
     margin-bottom: 0;
     max-width: 100%;
     height: 14em;
     padding-bottom: 2em;
     background-color: #fff;
-    border-top: solid 2px #2e2473;
-
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgb(0, 0, 0) 10px 8px 20px, rgb(51, 51, 51) 0px 0px 0px 3px;
 
     h1 {
       z-index: 1;
@@ -71,8 +84,9 @@ export const SecoesContainer = styled.div`
   section:not(:first-child) {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
-  div.bg-nav-section {
-    background-color: #f22786;
+  .bg-nav-section {
+    padding: 1.5em 1em;
+    background-color: #05f2db;
   }
 
   div.container {
@@ -136,6 +150,7 @@ export const SecoesContainer = styled.div`
       }
     }
   }
+
   @media (max-width: 400px) {
     h1 {
       font-size: 2em;
