@@ -3,18 +3,19 @@ import CoracaoAtivo from "../assets/coracao-ativo.webp";
 import Coracao from "../assets/coracao.webp";
 import Error from "../assets/error.svg";
 
+import { LikesAnonimos } from "../services/projetos.service";
+
 export function Projetos(props) {
   const [isAtivo, setIsAtivo] = useState(false);
   const [imagensTecnologias, setImagensTecnologias] = useState({});
 
-  function ativo() {
+  async function ativo() {
     setIsAtivo((prevIsAtivo) => !prevIsAtivo);
     const audio = new Audio("./src/assets/like-sound.mp3");
     isAtivo ? audio.pause() : audio.play();
   }
 
   useEffect(() => {
-    // Função assíncrona para carregar as imagens das tecnologias
     async function carregarImagensTecnologias() {
       const imagens = {};
       for (const tecnologia of props.tecnologiasUsadas) {
@@ -36,7 +37,7 @@ export function Projetos(props) {
   }, [props.tecnologiasUsadas]);
 
   return (
-    <div className="item">
+    <div className="item" key={props.id}>
       <div className="banner">
         <img src={props.banner} />
       </div>
@@ -62,7 +63,7 @@ export function Projetos(props) {
             className={`${isAtivo ? "ativo" : ""}`}
             alt="like"
           />
-          <span>{props.likes}</span>
+          <span>{props.likes.length}</span>
         </button>
         <button>
           <img src="./src/assets/share.svg" alt="compartilhar" />

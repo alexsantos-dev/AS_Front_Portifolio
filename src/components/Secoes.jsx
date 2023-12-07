@@ -1,9 +1,33 @@
 import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
-import { projetos } from "./data";
 import { Container } from "./Projetos.styles";
 
+import { useState, useEffect } from "react";
+import { getRecentes } from "../services/projetos.service";
+
 export function Secoes() {
+  const [teste, setTeste] = useState([]);
+
+  async function findPost() {
+    try {
+      const Response = await getRecentes();
+      console.log(Response); // Verifique a resposta completa
+
+      // Certifique-se de que Response.data é um array
+      if (Array.isArray(Response.data)) {
+        setTeste(Response.data);
+      } else {
+        console.error("A resposta da API não contém um array de projetos.");
+      }
+    } catch (error) {
+      console.error("Erro na requisição:", error);
+    }
+  }
+
+  useEffect(() => {
+    findPost();
+  }, []);
+
   return (
     <SecoesContainer>
       <div className="bg-nav-section">
@@ -40,6 +64,7 @@ export function Secoes() {
       </section>
       <section id="Habilidades">
         <h2>#Habilidades</h2>
+
         <div className="container">
           <div className="item">
             <figure>
@@ -162,16 +187,22 @@ export function Secoes() {
         </div>
       </section>
       <section id="Projetos">
-        <h2>#Projetos</h2>
+        <div className="opcoes">
+          <h2>#Projetos</h2>
+          <select>
+            <option value="recentes">Mais Recentes</option>
+            <option value="relevantes">Mais Relevantes</option>
+          </select>
+        </div>
         <Container>
-          {projetos.map((projeto) => (
+          {teste.map((item) => (
             <Projetos
-              key={projeto.id}
-              titulo={projeto.titulo}
-              resumo={projeto.resumo}
-              banner={projeto.banner}
-              tecnologiasUsadas={projeto.tecnologiasUsadas}
-              likes={projeto.likes}
+              key={item.id}
+              titulo={item.titulo}
+              resumo={item.resumo}
+              banner={item.banner}
+              tecnologiasUsadas={item.tecnologiasUsadas}
+              likes={item.likes}
             />
           ))}
         </Container>

@@ -57,7 +57,37 @@ export const SecoesContainer = styled.div`
   }
 
   #Projetos {
-    border: solid 1px black;
+    .opcoes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+
+      select {
+        transition: all 0.4s ease-in-out;
+        border-radius: 0.4em;
+        background: #f1f1f1;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
+          rgb(51, 51, 51) 0px 0px 0px 3px;
+        font-size: 1em;
+        padding: 0.4em;
+        height: 2em;
+        border: none;
+        background: none;
+
+        option {
+          transition: all 0.4s ease-in-out;
+        }
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  #Projetos {
     h2 {
       margin-bottom: 1em;
     }

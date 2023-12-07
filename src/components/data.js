@@ -1,4 +1,4 @@
-export const projetos = [
+export const teste = [
     {
         id: "1",
         titulo: "alek1",

@@ -20,7 +20,6 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   gap: 2.5em;
-  border: solid 1px red;
 
   .item {
     width: 360px;
@@ -69,6 +68,9 @@ export const Container = styled.div`
         height: 5%;
       }
       p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 40%;
       }
 
@@ -80,12 +82,13 @@ export const Container = styled.div`
         justify-content: space-around;
         align-items: center;
         span {
-          width: auto;
+          width: 1em;
+          height: 1em;
           display: flex;
           flex-direction: column-reverse;
           align-items: center;
           justify-content: left;
-
+          font-size: 0.7em;
           img {
             display: flex;
             width: 2em;
