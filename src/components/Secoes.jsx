@@ -201,10 +201,7 @@ export function Secoes() {
       <section id="Projetos">
         <div className="opcoes">
           <h2>#Projetos</h2>
-          <select
-            selected
-            value={opcaoSelecionada}
-            onChange={handleSelectChange}>
+          <select value={opcaoSelecionada} onChange={handleSelectChange}>
             <option value="recentes">Mais Recentes</option>
             <option value="relevantes">Mais Relevantes</option>
           </select>
