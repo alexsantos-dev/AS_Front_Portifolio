@@ -10,7 +10,7 @@ export const SecoesContainer = styled.div`
   section {
     background-color: #fff;
     min-width: 300px;
-    max-width: 1000px;
+    max-width: 1280px;
     border-radius: 1em;
     padding: 5em 0;
     margin: 0 auto 2em auto;

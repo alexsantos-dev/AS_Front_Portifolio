@@ -2,31 +2,36 @@ import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
 import { Container } from "./Projetos.styles";
 
-import { useState, useEffect } from "react";
-import { getRecentes } from "../services/projetos.service";
+import { useState, useEffect, useCallback } from "react";
+import { getRecentes, getRelevantes } from "../services/projetos.service";
 
 export function Secoes() {
-  const [teste, setTeste] = useState([]);
+  const [projetos, setProjetos] = useState([]);
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState("recentes");
 
-  async function findPost() {
+  const handleSelectChange = (event) => {
+    setOpcaoSelecionada(event.target.value);
+  };
+
+  const fetchData = useCallback(async () => {
     try {
-      const Response = await getRecentes();
-      console.log(Response); // Verifique a resposta completa
-
-      // Certifique-se de que Response.data é um array
-      if (Array.isArray(Response.data)) {
-        setTeste(Response.data);
-      } else {
-        console.error("A resposta da API não contém um array de projetos.");
+      if (opcaoSelecionada === "recentes") {
+        const Response = await getRecentes();
+        console.log(Response);
+        setProjetos(Response.data);
+      } else if (opcaoSelecionada === "relevantes") {
+        const Response = await getRelevantes();
+        console.log(Response);
+        setProjetos(Response.data);
       }
     } catch (error) {
       console.error("Erro na requisição:", error);
     }
-  }
+  }, [opcaoSelecionada, setProjetos]);
 
   useEffect(() => {
-    findPost();
-  }, []);
+    fetchData();
+  }, [fetchData]);
 
   return (
     <SecoesContainer>
@@ -189,20 +194,24 @@ export function Secoes() {
       <section id="Projetos">
         <div className="opcoes">
           <h2>#Projetos</h2>
-          <select>
-            <option value="recentes">Mais Recentes</option>
+          <select value={opcaoSelecionada} onChange={handleSelectChange}>
+            <option value="recentes" selected>
+              Mais Recentes
+            </option>
             <option value="relevantes">Mais Relevantes</option>
           </select>
         </div>
         <Container>
-          {teste.map((item) => (
+          {projetos.map((item) => (
             <Projetos
               key={item.id}
+              id={item._id}
               titulo={item.titulo}
               resumo={item.resumo}
               banner={item.banner}
               tecnologiasUsadas={item.tecnologiasUsadas}
               likes={item.likes}
+              compartilhamentos={item.compartilhamentos}
             />
           ))}
         </Container>

@@ -8,12 +8,8 @@ import { LikesAnonimos } from "../services/projetos.service";
 export function Projetos(props) {
   const [isAtivo, setIsAtivo] = useState(false);
   const [imagensTecnologias, setImagensTecnologias] = useState({});
-
-  async function ativo() {
-    setIsAtivo((prevIsAtivo) => !prevIsAtivo);
-    const audio = new Audio("./src/assets/like-sound.mp3");
-    isAtivo ? audio.pause() : audio.play();
-  }
+  const [ativoEmAndamento, setAtivoEmAndamento] = useState(false);
+  const [numLikes, setNumLikes] = useState(props.likes.length);
 
   useEffect(() => {
     async function carregarImagensTecnologias() {
@@ -33,13 +29,76 @@ export function Projetos(props) {
       setImagensTecnologias(imagens);
     }
 
+    async function verificarLike() {
+      try {
+        const usuarioAnonimoIdCache = localStorage.getItem("usuarioAnonimoId");
+        if (usuarioAnonimoIdCache) {
+          const usuarioAnonimoIdDaResposta = await LikesAnonimos(
+            props.id,
+            usuarioAnonimoIdCache
+          );
+          const usuarioAnonimoCurtiu =
+            usuarioAnonimoIdDaResposta.likes.length > 0;
+          setIsAtivo(usuarioAnonimoCurtiu);
+
+          setNumLikes(usuarioAnonimoIdDaResposta.likes.length);
+        }
+      } catch (error) {
+        console.error("Erro ao verificar like:", error);
+      }
+    }
+
     carregarImagensTecnologias();
-  }, [props.tecnologiasUsadas]);
+    verificarLike();
+  }, [props.tecnologiasUsadas, props.id]);
+
+  async function ativo() {
+    try {
+      if (ativoEmAndamento) {
+        return;
+      }
+
+      setAtivoEmAndamento(true);
+
+      const usuarioAnonimoIdCache = localStorage.getItem("usuarioAnonimoId");
+      const usuarioAnonimoIdDaResposta = await LikesAnonimos(
+        props.id,
+        usuarioAnonimoIdCache
+      );
+
+      if (
+        usuarioAnonimoIdDaResposta !== null &&
+        usuarioAnonimoIdDaResposta !== undefined
+      ) {
+        const audio = new Audio("./src/assets/like-sound.mp3");
+        setIsAtivo((prevIsAtivo) => {
+          prevIsAtivo ? audio.pause() : audio.play();
+          return !prevIsAtivo;
+        });
+
+        setNumLikes(usuarioAnonimoIdDaResposta.likes.length);
+
+        localStorage.setItem(
+          "usuarioAnonimoId",
+          usuarioAnonimoIdDaResposta.likes[0].usuarioAnonimoId
+        );
+      } else {
+        console.error(
+          "Erro ao obter usuarioAnonimoId:",
+          usuarioAnonimoIdDaResposta
+        );
+      }
+    } catch (error) {
+      console.error("Erro ao dar like:", error);
+    } finally {
+      setAtivoEmAndamento(false);
+    }
+  }
 
   return (
     <div className="item" key={props.id}>
       <div className="banner">
-        <img src={props.banner} />
+        <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
       </div>
       <div className="descricao">
         <h3>{props.titulo}</h3>
@@ -50,7 +109,7 @@ export function Projetos(props) {
               {tecnologia}
               <img
                 src={imagensTecnologias[tecnologia] || Error}
-                alt={tecnologia}
+                alt={`Logo da tecnologia ${tecnologia}`}
               />
             </span>
           ))}
@@ -63,10 +122,11 @@ export function Projetos(props) {
             className={`${isAtivo ? "ativo" : ""}`}
             alt="like"
           />
-          <span>{props.likes.length}</span>
+          <span>{numLikes}</span>
         </button>
         <button>
           <img src="./src/assets/share.svg" alt="compartilhar" />
+          <span>{props.compartilhamentos}</span>
         </button>
         <button>
           <img src="./src/assets/folder.svg" alt="repositórios" />

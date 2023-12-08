@@ -2,6 +2,8 @@ import axios from "axios";
 
 const baseURL = "https://as-api-portifolio.onrender.com"
 
+//  "http://localhost:5173"
+
 export function getRecentes() {
     const res = axios.get(`${baseURL}/projetos/recentes`)
     return res
@@ -12,7 +14,12 @@ export function getRelevantes() {
     return res
 }
 
-export function LikesAnonimos() {
-    const res = axios.patch(`${baseURL}/projetos/like/:id`)
-    return res
+export async function LikesAnonimos(id) {
+    try {
+        const res = await axios.patch(`${baseURL}/projetos/like/${id}`);
+        return res.data
+    } catch (error) {
+        console.error("Erro ao dar like:", error);
+        throw error;
+    }
 }

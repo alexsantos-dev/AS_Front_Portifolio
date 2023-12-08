@@ -23,6 +23,7 @@ export const Container = styled.div`
 
   .item {
     width: 360px;
+    max-width: 500px;
     height: 500px;
     padding: 0.8em;
     display: flex;
@@ -82,8 +83,7 @@ export const Container = styled.div`
         justify-content: space-around;
         align-items: center;
         span {
-          width: 1em;
-          height: 1em;
+          width: auto;
           display: flex;
           flex-direction: column-reverse;
           align-items: center;
@@ -139,7 +139,8 @@ export const Container = styled.div`
   }
   @media (min-width: 1280px) {
     .item {
-      width: 40%;
+      width: 100%;
+      height: 420px;
     }
   }
 `;
