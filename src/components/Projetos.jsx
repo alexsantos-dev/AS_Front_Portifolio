@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import CoracaoAtivo from "../assets/coracao-ativo.webp";
 import Coracao from "../assets/coracao.webp";
 import Error from "../assets/error.svg";
+import Share from "../assets/share.svg";
+import Folder from "../assets/folder.svg";
+import Play from "../assets/play.svg";
+import LikeSound from "../assets/like-sound.mp3";
 
 import { LikesAnonimos } from "../services/projetos.service";
 
@@ -70,7 +74,7 @@ export function Projetos(props) {
         usuarioAnonimoIdDaResposta !== null &&
         usuarioAnonimoIdDaResposta !== undefined
       ) {
-        const audio = new Audio("./src/assets/like-sound.mp3");
+        const audio = new Audio(LikeSound);
         setIsAtivo((prevIsAtivo) => {
           prevIsAtivo ? audio.pause() : audio.play();
           return !prevIsAtivo;
@@ -125,14 +129,14 @@ export function Projetos(props) {
           <span>{numLikes}</span>
         </button>
         <button>
-          <img src="./src/assets/share.svg" alt="compartilhar" />
+          <img src={Share} alt="compartilhar" />
           <span>{props.compartilhamentos}</span>
         </button>
         <button>
-          <img src="./src/assets/folder.svg" alt="repositórios" />
+          <img src={Folder} alt="repositórios" />
         </button>
         <button>
-          <img src="./src/assets/play.svg" alt="play" />
+          <img src={Play} alt="play" />
         </button>
       </div>
     </div>

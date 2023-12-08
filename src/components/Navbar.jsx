@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
+import PhoneIcon from "../assets/telefone.png";
+import LinkedInIcon from "../assets/linkedin.webp";
+import GithubIcon from "../assets/github.webp";
+import WhatsappIcon from "../assets/whatsapp.webp";
+import LogoIcon from "../assets/logo1.webp";
 
 export function Navbar() {
   const [isAtivo, setIsAtivo] = useState(false);
@@ -36,36 +41,24 @@ export function Navbar() {
             onClick={ativo}
             title="Contatos"
             className={`${isAtivo ? "" : "heartBeat"}`}>
-            <img
-              src="./src/assets/telefone.png"
-              alt="contato"
-              title="Contato"
-            />
+            <img src={PhoneIcon} alt="contato" title="Contato" />
           </button>
         </li>
         <li>
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
-            <img
-              src="./src/assets/linkedin.webp"
-              alt="linkedIn"
-              title="LinkedIn"
-            />
+            <img src={LinkedInIcon} alt="linkedIn" title="LinkedIn" />
           </a>
         </li>
         <li>
           <a href="https://github.com/alexsantos-dev" target="blank">
-            <img src="./src/assets/github.webp" alt="github" title="Github" />
+            <img src={GithubIcon} alt="github" title="Github" />
           </a>
         </li>
         <li>
           <a href="https://wa.me/+5598981630767" target="blank">
-            <img
-              src="./src/assets/whatsapp.webp"
-              alt="whatsapp"
-              title="Whatsapp"
-            />
+            <img src={WhatsappIcon} alt="whatsapp" title="Whatsapp" />
           </a>
         </li>
       </ul>
@@ -73,11 +66,7 @@ export function Navbar() {
       <ul className="logo">
         <li>
           <a href="#">
-            <img
-              src="./src/assets/logo1.webp"
-              alt="logo"
-              className="logoIcon"
-            />
+            <img src={LogoIcon} alt="logo" className="logoIcon" />
           </a>
         </li>
       </ul>

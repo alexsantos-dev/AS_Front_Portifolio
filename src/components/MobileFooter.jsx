@@ -1,5 +1,8 @@
 import { MobileFootCont } from "./MobileFooter.styled";
 import { useState } from "react";
+import ProjectIcon from "../assets/projects.svg";
+import ToolsIcon from "../assets/tools.svg";
+import HomeIcon from "../assets/me.svg";
 
 export function MobileFooter() {
   const [homeAtivo, setHomeAtivo] = useState(true);
@@ -31,7 +34,7 @@ export function MobileFooter() {
           onClick={HomeAtivo}
           className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
           <a href="#Sobre">
-            <img src="./src/assets/me.svg" alt="home" />
+            <img src={HomeIcon} alt="home" />
             Sobre
           </a>
         </button>
@@ -40,7 +43,7 @@ export function MobileFooter() {
           onClick={HabAtivo}
           className={`habBtn ${habAtivo ? "ativo" : ""}`}>
           <a href="#Habilidades">
-            <img src="./src/assets/tools.svg" alt="habilidades" />
+            <img src={ToolsIcon} alt="habilidades" />
             Habilidades
           </a>
         </button>
@@ -49,7 +52,7 @@ export function MobileFooter() {
           onClick={ProjAtivo}
           className={`projectBtn ${projAtivo ? "ativo" : ""}`}>
           <a href="#Projetos">
-            <img src="./src/assets/projects.svg" alt="projetos" />
+            <img src={ProjectIcon} alt="projetos" />
             Projetos
           </a>
         </button>
