@@ -1,7 +1,6 @@
 import { Navbar } from "./components/Navbar";
 import { MobileFooter } from "./components/MobileFooter";
 import { Secoes } from "./components/Secoes";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
   return (
@@ -9,7 +8,6 @@ function App() {
       <Navbar />
       <Secoes />
       <MobileFooter />
-      <SpeedInsights />
     </>
   );
 }
