@@ -27,7 +27,7 @@ const itemFade = keyframes`
 
 export const Nav = styled.nav`
   width: 100%;
-  background-color: #f22786;
+  background-color: #ff3995;
   padding: 1em;
   height: 6em;
   top: 0;
