@@ -6,6 +6,7 @@ import Play from "../assets/play.svg";
 
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
+  const [deployText, setDeployText] = useState("");
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -38,7 +39,7 @@ export function Projetos(props) {
           url: props.deploy,
         });
       } else {
-        const shareUrl = `${author}: ${encodeURIComponent(props.deploy)}`;
+        const shareUrl = props.deploy;
         window.open(shareUrl, "_blank");
       }
     } catch (error) {
@@ -53,8 +54,35 @@ export function Projetos(props) {
     await props.onVisualizar(props.id);
   };
 
+  const fecharModal = () => {
+    setModalOpen(false);
+    setDeployText("");
+  };
+
+  const copiarTexto = () => {
+    const textArea = document.createElement("textarea");
+    textArea.value = deployText;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
+    alert("Texto copiado para a área de transferência!");
+    fecharModal();
+  };
+
   return (
     <div className="item" key={props.id}>
+      {isModalOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={fecharModal}>
+              &times;
+            </span>
+            <p>{deployText}</p>
+            <button onClick={copiarTexto}>Copiar</button>
+          </div>
+        </div>
+      )}
       <div className="banner">
         <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
       </div>
