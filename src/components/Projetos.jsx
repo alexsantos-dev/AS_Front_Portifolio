@@ -28,16 +28,16 @@ export function Projetos(props) {
   }, [props.tecnologiasUsadas]);
 
   const handleCompartilharClick = async () => {
+    const author = "Alex Santos";
     try {
       await props.onCompartilhar(props.id);
       if (navigator.share) {
         await navigator.share({
-          title: props.titulo,
-          text: props.resumo,
+          title: `${author}: ${props.titulo}`,
+          text: `${props.resumo}`,
           url: props.deploy,
         });
       } else {
-        const author = "Alex Santos";
         const shareUrl = `${author}: ${encodeURIComponent(props.deploy)}`;
         window.open(shareUrl, "_blank");
       }
