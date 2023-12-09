@@ -209,8 +209,7 @@ export function Secoes() {
         <Container>
           {projetos.map((item) => (
             <Projetos
-              key={item.id}
-              id={item._id}
+              key={item._id}
               titulo={item.titulo}
               resumo={item.resumo}
               banner={item.banner}
