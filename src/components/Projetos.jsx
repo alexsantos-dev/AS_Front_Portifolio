@@ -33,7 +33,7 @@ export function Projetos(props) {
       if (navigator.share) {
         await navigator.share({
           title: props.titulo,
-          text: props.resumo,
+          text: encodeURIComponent(props.resumo),
           url: props.deploy,
         });
       } else {
