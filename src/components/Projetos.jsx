@@ -40,8 +40,8 @@ export function Projetos(props) {
           url: props.deploy,
         });
       } else {
-        const shareUrl = props.deploy;
-        window.open(shareUrl, "_blank");
+        setDeployText(props.deploy);
+        setModalOpen(true);
       }
     } catch (error) {
       console.error("Erro ao compartilhar:", error);
