@@ -7,6 +7,7 @@ import Play from "../assets/play.svg";
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
   const [deployText, setDeployText] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false);
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
