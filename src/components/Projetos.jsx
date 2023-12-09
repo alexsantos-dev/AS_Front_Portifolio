@@ -74,9 +74,9 @@ export function Projetos(props) {
   return (
     <div className="item" key={props.id}>
       {isModalOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={fecharModal}>
+        <div className="popup">
+          <div className="popup-content">
+            <span className="popup-close" onClick={fecharModal}>
               &times;
             </span>
             <p>{deployText}</p>
@@ -84,6 +84,7 @@ export function Projetos(props) {
           </div>
         </div>
       )}
+
       <div className="banner">
         <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
       </div>
