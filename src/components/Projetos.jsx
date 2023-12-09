@@ -27,6 +27,18 @@ export function Projetos(props) {
     carregarImagensTecnologias();
   }, [props.tecnologiasUsadas]);
 
+  const handleCompartilharClick = async () => {
+    await props.onCompartilhar(props.id);
+  };
+
+  const handleAcessarRepositorioClick = async () => {
+    await props.onAcessarRepositorio(props.id);
+  };
+
+  const handleVisualizarClick = async () => {
+    await props.onVisualizar(props.id);
+  };
+
   return (
     <div className="item" key={props.id}>
       <div className="banner">
@@ -48,19 +60,17 @@ export function Projetos(props) {
         </div>
       </div>
       <div className="interacoes">
-        <button id={props.id} onClick={() => props.onCompartilhar(props.id)}>
+        <button id={props.id} onClick={handleCompartilharClick}>
           <img src={Share} alt="compartilhar" />
           <span>{props.compartilhamentos}</span>
         </button>
-        <button
-          id={props.id}
-          onClick={() => props.onAcessarRepositorio(props.id)}>
+        <button id={props.id} onClick={handleAcessarRepositorioClick}>
           <a href={props.repositorio} target="_blank" rel="external">
             <img src={Folder} alt="repositórios" />
             <span>{props.acessRepositorio}</span>
           </a>
         </button>
-        <button id={props.id} onClick={() => props.onVisualizar(props.id)}>
+        <button id={props.id} onClick={handleVisualizarClick}>
           <a href={props.deploy} target="_blank" rel="external">
             <img src={Play} alt="play" />
             <span>{props.visualizacoes}</span>
