@@ -214,7 +214,7 @@ export function Secoes() {
               resumo={item.resumo}
               banner={item.banner}
               tecnologiasUsadas={item.tecnologiasUsadas}
-              likes={item.likes}
+              visualizacoes={item.visualizacoes}
               compartilhamentos={item.compartilhamentos}
             />
           ))}
