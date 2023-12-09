@@ -137,41 +137,64 @@ export const Container = styled.div`
         }
       }
     }
-    .popup {
-      display: none;
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    dialog {
+      display: block;
       position: fixed;
       top: 50%;
       left: 50%;
+      border-radius: 1em;
       transform: translate(-50%, -50%);
       padding: 20px;
       background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
       z-index: 1000;
     }
 
-    .popup-content {
+    .dialog p {
       text-align: center;
     }
 
-    .popup button {
-      padding: 10px;
-      margin-top: 10px;
-      background-color: #007bff;
-      color: #fff;
+    button {
+      background: none;
+      outline: none;
       border: none;
       cursor: pointer;
     }
 
-    .popup button:hover {
-      background-color: #0056b3;
+    button.copiarBtn {
+      border-radius: 0.4em;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #ffd9a8;
+      color: #000;
+      border: none;
     }
 
-    .popup-close {
+    button.copiarBtn:hover {
+      background-color: #e0be91;
+    }
+
+    button.dialog-close {
       position: absolute;
       top: 10px;
       right: 10px;
-      font-size: 20px;
-      cursor: pointer;
+      padding: 2em;
+      width: 2em;
+      height: 2em;
+    }
+    button.dialog-close:hover {
+      opacity: 0.7;
     }
   }
 

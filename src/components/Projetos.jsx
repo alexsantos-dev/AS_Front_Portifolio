@@ -7,7 +7,7 @@ import Play from "../assets/play.svg";
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
   const [deployText, setDeployText] = useState("");
-  const [isModalOpen, setModalOpen] = useState(false);
+  const [isDialogOpen, setDialogOpen] = useState(false);
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -41,7 +41,7 @@ export function Projetos(props) {
         });
       } else {
         setDeployText(props.deploy);
-        setModalOpen(true);
+        setDialogOpen(true);
       }
     } catch (error) {
       console.error("Erro ao compartilhar:", error);
@@ -55,8 +55,8 @@ export function Projetos(props) {
     await props.onVisualizar(props.id);
   };
 
-  const fecharModal = () => {
-    setModalOpen(false);
+  const fecharDialog = () => {
+    setDialogOpen(false);
     setDeployText("");
   };
 
@@ -73,18 +73,6 @@ export function Projetos(props) {
 
   return (
     <div className="item" key={props.id}>
-      {isModalOpen && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="popup-close" onClick={fecharModal}>
-              &times;
-            </span>
-            <p>{deployText}</p>
-            <button onClick={copiarTexto}>Copiar</button>
-          </div>
-        </div>
-      )}
-
       <div className="banner">
         <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
       </div>
@@ -121,6 +109,18 @@ export function Projetos(props) {
           </a>
         </button>
       </div>
+      {isDialogOpen && <div className="overlay" onClick={fecharDialog}></div>}
+      {isDialogOpen && (
+        <dialog open className="dialog">
+          <button className="popup-close" onClick={fecharDialog}>
+            x
+          </button>
+          <p>{deployText}</p>
+          <button onClick={copiarTexto} className="copiarBtn">
+            Copiar
+          </button>
+        </dialog>
+      )}
     </div>
   );
 }
