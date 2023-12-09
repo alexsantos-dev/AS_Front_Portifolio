@@ -34,7 +34,7 @@ export function Projetos(props) {
       if (navigator.share) {
         await navigator.share({
           title: `${author}: ${props.titulo}`,
-          text: `${props.resumo}`,
+          text: `${author}: ${props.titulo} - ${props.resumo}`,
           url: props.deploy,
         });
       } else {
