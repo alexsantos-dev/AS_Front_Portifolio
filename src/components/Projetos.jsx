@@ -28,9 +28,23 @@ export function Projetos(props) {
   }, [props.tecnologiasUsadas]);
 
   const handleCompartilharClick = async () => {
-    await props.onCompartilhar(props.id);
+    try {
+      await props.onCompartilhar(props.id);
+      if (navigator.share) {
+        await navigator.share({
+          title: props.titulo,
+          text: props.resumo,
+          url: props.deploy,
+        });
+      } else {
+        const author = "Alex Santos";
+        const shareUrl = `${author}: ${encodeURIComponent(props.deploy)}`;
+        window.open(shareUrl, "_blank");
+      }
+    } catch (error) {
+      console.error("Erro ao compartilhar:", error);
+    }
   };
-
   const handleAcessarRepositorioClick = async () => {
     await props.onAcessarRepositorio(props.id);
   };
@@ -60,7 +74,7 @@ export function Projetos(props) {
         </div>
       </div>
       <div className="interacoes">
-        <button id={props.id} onClick={handleCompartilharClick}>
+        <button key={props.id} onClick={handleCompartilharClick}>
           <img src={Share} alt="compartilhar" />
           <span>{props.compartilhamentos}</span>
         </button>

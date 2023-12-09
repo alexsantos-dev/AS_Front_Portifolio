@@ -77,11 +77,12 @@ export const Container = styled.div`
 
       div.tecnologias {
         height: 55%;
-        width: 95%;
+        width: 100%;
         display: flex;
+        gap: 0.4em;
         flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
+        justify-content: space-evenly;
+        align-items: flex-start;
         span {
           width: auto;
           display: flex;
@@ -98,7 +99,7 @@ export const Container = styled.div`
     }
     .interacoes {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       height: 10%;
       width: 100%;
@@ -140,8 +141,8 @@ export const Container = styled.div`
 
   @media (min-width: 1280px) {
     .item {
-      width: 100%;
-      height: 420px;
+      width: 40%;
+      height: 480px;
     }
   }
 `;
