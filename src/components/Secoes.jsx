@@ -13,7 +13,13 @@ import CssIcon from "../assets/css.webp";
 import HtmlIcon from "../assets/html.webp";
 
 import { useState, useEffect, useCallback } from "react";
-import { getRecentes, getRelevantes } from "../services/projetos.service";
+import {
+  getRecentes,
+  getRelevantes,
+  compartilhar,
+  visualizar,
+  acessarRep,
+} from "../services/projetos.service";
 
 export function Secoes() {
   const [projetos, setProjetos] = useState([]);
@@ -209,13 +215,20 @@ export function Secoes() {
         <Container>
           {projetos.map((item) => (
             <Projetos
-              key={item._id}
+              key={item.id}
+              id={item._id}
               titulo={item.titulo}
               resumo={item.resumo}
               banner={item.banner}
               tecnologiasUsadas={item.tecnologiasUsadas}
-              visualizacoes={item.visualizacoes}
               compartilhamentos={item.compartilhamentos}
+              acessRepositorio={item.acessRepositorio}
+              visualizacoes={item.visualizacoes}
+              repositorio={item.repositorio}
+              deploy={item.deploy}
+              onCompartilhar={(projetoId) => compartilhar(projetoId)}
+              onAcessarRepositorio={(projetoId) => acessarRep(projetoId)}
+              onVisualizar={(projetoId) => visualizar(projetoId)}
             />
           ))}
         </Container>

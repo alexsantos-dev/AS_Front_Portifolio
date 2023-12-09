@@ -6,7 +6,6 @@ import Play from "../assets/play.svg";
 
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
-
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -37,8 +36,8 @@ export function Projetos(props) {
         <h3>{props.titulo}</h3>
         <p>{props.resumo}</p>
         <div className="tecnologias">
-          {props.tecnologiasUsadas.map((tecnologia, index) => (
-            <span key={index}>
+          {props.tecnologiasUsadas.map((tecnologia) => (
+            <span key={tecnologia}>
               {tecnologia}
               <img
                 src={imagensTecnologias[tecnologia] || Error}
@@ -49,16 +48,23 @@ export function Projetos(props) {
         </div>
       </div>
       <div className="interacoes">
-        <button>
+        <button id={props.id} onClick={() => props.onCompartilhar(props.id)}>
           <img src={Share} alt="compartilhar" />
           <span>{props.compartilhamentos}</span>
         </button>
-        <button>
-          <img src={Folder} alt="repositórios" />
+        <button
+          id={props.id}
+          onClick={() => props.onAcessarRepositorio(props.id)}>
+          <a href={props.repositorio} target="_blank" rel="external">
+            <img src={Folder} alt="repositórios" />
+            <span>{props.acessRepositorio}</span>
+          </a>
         </button>
-        <button>
-          <img src={Play} alt="play" />
-          <span>{props.visualizacoes}</span>
+        <button id={props.id} onClick={() => props.onVisualizar(props.id)}>
+          <a href={props.deploy} target="_blank" rel="external">
+            <img src={Play} alt="play" />
+            <span>{props.visualizacoes}</span>
+          </a>
         </button>
       </div>
     </div>

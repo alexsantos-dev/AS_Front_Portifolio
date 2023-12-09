@@ -12,12 +12,17 @@ export function getRelevantes() {
     return res
 }
 
-export async function LikesAnonimos(id) {
-    try {
-        const res = await axios.patch(`${baseURL}/projetos/like/${id}`);
-        return res.data
-    } catch (error) {
-        console.error("Erro ao dar like:", error);
-        throw error;
-    }
+export function visualizar(projetoId) {
+    const res = axios.patch(`${baseURL}/projetos/visualizacoes/${projetoId}`)
+    return res.data
+}
+
+export function compartilhar(projetoId) {
+    const res = axios.patch(`${baseURL}/projetos/compartilhar/${projetoId}`)
+    return res.data
+}
+
+export function acessarRep(projetoId) {
+    const res = axios.patch(`${baseURL}/projetos/acessRepositorio/${projetoId}`)
+    return res.data
 }
