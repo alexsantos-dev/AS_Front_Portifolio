@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
 import Error from "../assets/error.svg";
 import Share from "../assets/share.webp";
 import Folder from "../assets/folder.webp";
@@ -8,6 +9,8 @@ export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
   const [deployText, setDeployText] = useState("");
   const [isDialogOpen, setDialogOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -73,17 +76,29 @@ export function Projetos(props) {
   return (
     <div className="item" key={props.id}>
       <div className="banner">
-        <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
+        {loading ? (
+          <Skeleton height={480} className="skeleton" />
+        ) : (
+          <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
+        )}
       </div>
       <div className="descricao">
-        <h3>{props.titulo}</h3>
-        <p>{props.resumo}</p>
+        <h3>
+          {loading ? (
+            <Skeleton width={200} className="skeleton" />
+          ) : (
+            props.titulo
+          )}
+        </h3>
+        <p>
+          {loading ? <Skeleton count={3} className="skeleton" /> : props.resumo}
+        </p>
         <div className="tecnologias">
           {props.tecnologiasUsadas.map((tecnologia) => (
             <span key={tecnologia}>
               {tecnologia}
               <img
-                src={imagensTecnologias[tecnologia] || Error}
+                src={loading ? Error : imagensTecnologias[tecnologia]}
                 alt={`Logo da tecnologia ${tecnologia}`}
               />
             </span>
@@ -92,20 +107,34 @@ export function Projetos(props) {
       </div>
       <div className="interacoes">
         <button key={props.id} onClick={handleCompartilharClick}>
-          <img src={Share} alt="compartilhar" />
-          <span>{props.compartilhamentos}</span>
+          {loading ? (
+            <Skeleton width={50} className="skeleton" />
+          ) : (
+            <>
+              <img src={Share} alt="compartilhar" />
+              <span>{props.compartilhamentos}</span>
+            </>
+          )}
         </button>
         <button id={props.id} onClick={handleAcessarRepositorioClick}>
-          <a href={props.repositorio} target="_blank" rel="external">
-            <img src={Folder} alt="repositórios" />
-            <span>{props.acessRepositorio}</span>
-          </a>
+          {loading ? (
+            <Skeleton width={50} className="skeleton" />
+          ) : (
+            <a href={props.repositorio} target="_blank" rel="external">
+              <img src={Folder} alt="repositórios" />
+              <span>{props.acessRepositorio}</span>
+            </a>
+          )}
         </button>
         <button id={props.id} onClick={handleVisualizarClick}>
-          <a href={props.deploy} target="_blank" rel="external">
-            <img src={Play} alt="play" />
-            <span>{props.visualizacoes}</span>
-          </a>
+          {loading ? (
+            <Skeleton width={50} className="skeleton" />
+          ) : (
+            <a href={props.deploy} target="_blank" rel="external">
+              <img src={Play} alt="play" />
+              <span>{props.visualizacoes}</span>
+            </a>
+          )}
         </button>
       </div>
       {isDialogOpen && <div className="overlay" onClick={fecharDialog}></div>}

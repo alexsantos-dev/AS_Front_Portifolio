@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const pulse = keyframes`
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+`;
 
 export const Container = styled.div`
   flex-wrap: wrap;
@@ -34,6 +43,9 @@ export const Container = styled.div`
         border-radius: 0.8em 0.8em 0 0;
         width: 100%;
       }
+      .skeleton {
+        animation: ${pulse} 1.5s infinite;
+      }
     }
     .descricao {
       border-right: solid 1px #000;
@@ -51,6 +63,9 @@ export const Container = styled.div`
       p {
         width: 95%;
         text-align: center;
+        .skeleton {
+          animation: ${pulse} 1.5s infinite;
+        }
       }
 
       h3 {
@@ -107,6 +122,11 @@ export const Container = styled.div`
         background: none;
         cursor: pointer;
         padding: 1em;
+
+        .skeleton {
+          animation: ${pulse} 1.5s infinite;
+        }
+
         img {
           width: 2em;
         }
