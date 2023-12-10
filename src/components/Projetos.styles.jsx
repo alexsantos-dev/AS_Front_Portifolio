@@ -10,8 +10,7 @@ export const Container = styled.div`
 
   .item {
     width: 360px;
-    max-width: 500px;
-    height: 500px;
+    height: 480px;
     padding: 0.8em;
     display: flex;
     flex-direction: column;
@@ -198,7 +197,7 @@ export const Container = styled.div`
 
   @media (min-width: 1280px) {
     .item {
-      width: 40%;
+      width: 400px;
       height: 480px;
     }
   }
