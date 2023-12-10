@@ -14,7 +14,6 @@ export const SecoesContainer = styled.div`
     border-radius: 1em;
     padding: 5em 0;
     margin: 0 auto 2em auto;
-    border: solid 4px rgb(51, 51, 51);
 
     h1 {
       color: #000;
@@ -57,6 +56,8 @@ export const SecoesContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: rgb(0, 0, 0) 10px 8px 20px;
+    border: none;
   }
 
   #Projetos {
@@ -99,7 +100,6 @@ export const SecoesContainer = styled.div`
     height: 14em;
     padding-bottom: 2em;
     background-color: #fff;
-    box-shadow: rgb(0, 0, 0) 10px 8px 20px, rgb(51, 51, 51) 0px 0px 0px 3px;
 
     h1 {
       z-index: 1;
