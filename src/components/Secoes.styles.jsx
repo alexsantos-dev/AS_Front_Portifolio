@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SecoesContainer = styled.div`
   position: relative;
   width: 100%;
-  top: 6em;
+  top: 4.5em;
   padding-bottom: 4em;
   background-color: #ffd9a8;
 
