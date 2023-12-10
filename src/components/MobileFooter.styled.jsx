@@ -7,7 +7,7 @@ export const MobileFootCont = styled.nav`
   left: 0;
   z-index: 10;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   background-color: #ededed;

@@ -74,7 +74,7 @@ export const Container = styled.div`
         display: flex;
         gap: 0.4em;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-around;
         align-items: center;
         margin-bottom: 1em;
         span {
