@@ -77,6 +77,7 @@ export const SecoesContainer = styled.div`
         padding: 0.4em;
         height: 2em;
         border: none;
+        outline: none;
       }
     }
   }
