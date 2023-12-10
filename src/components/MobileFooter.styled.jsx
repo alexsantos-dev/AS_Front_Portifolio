@@ -10,7 +10,7 @@ export const MobileFootCont = styled.nav`
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  background-color: #ededed;
+  background-color: #ffffff;
   border-top: 2px solid #2e2473;
 
   div {
