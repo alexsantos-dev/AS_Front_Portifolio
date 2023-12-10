@@ -156,15 +156,13 @@ export const SecoesContainer = styled.div`
       }
 
       p {
-        text-align: left;
+        text-align: justify;
 
         a {
-          font-style: italic;
-          font-weight: 400;
+          color: #5139eb;
         }
 
         a:hover {
-          color: #5139eb;
           text-decoration: underline;
         }
 
