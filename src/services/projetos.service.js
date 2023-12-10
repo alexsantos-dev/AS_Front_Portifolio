@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://as-api-portifolio.onrender.com"
+const baseURL = "https://api-portifolio-ohio-br.onrender.com"
 
 export function getRecentes() {
     const res = axios.get(`${baseURL}/projetos/recentes`)
