@@ -73,6 +73,12 @@ export function Projetos(props) {
     fecharDialog();
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 20000);
+  }, []);
+
   return (
     <div className="item" key={props.id}>
       <div className="banner">
