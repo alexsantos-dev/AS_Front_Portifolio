@@ -15,10 +15,6 @@ export const SecoesContainer = styled.div`
     padding: 5em 0;
     margin: 0 auto 2em auto;
     border: solid 4px rgb(51, 51, 51);
-    span {
-      font-style: italic;
-      color: #434343;
-    }
 
     h1 {
       color: #000;
@@ -46,6 +42,13 @@ export const SecoesContainer = styled.div`
     }
   }
 
+  #Sobre {
+    span {
+      font-weight: bold;
+      color: #252525;
+    }
+  }
+
   #Sobre,
   #Habilidades,
   #Projetos,
@@ -61,29 +64,19 @@ export const SecoesContainer = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 90%;
+      width: 82%;
       margin-bottom: 1em;
 
       select {
         transition: all 0.4s ease-in-out;
         border-radius: 0.4em;
-        background: #f1f1f1;
+        background: #05f2da47;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
           rgb(51, 51, 51) 0px 0px 0px 3px;
         font-size: 1em;
         padding: 0.4em;
         height: 2em;
         border: none;
-        background: none;
-
-        option {
-          transition: all 0.4s ease-in-out;
-        }
-
-        &:focus {
-          border: none;
-          outline: none;
-        }
       }
     }
   }
