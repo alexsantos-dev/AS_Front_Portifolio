@@ -5,7 +5,7 @@ export const SecoesContainer = styled.div`
   width: 100%;
   top: 4.5em;
   padding-bottom: 4em;
-  background-color: #ffd9a8;
+  background-color: #05f2db;
 
   section {
     background-color: #fff;
