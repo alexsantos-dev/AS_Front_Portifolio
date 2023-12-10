@@ -76,7 +76,7 @@ export function Projetos(props) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 20000);
+    }, 10000);
   }, []);
 
   return (
