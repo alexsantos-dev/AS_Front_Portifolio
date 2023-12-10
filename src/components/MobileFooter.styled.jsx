@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MobileFootCont = styled.nav`
   width: 100%;
-  height: 5.4em;
+  height: 4.5em;
   bottom: 0;
   left: 0;
   z-index: 10;
@@ -15,7 +15,7 @@ export const MobileFootCont = styled.nav`
 
   div {
     width: 80%;
-    height: 5.6em;
+    height: 4em;
     max-width: 400px;
     display: flex;
     justify-content: space-between;
@@ -34,13 +34,13 @@ export const MobileFootCont = styled.nav`
         border-radius: 1em;
         background-color: transparent;
         position: absolute;
-        top: -0.2em;
+        top: 0;
         left: 0;
         transition: 0.4s ease-in-out;
       }
 
       a {
-        padding: 1.2em;
+        padding: 1em;
         display: flex;
         align-items: center;
         justify-items: center;
@@ -63,7 +63,7 @@ export const MobileFootCont = styled.nav`
       }
     }
     .sobreBtn::after {
-      top: -0.1em;
+      top: 0.25em;
     }
 
     .projectBtn {
@@ -71,11 +71,11 @@ export const MobileFootCont = styled.nav`
         margin-left: 0.46em;
       }
       &::after {
-        top: -0.4em;
+        top: 0.01em;
       }
     }
     .habBtn::after {
-      top: -0.3em;
+      top: 0.1em;
     }
   }
   @media (min-width: 884px) {

@@ -29,7 +29,7 @@ export const Nav = styled.nav`
   width: 100%;
   background-color: #ff3995;
   padding: 1em;
-  height: 6em;
+  height: 4.5em;
   top: 0;
   left: 0;
   display: flex;
@@ -55,7 +55,8 @@ export const Nav = styled.nav`
       /* width: 26em; */
       align-self: center;
       .logoIcon {
-        width: 4.6em;
+        margin-top: 0.4em;
+        width: 4em;
       }
     }
 
@@ -150,12 +151,11 @@ export const Nav = styled.nav`
       .logoIcon {
         margin-top: 0.4em;
         /* margin-left: 1em; */
-        width: 4em;
+        width: 3.8em;
       }
     }
     ul.contato {
-      width: 5em;
-      height: 5em;
+      width: 1em;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -164,7 +164,7 @@ export const Nav = styled.nav`
       z-index: 10;
       background: #f1f1f1;
       border: inset 3px #0d0d0d;
-      padding: 2em;
+      padding: 1.7em;
       flex-direction: row-reverse;
 
       &:hover > :not(:hover) {
@@ -179,7 +179,10 @@ export const Nav = styled.nav`
 
       li {
         border-radius: 6em;
-        width: 3em;
+        width: 2em;
+      }
+      li:not(:first-child) {
+        margin-right: 0.6em;
       }
 
       li:first-child {
@@ -215,7 +218,7 @@ export const Nav = styled.nav`
     }
 
     ul.item-ativo {
-      width: 17em;
+      width: 16em;
       li:not(:first-child) {
         display: block;
       }

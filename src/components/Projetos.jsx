@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Error from "../assets/error.svg";
-import Share from "../assets/share.svg";
-import Folder from "../assets/folder.svg";
-import Play from "../assets/play.svg";
+import Share from "../assets/share.webp";
+import Folder from "../assets/folder.webp";
+import Play from "../assets/play.webp";
 
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
@@ -65,10 +65,9 @@ export function Projetos(props) {
     textArea.value = deployText;
     document.body.appendChild(textArea);
     textArea.select();
-    document.execCommand("copy");
     document.body.removeChild(textArea);
     alert("Texto copiado para a área de transferência!");
-    fecharModal();
+    fecharDialog();
   };
 
   return (

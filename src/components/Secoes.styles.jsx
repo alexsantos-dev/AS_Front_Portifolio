@@ -5,7 +5,7 @@ export const SecoesContainer = styled.div`
   width: 100%;
   top: 6em;
   padding-bottom: 4em;
-  background-color: #faebd7;
+  background-color: #ffd9a8;
 
   section {
     background-color: #fff;
@@ -14,7 +14,7 @@ export const SecoesContainer = styled.div`
     border-radius: 1em;
     padding: 5em 0;
     margin: 0 auto 2em auto;
-
+    border: solid 4px rgb(51, 51, 51);
     span {
       font-style: italic;
       color: #434343;
@@ -62,6 +62,7 @@ export const SecoesContainer = styled.div`
       justify-content: space-between;
       align-items: center;
       width: 90%;
+      margin-bottom: 1em;
 
       select {
         transition: all 0.4s ease-in-out;
@@ -193,6 +194,19 @@ export const SecoesContainer = styled.div`
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
+
+      .opcoes {
+        position: relative;
+        padding: 1em;
+        align-items: flex-start;
+        flex-direction: column;
+
+        select {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
     }
 
     section#Sobre {

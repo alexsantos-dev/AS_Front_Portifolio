@@ -1,17 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const heartbeat = keyframes`
-  from {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.4);
-    box-shadow: rgba(252, 0, 0, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  }
-  to {
-    transform: scale(1);
-  }
-`;
+import styled from "styled-components";
 
 export const Container = styled.div`
   flex-wrap: wrap;
@@ -31,7 +18,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    background-color: #faebd7;
+    background-color: #ffd9a8;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 
     .banner {
@@ -42,11 +29,16 @@ export const Container = styled.div`
       height: 40%;
 
       img {
+        border-top: solid 1px #000;
+        border-right: solid 1px #000;
+        border-left: solid 1px #000;
         border-radius: 0.8em 0.8em 0 0;
         width: 100%;
       }
     }
     .descricao {
+      border-right: solid 1px #000;
+      border-left: solid 1px #000;
       background-color: #fff;
       position: relative;
       display: flex;
@@ -65,24 +57,26 @@ export const Container = styled.div`
       h3 {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 5%;
+        align-items: flex-start;
+        height: 30%;
       }
       p {
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 40%;
+        align-items: flex-start;
+        height: 30%;
       }
 
       div.tecnologias {
-        height: 55%;
+        margin-bottom: 1em;
+        height: 100%;
         width: 100%;
         display: flex;
         gap: 0.4em;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: flex-start;
+        align-items: center;
+        margin-bottom: 1em;
         span {
           width: auto;
           display: flex;
@@ -98,18 +92,17 @@ export const Container = styled.div`
       }
     }
     .interacoes {
+      border: 1px solid black;
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 10%;
+      height: 15%;
       width: 100%;
       padding: 0 1em;
       border-radius: 0 0 1em 1em;
       background-color: #f9f9f9;
 
       button {
-        border: solid 1px black;
-
         position: relative;
         border: none;
         background: none;
@@ -121,19 +114,24 @@ export const Container = styled.div`
 
         span {
           top: 0.6em;
-          right: 0.1em;
+          left: 3em;
+          width: 3em;
+          padding-left: 0.2em;
           font-style: normal;
+          display: flex;
+          justify-content: left;
           position: absolute;
           z-index: 0;
         }
       }
-      .ativo {
-        animation: ${heartbeat} 0.4s;
+      button:nth-child(1) {
+        span {
+          left: 3.1em;
+        }
       }
-      button:last-child {
-        padding: 0.6em;
-        img {
-          width: 2.8em;
+      button:nth-child(2) {
+        span {
+          left: 3.3em;
         }
       }
     }
