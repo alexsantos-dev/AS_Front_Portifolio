@@ -189,12 +189,14 @@ export const SecoesContainer = styled.div`
       align-items: center;
 
       .opcoes {
+        width: 95%;
         position: relative;
         padding: 1em;
         align-items: flex-start;
         flex-direction: column;
 
         select {
+          margin-right: 0.7em;
           position: absolute;
           bottom: 0;
           right: 0;
