@@ -22,6 +22,7 @@ export const SecoesContainer = styled.div`
     h2 {
       color: #0d0d0d;
       span {
+        margin-right: 0.15em;
         text-shadow: 2px 2px #49f2e1;
       }
     }
