@@ -20,6 +20,7 @@ export const Container = styled.div`
     background: linear-gradient(-50deg, #d4d4d4 30%, #ffffff 70%);
     border-right: solid 3px #000;
     border-bottom: solid 3px #000;
+    box-shadow: rgb(0, 0, 0) 3px 1px 8px;
 
     .banner {
       border-radius: 1em 1em 0 0;
