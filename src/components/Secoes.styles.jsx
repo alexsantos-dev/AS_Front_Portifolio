@@ -46,8 +46,8 @@ export const SecoesContainer = styled.div`
 
   #Sobre {
     span {
-      font-weight: bold;
-      color: #252525;
+      font-family: Poppins-semiBold;
+      color: #000000;
     }
   }
 
@@ -74,14 +74,12 @@ export const SecoesContainer = styled.div`
       select {
         transition: all 0.4s ease-in-out;
         border-radius: 0.4em;
-        background: #49f2e1;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
-          rgb(51, 51, 51) 0px 0px 0px 3px;
+        background-color: #83f7e9;
+        border: solid 1px #0d0d0d;
         font-size: 1em;
-        font-weight: 600;
+        font-weight: 500;
         padding: 0.4em;
         height: 2em;
-        border: none;
         outline: none;
       }
     }
