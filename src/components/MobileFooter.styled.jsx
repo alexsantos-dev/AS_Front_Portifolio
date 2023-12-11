@@ -11,7 +11,7 @@ export const MobileFootCont = styled.nav`
   align-items: center;
   position: fixed;
   background-color: #ffffff;
-  border-top: 2px solid #2e2473;
+  border-top: 2px solid #0d0d0d;
 
   div {
     width: 80%;
@@ -47,7 +47,7 @@ export const MobileFootCont = styled.nav`
         font-weight: 600;
         flex-direction: column;
         gap: 0.3em;
-        color: #2e2473;
+        color: #0d0d0d;
 
         img {
           width: 2em;
@@ -58,7 +58,7 @@ export const MobileFootCont = styled.nav`
       opacity: 1;
 
       &::after {
-        background-color: #2e2473;
+        background-color: #0d0d0d;
         width: 100%;
       }
     }
