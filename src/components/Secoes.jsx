@@ -1,5 +1,3 @@
-import React from "react";
-
 import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
 import { Container } from "./Projetos.styles";
@@ -57,8 +55,7 @@ export function Secoes() {
         const fimChamada = new Date().getTime();
         const tempoResposta = fimChamada - inicioChamada;
 
-        // Define o tempo de exibição com base no tempo de resposta
-        setExibirSkeleton(true); // Volte a exibir o Skeleton
+        setExibirSkeleton(true);
         setProjetos([]);
         setTimeout(() => {
           setExibirSkeleton(false);
