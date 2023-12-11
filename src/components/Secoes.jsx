@@ -1,6 +1,9 @@
+import React from "react";
+
 import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
 import { Container } from "./Projetos.styles";
+import { ProjetoSkeleton } from "./ProjetoSkeleton";
 import JsIcon from "../assets/javascript.webp";
 import ReactIcon from "../assets/react.webp";
 import NodeIcon from "../assets/node.webp";
@@ -21,29 +24,68 @@ import {
   acessarRep,
 } from "../services/projetos.service";
 
+const TemporizadorExibicao = ({ tempoExibicao, onComplete }) => {
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      onComplete();
+    }, tempoExibicao);
+
+    return () => clearTimeout(timeoutId);
+  }, [tempoExibicao, onComplete]);
+
+  return <ProjetoSkeleton />;
+};
+
 export function Secoes() {
   const [projetos, setProjetos] = useState([]);
   const [opcaoSelecionada, setOpcaoSelecionada] = useState("recentes");
+  const [exibirSkeleton, setExibirSkeleton] = useState(true);
 
   const handleSelectChange = (event) => {
     setOpcaoSelecionada(event.target.value);
+    setExibirSkeleton(true);
   };
 
   const fetchData = useCallback(async () => {
     try {
+      const inicioChamada = new Date().getTime();
+
       if (opcaoSelecionada === "recentes") {
         const Response = await getRecentes();
         console.log(Response);
-        setProjetos(Response.data);
+
+        const fimChamada = new Date().getTime();
+        const tempoResposta = fimChamada - inicioChamada;
+
+        // Define o tempo de exibição com base no tempo de resposta
+        setExibirSkeleton(true); // Volte a exibir o Skeleton
+        setProjetos([]);
+        setTimeout(() => {
+          setExibirSkeleton(false);
+          setProjetos(Response.data);
+        }, tempoResposta);
       } else if (opcaoSelecionada === "relevantes") {
         const Response = await getRelevantes();
         console.log(Response);
-        setProjetos(Response.data);
+
+        const fimChamada = new Date().getTime();
+        const tempoResposta = fimChamada - inicioChamada;
+
+        setExibirSkeleton(true);
+        setProjetos([]);
+        setTimeout(() => {
+          setExibirSkeleton(false);
+          setProjetos(Response.data);
+        }, tempoResposta);
       }
     } catch (error) {
       console.error("Erro na requisição:", error);
     }
   }, [opcaoSelecionada, setProjetos]);
+
+  const handleSkeletonComplete = () => {
+    setExibirSkeleton(false);
+  };
 
   useEffect(() => {
     fetchData();
@@ -202,24 +244,32 @@ export function Secoes() {
           </select>
         </div>
         <Container>
-          {projetos.map((item) => (
-            <Projetos
-              key={item.id}
-              id={item._id}
-              titulo={item.titulo}
-              resumo={item.resumo}
-              banner={item.banner}
-              tecnologiasUsadas={item.tecnologiasUsadas}
-              compartilhamentos={item.compartilhamentos}
-              acessRepositorio={item.acessRepositorio}
-              visualizacoes={item.visualizacoes}
-              repositorio={item.repositorio}
-              deploy={item.deploy}
-              onCompartilhar={(projetoId) => compartilhar(projetoId)}
-              onAcessarRepositorio={(projetoId) => acessarRep(projetoId)}
-              onVisualizar={(projetoId) => visualizar(projetoId)}
-            />
-          ))}
+          {exibirSkeleton
+            ? Array.from({ length: 4 }).map((_, index) => (
+                <TemporizadorExibicao
+                  key={index}
+                  tempoExibicao={1000}
+                  onComplete={handleSkeletonComplete}
+                />
+              ))
+            : projetos.map((item) => (
+                <Projetos
+                  key={item.id}
+                  id={item._id}
+                  titulo={item.titulo}
+                  resumo={item.resumo}
+                  banner={item.banner}
+                  tecnologiasUsadas={item.tecnologiasUsadas}
+                  compartilhamentos={item.compartilhamentos}
+                  acessRepositorio={item.acessRepositorio}
+                  visualizacoes={item.visualizacoes}
+                  repositorio={item.repositorio}
+                  deploy={item.deploy}
+                  onCompartilhar={(projetoId) => compartilhar(projetoId)}
+                  onAcessarRepositorio={(projetoId) => acessarRep(projetoId)}
+                  onVisualizar={(projetoId) => visualizar(projetoId)}
+                />
+              ))}
         </Container>
       </section>
     </SecoesContainer>

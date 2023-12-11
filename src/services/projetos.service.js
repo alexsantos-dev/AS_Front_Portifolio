@@ -4,7 +4,7 @@ const baseURL = "https://api-portifolio-ohio-br.onrender.com";
 
 const axiosInstance = axios.create({
     baseURL: baseURL,
-    timeout: 10000,
+    timeout: 25000,
 });
 
 export function getRecentes() {
