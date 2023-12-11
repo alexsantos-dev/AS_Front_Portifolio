@@ -98,10 +98,8 @@ export const SecoesContainer = styled.div`
   section#bem-vindo {
     border-radius: 0.4em;
     width: 100%;
-    margin-bottom: 0;
     max-width: 100%;
-    height: 14em;
-    padding-bottom: 2em;
+    height: 12em;
     background-color: #fff;
 
     h1 {
@@ -189,6 +187,9 @@ export const SecoesContainer = styled.div`
   }
 
   @media (max-width: 884px) {
+    h1 {
+      font-size: 2em;
+    }
     section#Projetos {
       flex-direction: column;
       justify-content: space-between;
