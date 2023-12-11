@@ -2,27 +2,22 @@ import axios from "axios";
 
 const baseURL = "https://api-portifolio-ohio-br.onrender.com";
 
-const axiosInstance = axios.create({
-    baseURL: baseURL,
-    timeout: 5000,
-});
-
 export function getRecentes() {
-    return axiosInstance.get("/projetos/recentes");
+    return axios.get(`${baseURL}/projetos/recentes`);
 }
 
 export function getRelevantes() {
-    return axiosInstance.get("/projetos/relevantes");
+    return axios.get(`${baseURL}/projetos/relevantes`);
 }
 
 export function visualizar(projetoId) {
-    return axiosInstance.patch(`/projetos/visualizacoes/${projetoId}`);
+    return axios.patch(`${baseURL}/projetos/visualizacoes/${projetoId}`);
 }
 
 export function compartilhar(projetoId) {
-    return axiosInstance.patch(`/projetos/compartilhar/${projetoId}`);
+    return axios.patch(`${baseURL}/projetos/compartilhar/${projetoId}`);
 }
 
 export function acessarRep(projetoId) {
-    return axiosInstance.patch(`/projetos/acessRepositorio/${projetoId}`);
+    return axios.patch(`${baseURL}/projetos/acessRepositorio/${projetoId}`)
 }
