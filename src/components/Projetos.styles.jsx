@@ -1,13 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const pulse = keyframes`
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-`;
+import styled from "styled-components";
 
 export const Container = styled.div`
   flex-wrap: wrap;
@@ -19,7 +10,7 @@ export const Container = styled.div`
 
   .item {
     width: 360px;
-    height: 480px;
+    height: 520px;
     padding: 0.8em;
     display: flex;
     flex-direction: column;
@@ -43,9 +34,6 @@ export const Container = styled.div`
         border-radius: 0.8em 0.8em 0 0;
         width: 100%;
       }
-      .skeleton {
-        animation: ${pulse} 1.5s infinite;
-      }
     }
     .descricao {
       border-right: solid 1px #000;
@@ -63,9 +51,6 @@ export const Container = styled.div`
       p {
         width: 95%;
         text-align: center;
-        .skeleton {
-          animation: ${pulse} 1.5s infinite;
-        }
       }
 
       h3 {
@@ -122,10 +107,6 @@ export const Container = styled.div`
         background: none;
         cursor: pointer;
         padding: 1em;
-
-        .skeleton {
-          animation: ${pulse} 1.5s infinite;
-        }
 
         img {
           width: 2em;
@@ -217,7 +198,7 @@ export const Container = styled.div`
 
   @media (min-width: 1280px) {
     .item {
-      width: 400px;
+      width: 360px;
       height: 480px;
     }
   }

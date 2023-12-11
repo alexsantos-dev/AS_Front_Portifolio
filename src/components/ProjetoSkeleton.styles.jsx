@@ -11,7 +11,7 @@ const pulse = keyframes`
 
 export const SkeletonContainer = styled.div`
   width: 360px;
-  height: 480px;
+  height: 520px;
   padding: 0.8em;
   display: flex;
   flex-direction: column;
@@ -101,7 +101,7 @@ export const SkeletonContainer = styled.div`
   .interacoes {
     border: 1px solid #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 15%;
     width: 100%;
@@ -111,6 +111,7 @@ export const SkeletonContainer = styled.div`
 
     button,
     .skeleton {
+      width: 33%;
       position: relative;
       border: none;
       background: none;

@@ -245,14 +245,13 @@ export function Secoes() {
             ? Array.from({ length: 4 }).map((_, index) => (
                 <TemporizadorExibicao
                   key={index}
-                  tempoExibicao={1000}
+                  tempoExibicao={25000}
                   onComplete={handleSkeletonComplete}
                 />
               ))
             : projetos.map((item) => (
                 <Projetos
                   key={item.id}
-                  id={item._id}
                   titulo={item.titulo}
                   resumo={item.resumo}
                   banner={item.banner}
