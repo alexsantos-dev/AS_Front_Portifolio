@@ -84,7 +84,7 @@ export function Secoes() {
         </p>
         <p>
           Explore a seção de <span>Projetos</span> para executar, compartilhar e
-          acessar os repositórios de cada um dos meus trabalhos, além disso você
+          acessar os repositórios de cada um dos meus trabalhos. Além disso você
           pode escolher entre as ordenações &quot;Mais recentes&quot; e
           &quot;Mais Relevantes&quot;.
         </p>
