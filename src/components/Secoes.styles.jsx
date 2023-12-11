@@ -5,7 +5,7 @@ export const SecoesContainer = styled.div`
   width: 100%;
   top: 4.5em;
   padding-bottom: 4em;
-  background-color: #05f2db;
+  background-color: #590b28;
 
   section {
     background-color: #fff;
@@ -20,7 +20,10 @@ export const SecoesContainer = styled.div`
     }
 
     h2 {
-      color: #2e2473;
+      color: #0d0d0d;
+      span {
+        text-shadow: 2px 2px #49f2e1;
+      }
     }
 
     h1,
@@ -71,10 +74,11 @@ export const SecoesContainer = styled.div`
       select {
         transition: all 0.4s ease-in-out;
         border-radius: 0.4em;
-        background: #05f2da47;
+        background: #49f2e1;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
           rgb(51, 51, 51) 0px 0px 0px 3px;
         font-size: 1em;
+        font-weight: 600;
         padding: 0.4em;
         height: 2em;
         border: none;
@@ -103,7 +107,7 @@ export const SecoesContainer = styled.div`
 
     h1 {
       z-index: 1;
-      text-shadow: 1px 1px #f22786;
+      text-shadow: 1px 1px #bf0404;
       padding-bottom: 1em;
     }
   }
@@ -112,7 +116,7 @@ export const SecoesContainer = styled.div`
   }
   .bg-nav-section {
     padding: 1.5em 1em;
-    background-color: #05f2db;
+    background-color: #49f2e1;
   }
 
   div.container {
@@ -175,6 +179,10 @@ export const SecoesContainer = styled.div`
     }
   }
 
+  @media (max-width: 360px) {
+    top: 3em;
+  }
+
   @media (max-width: 400px) {
     h1 {
       font-size: 2em;
@@ -204,7 +212,6 @@ export const SecoesContainer = styled.div`
     }
 
     section#Sobre {
-      margin-top: 0.2em;
       border-radius: 0 0 1em 1em;
     }
 

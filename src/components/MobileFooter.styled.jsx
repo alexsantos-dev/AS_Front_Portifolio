@@ -78,6 +78,23 @@ export const MobileFootCont = styled.nav`
       top: 0.1em;
     }
   }
+  @media (max-width: 360px) {
+    height: 3.5em;
+
+    div {
+      height: 3em;
+
+      button {
+        a {
+          padding: 0.7em;
+          img {
+            width: 1.5em;
+          }
+        }
+      }
+    }
+  }
+
   @media (min-width: 884px) {
     display: none;
   }

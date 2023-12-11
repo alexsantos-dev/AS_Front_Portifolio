@@ -11,14 +11,15 @@ export const Container = styled.div`
   .item {
     width: 360px;
     height: 520px;
-    padding: 0.8em;
+    padding: 0 0.6em 0.6em 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 1em;
-    background-color: #dfceb8;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    background: linear-gradient(-50deg, #d4d4d4 30%, #ffffff 70%);
+    border-right: solid 3px #000;
+    border-bottom: solid 3px #000;
 
     .banner {
       border-radius: 1em 1em 0 0;
@@ -29,14 +30,14 @@ export const Container = styled.div`
 
       img {
         border-top: solid 1px #000;
-        border-right: solid 1px #000;
         border-left: solid 1px #000;
+        border-bottom: solid 1px #000;
+
         border-radius: 0.8em 0.8em 0 0;
         width: 100%;
       }
     }
     .descricao {
-      border-right: solid 1px #000;
       border-left: solid 1px #000;
       background-color: #fff;
       position: relative;
@@ -91,7 +92,8 @@ export const Container = styled.div`
       }
     }
     .interacoes {
-      border: 1px solid black;
+      border-top: solid 1px #000;
+      border-left: solid 1px #000;
       display: flex;
       justify-content: space-around;
       align-items: center;

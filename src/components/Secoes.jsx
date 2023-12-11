@@ -22,17 +22,6 @@ import {
   acessarRep,
 } from "../services/projetos.service";
 
-const TemporizadorExibicao = ({ tempoExibicao, onComplete }) => {
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      onComplete();
-    }, tempoExibicao);
-
-    return () => clearTimeout(timeoutId);
-  }, [tempoExibicao, onComplete]);
-
-  return <ProjetoSkeleton />;
-};
 export function Secoes() {
   const [projetos, setProjetos] = useState([]);
   const [opcaoSelecionada, setOpcaoSelecionada] = useState("recentes");
@@ -70,10 +59,6 @@ export function Secoes() {
     }
   }, [opcaoSelecionada, setProjetos]);
 
-  const handleSkeletonComplete = () => {
-    setExibirSkeleton(false);
-  };
-
   useEffect(() => {
     fetchData();
   }, [fetchData]);
@@ -86,7 +71,9 @@ export function Secoes() {
         </section>
       </div>
       <section id="Sobre">
-        <h2>#Sobre</h2>
+        <h2>
+          <span>#</span>Sobre
+        </h2>
         <p>
           Olá, sou Alex, um aspirante a desenvolvedor web fullstack de 19 anos
           com 5 meses de experiência prática. Destaco-me por participação ativa
@@ -102,7 +89,9 @@ export function Secoes() {
         </p>
       </section>
       <section id="Habilidades">
-        <h2>#Habilidades</h2>
+        <h2>
+          <span>#</span>Habilidades
+        </h2>
 
         <div className="container">
           <div className="item">
@@ -224,7 +213,9 @@ export function Secoes() {
       </section>
       <section id="Projetos">
         <div className="opcoes">
-          <h2>#Projetos</h2>
+          <h2>
+            <span>#</span>Projetos
+          </h2>
           <select value={opcaoSelecionada} onChange={handleSelectChange}>
             <option value="recentes">Mais Recentes</option>
             <option value="relevantes">Mais Relevantes</option>

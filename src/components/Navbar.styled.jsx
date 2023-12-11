@@ -27,7 +27,7 @@ const itemFade = keyframes`
 
 export const Nav = styled.nav`
   width: 100%;
-  background-color: #ff3995;
+  background-color: #ffffff;
   padding: 1em;
   height: 4.5em;
   top: 0;
@@ -63,24 +63,22 @@ export const Nav = styled.nav`
     &.sections {
       justify-content: space-between;
       align-items: center;
-      /* width: 19%; */
-      /* height: 100%; */
 
       a {
         transition: 0.3s ease-in;
         position: relative;
-        color: #cbcbcbe8;
+        color: #0d0d0d7a;
         font-weight: 600;
         font-size: 1.1em;
-        padding: 0.7em 0.4em;
+        padding: 0.6em 0.4em;
         &:hover {
-          color: #fff;
+          color: #0d0d0d;
         }
 
         &::after {
           content: "";
           width: 0%;
-          height: 0.35em;
+          height: 0.2em;
           border-radius: 1em;
           background-color: transparent;
           position: absolute;
@@ -90,15 +88,15 @@ export const Nav = styled.nav`
         }
 
         &:hover::after {
-          background-color: #f2f2f2;
+          background-color: #bf0404;
           width: 100%;
         }
       }
       .linkAtivo {
-        color: #fff;
+        color: #0d0d0ddd;
 
         &::after {
-          background-color: #f2f2f2;
+          background-color: #bf0404;
           width: 100%;
         }
       }
@@ -115,7 +113,7 @@ export const Nav = styled.nav`
       &:hover > :hover {
         opacity: 1;
         transform: scale(1.1);
-        box-shadow: #05f2db 0px 2px 10px;
+        box-shadow: #49f2e1 0px 2px 10px;
       }
 
       li {
@@ -163,7 +161,7 @@ export const Nav = styled.nav`
       border-radius: 6em;
       z-index: 10;
       background: #f1f1f1;
-      border: inset 3px #0d0d0d;
+      border: solid 2px #0d0d0d;
       padding: 1.7em;
       flex-direction: row-reverse;
 
@@ -228,6 +226,28 @@ export const Nav = styled.nav`
     }
     ul.sections {
       display: none;
+    }
+  }
+
+  @media (max-width: 360px) {
+    height: 3em;
+
+    ul.logo {
+      .logoIcon {
+        width: 2.5em;
+      }
+    }
+    ul.contato {
+      padding: 1em;
+      li {
+        button,
+        a {
+          height: 2em;
+          img {
+            width: 2em;
+          }
+        }
+      }
     }
   }
 
