@@ -18,23 +18,24 @@ export const SkeletonContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 1em;
-  background-color: #d1d1d1;
+  background-color: #dfceb8;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 
   .banner {
     border-radius: 1em 1em 0 0;
     display: flex;
     width: 100%;
     height: 40%;
-
+    background-color: #ffffff;
     .skeleton {
       animation: ${pulse} 1.5s infinite;
-      background: linear-gradient(90deg, #f2f2f2 25%, #e0e0e0 50%, #f2f2f2 75%);
+      background: linear-gradient(90deg, #dfceb8 25%, #ffffff 50%, #dfceb8 75%);
       background-size: 200% 100%;
     }
   }
 
   .descricao {
-    background-color: #e0e0e0;
+    background-color: #dfceb8;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ export const SkeletonContainer = styled.div`
     p,
     .skeleton {
       animation: ${pulse} 1.5s infinite;
-      background: linear-gradient(90deg, #f2f2f2 25%, #e0e0e0 50%, #f2f2f2 75%);
+      background: linear-gradient(90deg, #dfceb8 25%, #ffffff 50%, #dfceb8 75%);
       background-size: 200% 100%;
     }
 
@@ -98,7 +99,7 @@ export const SkeletonContainer = styled.div`
   }
 
   .interacoes {
-    border: 1px solid #f2f2f2;
+    border: 1px solid #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -106,7 +107,7 @@ export const SkeletonContainer = styled.div`
     width: 100%;
     padding: 0 1em;
     border-radius: 0 0 1em 1em;
-    background-color: #e0e0e0;
+    background-color: #dfceb8;
 
     button,
     .skeleton {
@@ -138,9 +139,9 @@ export const SkeletonContainer = styled.div`
         animation: ${pulse} 1.5s infinite;
         background: linear-gradient(
           90deg,
-          #f2f2f2 25%,
-          #e0e0e0 50%,
-          #f2f2f2 75%
+          #dfceb8 25%,
+          #ffffff 50%,
+          #dfceb8 75%
         );
         background-size: 200% 100%;
       }
