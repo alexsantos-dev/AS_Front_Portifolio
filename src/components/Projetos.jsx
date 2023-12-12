@@ -73,7 +73,11 @@ export function Projetos(props) {
   return (
     <div className="item" key={props.id}>
       <div className="banner">
-        <img src={props.banner} alt={`Banner do projeto ${props.titulo}`} />
+        <img
+          loading="lazy"
+          src={props.banner}
+          alt={`Banner do projeto ${props.titulo}`}
+        />
       </div>
       <div className="descricao">
         <h3>{props.titulo}</h3>
@@ -83,6 +87,7 @@ export function Projetos(props) {
             <span key={tecnologia}>
               {tecnologia}
               <img
+                loading="lazy"
                 src={imagensTecnologias[tecnologia] || Error}
                 alt={`Logo da tecnologia ${tecnologia}`}
               />
@@ -92,18 +97,18 @@ export function Projetos(props) {
       </div>
       <div className="interacoes">
         <button key={props.id} onClick={handleCompartilharClick}>
-          <img src={Share} alt="compartilhar" />
+          <img loading="lazy" src={Share} alt="compartilhar" />
           <span>{props.compartilhamentos}</span>
         </button>
         <button id={props.id} onClick={handleAcessarRepositorioClick}>
           <a href={props.repositorio} target="_blank" rel="external">
-            <img src={Folder} alt="repositórios" />
+            <img loading="lazy" src={Folder} alt="repositórios" />
             <span>{props.acessRepositorio}</span>
           </a>
         </button>
         <button id={props.id} onClick={handleVisualizarClick}>
           <a href={props.deploy} target="_blank" rel="external">
-            <img src={Play} alt="play" />
+            <img loading="lazy" src={Play} alt="play" />
             <span>{props.visualizacoes}</span>
           </a>
         </button>
