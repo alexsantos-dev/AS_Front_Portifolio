@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://18.231.155.174:3000";
+const baseURL = "https://api-portifolio-ohio-br.onrender.com";
 
 const axiosInstance = axios.create({
     baseURL,
