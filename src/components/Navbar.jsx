@@ -41,24 +41,24 @@ export function Navbar() {
             onClick={ativo}
             title="Contatos"
             className={`${isAtivo ? "" : "heartBeat"}`}>
-            <img src={PhoneIcon} alt="contato" title="Contato" />
+            <img loading="lazy" src={PhoneIcon} alt="contato" title="Contato" />
           </button>
         </li>
         <li>
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
-            <img src={LinkedInIcon} alt="linkedIn" title="LinkedIn" />
+            <img loading="lazy" src={LinkedInIcon} alt="linkedIn" title="LinkedIn" />
           </a>
         </li>
         <li>
           <a href="https://github.com/alexsantos-dev" target="blank">
-            <img src={GithubIcon} alt="github" title="Github" />
+            <img loading="lazy" src={GithubIcon} alt="github" title="Github" />
           </a>
         </li>
         <li>
           <a href="https://wa.me/+5598981630767" target="blank">
-            <img src={WhatsappIcon} alt="whatsapp" title="Whatsapp" />
+            <img loading="lazy" src={WhatsappIcon} alt="whatsapp" title="Whatsapp" />
           </a>
         </li>
       </ul>
@@ -66,7 +66,7 @@ export function Navbar() {
       <ul className="logo">
         <li>
           <a href="#">
-            <img src={LogoIcon} alt="logo" className="logoIcon" />
+            <img loading="lazy" src={LogoIcon} alt="logo" className="logoIcon" />
           </a>
         </li>
       </ul>

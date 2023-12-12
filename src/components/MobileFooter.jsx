@@ -34,7 +34,7 @@ export function MobileFooter() {
           onClick={HomeAtivo}
           className={` sobreBtn ${homeAtivo ? "ativo" : ""}`}>
           <a href="#Sobre">
-            <img src={HomeIcon} alt="icone de home" />
+            <img loading="lazy" src={HomeIcon} alt="icone de home" />
             Sobre
           </a>
         </button>
@@ -43,7 +43,7 @@ export function MobileFooter() {
           onClick={HabAtivo}
           className={`habBtn ${habAtivo ? "ativo" : ""}`}>
           <a href="#Habilidades">
-            <img src={ToolsIcon} alt="icone de habilidades" />
+            <img loading="lazy" src={ToolsIcon} alt="icone de habilidades" />
             Habilidades
           </a>
         </button>
@@ -52,7 +52,7 @@ export function MobileFooter() {
           onClick={ProjAtivo}
           className={`projectBtn ${projAtivo ? "ativo" : ""}`}>
           <a href="#Projetos">
-            <img src={ProjectIcon} alt="icone de projetos" />
+            <img loading="lazy" src={ProjectIcon} alt="icone de projetos" />
             Projetos
           </a>
         </button>

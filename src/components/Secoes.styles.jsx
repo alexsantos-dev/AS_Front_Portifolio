@@ -160,7 +160,7 @@ export const SecoesContainer = styled.div`
         text-align: justify;
 
         a {
-          color: #5c43fd;
+          color: #0000ff;
         }
 
         a:hover {
