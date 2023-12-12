@@ -10,7 +10,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(config => {
     config.headers['Access-Control-Allow-Origin'] = 'https://alexsantos-fullstack.vercel.app';
-    config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE';
+    config.headers['Access-Control-Allow-Methods'] = 'GET, PATCH';
     config.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization';
     return config;
 });
