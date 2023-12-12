@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://18.231.155.174:3000";
+const baseURL = "http://18.231.155.174:3000";
 
 const axiosInstance = axios.create({
     baseURL,
@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
 });
 
 axiosInstance.interceptors.request.use(config => {
-    config.headers['Access-Control-Allow-Origin'] = 'https://seu-frontend-na-vercel.vercel.app'; // 
+    config.headers['Access-Control-Allow-Origin'] = 'https://alexsantos-fullstack.vercel.app';
     config.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE';
     config.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization';
     return config;
