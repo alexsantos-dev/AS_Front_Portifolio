@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
-import PhoneIcon from z;
+import PhoneIcon from "../assets/telefone.png";
 import LinkedInIcon from "../assets/linkedin.webp";
 import GithubIcon from "../assets/github.webp";
 import WhatsappIcon from "../assets/whatsapp.webp";
@@ -48,7 +48,12 @@ export function Navbar() {
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
-            <img loading="lazy" src={LinkedInIcon} alt="linkedIn" title="LinkedIn" />
+            <img
+              loading="lazy"
+              src={LinkedInIcon}
+              alt="linkedIn"
+              title="LinkedIn"
+            />
           </a>
         </li>
         <li>
@@ -58,7 +63,12 @@ export function Navbar() {
         </li>
         <li>
           <a href="https://wa.me/+5598981630767" target="blank">
-            <img loading="lazy" src={WhatsappIcon} alt="whatsapp" title="Whatsapp" />
+            <img
+              loading="lazy"
+              src={WhatsappIcon}
+              alt="whatsapp"
+              title="Whatsapp"
+            />
           </a>
         </li>
       </ul>
@@ -66,7 +76,12 @@ export function Navbar() {
       <ul className="logo">
         <li>
           <a href="#">
-            <img loading="lazy" src={LogoIcon} alt="logo" className="logoIcon" />
+            <img
+              loading="lazy"
+              src={LogoIcon}
+              alt="logo"
+              className="logoIcon"
+            />
           </a>
         </li>
       </ul>
