@@ -25,7 +25,7 @@ export const Container = styled.div`
     .banner {
       border-radius: 1em 1em 0 0;
       display: flex;
-
+      position: relative;
       width: 100%;
       height: 40%;
 
@@ -36,6 +36,17 @@ export const Container = styled.div`
 
         border-radius: 0.8em 0.8em 0 0;
         width: 100%;
+      }
+      h3 {
+        font-size: 2.8em;
+        font-variant: small-caps;
+        font-family: Poppins-extraBold;
+        color: #000;
+        text-shadow: 3px 3px #fff;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
     .descricao {
@@ -49,28 +60,20 @@ export const Container = styled.div`
       width: 100%;
       height: 50%;
 
-      h3,
       p {
         width: 95%;
         text-align: center;
       }
-
-      h3 {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        height: 30%;
-      }
       p {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        height: 30%;
+        align-items: center;
+        height: 60%;
       }
 
       div.tecnologias {
         margin-bottom: 1em;
-        height: 100%;
+        height: 40%;
         width: 100%;
         display: flex;
         gap: 0.4em;

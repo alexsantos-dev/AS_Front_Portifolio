@@ -75,11 +75,11 @@ export const SecoesContainer = styled.div`
       select {
         transition: all 0.4s ease-in-out;
         border-radius: 0.4em;
-        background-color: #83f7e9;
-        border: solid 1px #0d0d0d;
+        background-color: #fff;
+        border: solid 3px #49f2e1;
         font-size: 1em;
         font-weight: 500;
-        padding: 0.4em;
+        padding: 0.2em 0.4em;
         height: 2em;
         outline: none;
       }

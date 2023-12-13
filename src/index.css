@@ -23,6 +23,13 @@
 
 }
 
+@font-face {
+  font-family: "Poppins-extraBold";
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+  font-display: swap;
+
+}
+
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;

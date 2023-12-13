@@ -8,6 +8,7 @@ export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
   const [deployText, setDeployText] = useState("");
   const [isDialogOpen, setDialogOpen] = useState(false);
+  const [bannerImage, setBannerImage] = useState(null);
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -28,6 +29,25 @@ export function Projetos(props) {
 
     carregarImagensTecnologias();
   }, [props.tecnologiasUsadas]);
+
+  useEffect(() => {
+    async function carregarImagemBanner() {
+      const bannerFormatado = props.banner.toLowerCase();
+      try {
+        const imagemBanner = await import(
+          `../assets/banners/${bannerFormatado}.webp`
+        );
+        setBannerImage(imagemBanner.default);
+      } catch (error) {
+        console.warn(
+          `Arquivo de imagem do banner não encontrado para o projeto com banner: ${props.banner}`
+        );
+        setBannerImage(null);
+      }
+    }
+
+    carregarImagemBanner();
+  }, [props.banner]);
 
   const handleCompartilharClick = async () => {
     const author = "Alex Santos";
@@ -71,16 +91,16 @@ export function Projetos(props) {
   };
 
   return (
-    <div className="item" key={props.id} loading="lazy">
+    <div className="item" key={props.id}>
       <div className="banner">
+        <h3>{props.titulo}</h3>
         <img
           loading="lazy"
-          src={props.banner}
+          src={bannerImage || Error}
           alt={`Banner do projeto ${props.titulo}`}
         />
       </div>
       <div className="descricao">
-        <h3>{props.titulo}</h3>
         <p>{props.resumo}</p>
         <div className="tecnologias">
           {props.tecnologiasUsadas.map((tecnologia) => (
@@ -88,7 +108,7 @@ export function Projetos(props) {
               {tecnologia}
               <img
                 loading="lazy"
-                src={imagensTecnologias[tecnologia] || Error}
+                src={imagensTecnologias[tecnologia]}
                 alt={`Logo da tecnologia ${tecnologia}`}
               />
             </span>
