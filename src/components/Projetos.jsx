@@ -93,11 +93,7 @@ export function Projetos(props) {
     <div className="item" key={props.id}>
       <div className="banner">
         <h3>{props.titulo}</h3>
-        <img
-          loading="lazy"
-          src={bannerImage || Error}
-          alt={`Banner do projeto ${props.titulo}`}
-        />
+        <img loading="lazy" src={bannerImage || Error} />
       </div>
       <div className="descricao">
         <p>{props.resumo}</p>
