@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
+import PhoneIcon from z;
+import LinkedInIcon from "../assets/linkedin.webp";
+import GithubIcon from "../assets/github.webp";
+import WhatsappIcon from "../assets/whatsapp.webp";
+import LogoIcon from "../assets/logo1.webp";
 
 export function Navbar() {
   const [isAtivo, setIsAtivo] = useState(false);
@@ -36,44 +41,24 @@ export function Navbar() {
             onClick={ativo}
             title="Contatos"
             className={`${isAtivo ? "" : "heartBeat"}`}>
-            <img
-              loading="lazy"
-              src="../assets/telefone.png"
-              alt="contato"
-              title="Contato"
-            />
+            <img loading="lazy" src={PhoneIcon} alt="contato" title="Contato" />
           </button>
         </li>
         <li>
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
-            <img
-              loading="lazy"
-              src="../assets/linkedin.webp"
-              alt="linkedIn"
-              title="LinkedIn"
-            />
+            <img loading="lazy" src={LinkedInIcon} alt="linkedIn" title="LinkedIn" />
           </a>
         </li>
         <li>
           <a href="https://github.com/alexsantos-dev" target="blank">
-            <img
-              loading="lazy"
-              src="../assets/github.webp"
-              alt="github"
-              title="Github"
-            />
+            <img loading="lazy" src={GithubIcon} alt="github" title="Github" />
           </a>
         </li>
         <li>
           <a href="https://wa.me/+5598981630767" target="blank">
-            <img
-              loading="lazy"
-              src="../assets/whatsapp.webp"
-              alt="whatsapp"
-              title="Whatsapp"
-            />
+            <img loading="lazy" src={WhatsappIcon} alt="whatsapp" title="Whatsapp" />
           </a>
         </li>
       </ul>
@@ -81,12 +66,7 @@ export function Navbar() {
       <ul className="logo">
         <li>
           <a href="#">
-            <img
-              loading="lazy"
-              src="../assets/logo1.webp"
-              alt="logo"
-              className="logoIcon"
-            />
+            <img loading="lazy" src={LogoIcon} alt="logo" className="logoIcon" />
           </a>
         </li>
       </ul>
