@@ -86,7 +86,7 @@ export function Secoes() {
         </h2>
 
         <div className="container">
-          <div className="item" loading="lazy">
+          <div className="item">
             <figure>
               <img
                 loading="lazy"

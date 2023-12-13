@@ -71,7 +71,7 @@ export function Projetos(props) {
   };
 
   return (
-    <div className="item" key={props.id}>
+    <div className="item" key={props.id} loading="lazy">
       <div className="banner">
         <img
           loading="lazy"
