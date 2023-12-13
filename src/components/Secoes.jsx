@@ -2,16 +2,6 @@ import { Projetos } from "./Projetos";
 import { SecoesContainer } from "./Secoes.styles";
 import { Container } from "./Projetos.styles";
 import { ProjetoSkeleton } from "./ProjetoSkeleton";
-import JsIcon from "../assets/javascript.webp";
-import ReactIcon from "../assets/react.webp";
-import NodeIcon from "../assets/node.webp";
-import ExpressIcon from "../assets/express.webp";
-import RestApiIcon from "../assets/rest-api.webp";
-import MongodbIcon from "../assets/mongodb.webp";
-import GitIcon from "../assets/git.webp";
-import StyledComponentsIcon from "../assets/styled-components.webp";
-import CssIcon from "../assets/css.webp";
-import HtmlIcon from "../assets/html.webp";
 
 import { useState, useEffect, useCallback } from "react";
 import {
@@ -96,9 +86,13 @@ export function Secoes() {
         </h2>
 
         <div className="container">
-          <div className="item">
+          <div className="item" loading="lazy">
             <figure>
-              <img src={JsIcon} alt="javascript logo" />
+              <img
+                loading="lazy"
+                src="../assets/javascript.webp"
+                alt="javascript logo"
+              />
               <figcaption>Javascript</figcaption>
             </figure>
             <p>
@@ -109,7 +103,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={ReactIcon} alt="react logo" />
+              <img loading="lazy" src="../assets/react.webp" alt="react logo" />
               <figcaption>React</figcaption>
             </figure>
             <p>
@@ -120,7 +114,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={NodeIcon} alt="node logo" />
+              <img loading="lazy" src="../assets/node.webp" alt="node logo" />
               <figcaption>Node</figcaption>
             </figure>
             <p>
@@ -131,7 +125,11 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={ExpressIcon} alt="express logo" />
+              <img
+                loading="lazy"
+                src="../assets/express.webp"
+                alt="express logo"
+              />
               <figcaption>Express</figcaption>
             </figure>
             <p>
@@ -142,7 +140,11 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={RestApiIcon} alt="rest api logo" />
+              <img
+                loading="lazy"
+                src="../assets/rest-api.webp"
+                alt="rest api logo"
+              />
               <figcaption>REST API</figcaption>
             </figure>
             <p>
@@ -157,7 +159,11 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={MongodbIcon} alt="mongodb  logo" />
+              <img
+                loading="lazy"
+                src="../assets/mongodb.webp"
+                alt="mongodb  logo"
+              />
               <figcaption>MongoDB</figcaption>
             </figure>
             <p>
@@ -170,7 +176,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={GitIcon} alt="git logo" />
+              <img loading="lazy" src="../assets/git.webp" alt="git logo" />
               <figcaption>Git</figcaption>
             </figure>
             <p>
@@ -181,7 +187,11 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={StyledComponentsIcon} alt="styled components logo" />
+              <img
+                loading="lazy"
+                src="../assets/styled-components.webp"
+                alt="styled components logo"
+              />
               <figcaption>Styled Components</figcaption>
             </figure>
             <p>
@@ -192,7 +202,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={CssIcon} alt="css3 logo" />
+              <img loading="lazy" src="../assets/css.webp" alt="css3 logo" />
               <figcaption>CSS3</figcaption>
             </figure>
             <p>
@@ -203,7 +213,7 @@ export function Secoes() {
           <hr />
           <div className="item">
             <figure>
-              <img src={HtmlIcon} alt="html5 logo" />
+              <img loading="lazy" src="../assets/html.webp" alt="html5 logo" />
               <figcaption>HTML5</figcaption>
             </figure>
             <p>
