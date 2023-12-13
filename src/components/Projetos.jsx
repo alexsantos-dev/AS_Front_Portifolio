@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Error from "../assets/error.svg";
 import Share from "../assets/share.webp";
 import Folder from "../assets/folder.webp";
 import Play from "../assets/play.webp";
