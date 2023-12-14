@@ -11,10 +11,8 @@ async function main() {
         }
     };
 
-    setTimeout(async () => {
-        await accessUrlAndPrintMessage();
-        setInterval(accessUrlAndPrintMessage, 30 * 60 * 1000);
-    }, 10000);
+    setInterval(accessUrlAndPrintMessage, 15 * 60 * 1000);
+
 
     await new Promise(() => { });
 }
