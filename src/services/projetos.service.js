@@ -6,7 +6,8 @@ async function main() {
         try {
             await axios.get('https://api-portifolio-ohio-br.onrender.com/');
         } catch (error) {
-            console.error('Erro ao acessar a página:', error.message);
+            console.error(error.message);
+            setInterval(accessUrlAndPrintMessage, 5000);
         }
     };
 
