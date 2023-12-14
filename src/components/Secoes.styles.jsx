@@ -47,7 +47,7 @@ export const SecoesContainer = styled.div`
 
   #Sobre {
     span {
-      font-family: Poppins-semiBold;
+      font-family: Poppins-semiBold, sans-serif;
       color: #000000;
     }
   }

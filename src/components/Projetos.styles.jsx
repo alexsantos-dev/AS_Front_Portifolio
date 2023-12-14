@@ -40,7 +40,7 @@ export const Container = styled.div`
       h3 {
         font-size: 2.8em;
         font-variant: small-caps;
-        font-family: Poppins-extraBold;
+        font-family: Poppins-extraBold, sans-serif;
         color: #000;
         text-shadow: 3px 3px #fff;
         position: absolute;

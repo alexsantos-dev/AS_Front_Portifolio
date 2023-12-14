@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  font-family: Popins-regular;
+  font-family: Popins-regular, sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
