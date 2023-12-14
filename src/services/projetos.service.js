@@ -1,5 +1,26 @@
 import axios from "axios";
 
+
+async function main() {
+    const accessUrlAndPrintMessage = async () => {
+        try {
+            await axios.get('https://api-portifolio-ohio-br.onrender.com/');
+            console.log('Página acessada!');
+        } catch (error) {
+            console.error('Erro ao acessar a página:', error.message);
+        }
+    };
+
+    setTimeout(async () => {
+        await accessUrlAndPrintMessage();
+        setInterval(accessUrlAndPrintMessage, 30 * 60 * 1000);
+    }, 10000);
+
+    await new Promise(() => { });
+}
+
+main();
+
 const baseURL = "https://api-portifolio-ohio-br.onrender.com";
 
 const axiosInstance = axios.create({
