@@ -18,12 +18,12 @@ export const LoadingScreen = styled.div`
   position: relative;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 80vh;
   background-color: #fff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 999999;
   & div {
     text-align: center;
@@ -43,9 +43,11 @@ export const LoadingScreen = styled.div`
       transparent 51%
     );
     background-size: 300% 100%;
-    animation: ${feixeDeLuz} 5s forwards infinite;
+    animation: ${feixeDeLuz} 5s ease infinite;
   }
   img {
+    width: 256px;
+    height: 256px;
     position: absolute;
     top: 50%;
     left: 50%;
