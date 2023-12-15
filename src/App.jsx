@@ -1,15 +1,32 @@
+import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { MobileFooter } from "./components/MobileFooter";
 import { Secoes } from "./components/Secoes";
+import { Loading } from "./components/Loading"; // Importa o componente de loading
 
-function App() {
+const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <Secoes />
-      <MobileFooter />
+      {loading && <Loading />}
+      {!loading && (
+        <>
+          <Navbar />
+          <Secoes />
+          <MobileFooter />
+        </>
+      )}
     </>
   );
-}
+};
 
 export default App;

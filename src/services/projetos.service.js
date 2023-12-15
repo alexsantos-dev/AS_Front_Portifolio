@@ -1,24 +1,5 @@
 import axios from "axios";
 
-
-async function main() {
-    const accessUrlAndPrintMessage = async () => {
-        try {
-            await axios.get('https://api-portifolio-ohio-br.onrender.com/');
-        } catch (error) {
-            console.error(error.message);
-            setInterval(accessUrlAndPrintMessage, 5000);
-        }
-    };
-
-    setInterval(accessUrlAndPrintMessage, 10000);
-
-
-    await new Promise(() => { });
-}
-
-main();
-
 const baseURL = "https://api-portifolio-ohio-br.onrender.com";
 
 const axiosInstance = axios.create({

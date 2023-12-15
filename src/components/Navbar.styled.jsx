@@ -70,7 +70,7 @@ export const Nav = styled.nav`
         transition: 0.3s ease-in;
         position: relative;
         color: #0d0d0d7a;
-        font-weight: 600;
+        font-weight: 300;
         font-size: 1.1em;
         padding: 0.6em 0.4em;
         &:hover {
@@ -85,13 +85,13 @@ export const Nav = styled.nav`
           background-color: transparent;
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: 5%;
           transition: 0.4s ease-in-out;
         }
 
         &:hover::after {
           background-color: #bf0404;
-          width: 100%;
+          width: 90%;
         }
       }
       .linkAtivo {
@@ -99,7 +99,7 @@ export const Nav = styled.nav`
 
         &::after {
           background-color: #bf0404;
-          width: 100%;
+          width: 90%;
         }
       }
     }
