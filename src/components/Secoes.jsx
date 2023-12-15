@@ -237,6 +237,7 @@ export function Secoes() {
                 titulo={item.titulo}
                 resumo={item.resumo}
                 banner={item.banner}
+                status={item.status}
                 tecnologiasUsadas={item.tecnologiasUsadas}
                 compartilhamentos={item.compartilhamentos}
                 acessRepositorio={item.acessRepositorio}

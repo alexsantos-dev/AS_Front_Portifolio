@@ -12,31 +12,29 @@ const pulse = keyframes`
 export const SkeletonContainer = styled.div`
   width: 360px;
   height: 520px;
-  padding: 0 0.6em 0.6em 0;
+  padding: 0.6em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 1em;
-  background-color: #d4d4d4;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  border-radius: 0.5em;
+  background-color: #da0251;
 
   .banner {
-    border-radius: 1em 1em 0 0;
+    border-radius: 0.5em 0.5em 0 0;
     display: flex;
     width: 100%;
     height: 40%;
-    background-color: #ffffff;
+    background-color: #ff6ca2;
     .skeleton {
       animation: ${pulse} 1.5s infinite;
-      background: linear-gradient(90deg, #d4d4d4 25%, #ffffff 50%, #d4d4d4 75%);
+      background: linear-gradient(90deg, #da0251 25%, #ffffff 50%, #da0251 75%);
       background-size: 200% 100%;
     }
   }
 
   .descricao {
-    background-color: #d4d4d4;
-    border: 1px solid #ffffff;
+    background-color: #590b28;
 
     position: relative;
     display: flex;
@@ -56,7 +54,7 @@ export const SkeletonContainer = styled.div`
     p,
     .skeleton {
       animation: ${pulse} 1.5s infinite;
-      background: linear-gradient(90deg, #d4d4d4 25%, #ffffff 50%, #d4d4d4 75%);
+      background: linear-gradient(90deg, #da0251 25%, #ffffff 50%, #da0251 75%);
       background-size: 200% 100%;
     }
 
@@ -101,15 +99,14 @@ export const SkeletonContainer = styled.div`
   }
 
   .interacoes {
-    border: 1px solid #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 15%;
     width: 100%;
     padding: 0 1em;
-    border-radius: 0 0 1em 1em;
-    background-color: #d4d4d4;
+    border-radius: 0 0 0.5em 0.5em;
+    background-color: #da0251;
 
     button,
     .skeleton {
@@ -142,9 +139,9 @@ export const SkeletonContainer = styled.div`
         animation: ${pulse} 1.5s infinite;
         background: linear-gradient(
           90deg,
-          #d4d4d4 25%,
+          #da0251 25%,
           #ffffff 50%,
-          #d4d4d4 75%
+          #da0251 75%
         );
         background-size: 200% 100%;
       }

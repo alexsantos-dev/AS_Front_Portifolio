@@ -1,4 +1,39 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+export const Pulse = keyframes`
+  0%{
+    transform: scale(1.3);
+  }
+  50%{
+    transform: scale(1);
+
+  }
+  100%{
+    transform: scale(1.3);
+
+  }
+`;
+
+export const Color = styled.div`
+  width: 18px;
+  height: 18px;
+  margin-right: 2px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background-color: ${(props) => {
+    switch (props.status) {
+      case "conceito":
+        return "white";
+      case "desenvolvimento":
+        return "#4fff57";
+      case "concluido":
+        return "blue";
+      default:
+        return "blue";
+    }
+  }};
+  animation: ${Pulse} 1s ease-in-out infinite;
+`;
 
 export const Container = styled.div`
   flex-wrap: wrap;
@@ -9,48 +44,69 @@ export const Container = styled.div`
   gap: 2.5em;
 
   .item {
+    position: relative;
+    overflow: hidden;
     width: 360px;
     height: 520px;
-    padding: 0 0.6em 0.6em 0;
+    padding: 0.6em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: 1em;
-    background: linear-gradient(-50deg, #d4d4d4 30%, #ffffff 70%);
-    border-right: solid 3px #000;
-    border-bottom: solid 3px #000;
+    border-radius: 0.5em;
+    background: linear-gradient(-40deg, #590b28 30%, #da0251 70%);
+    z-index: 2;
     box-shadow: rgb(0, 0, 0) 3px 1px 8px;
 
+    .status {
+      z-index: 1;
+      top: -6px;
+      right: -6px;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      background-color: #000;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        text-align: center;
+        color: #000;
+        font-size: 10em;
+        z-index: 2;
+      }
+    }
     .banner {
-      border-radius: 1em 1em 0 0;
+      border-radius: 0.5em 0.5em 0 0;
       display: flex;
       position: relative;
       width: 100%;
       height: 40%;
 
       img {
-        border-top: solid 1px #000;
-        border-left: solid 1px #000;
-        border-bottom: solid 1px #000;
-
-        border-radius: 0.8em 0.8em 0 0;
+        opacity: 0.8;
+        filter: brightness(80%) blur(1px);
+        border-radius: 0.5em 0.5em 0 0;
         width: 100%;
       }
       h3 {
-        font-size: 2.8em;
+        z-index: 2;
+        opacity: 1;
+        font-size: 2em;
         font-variant: small-caps;
         font-family: Poppins-extraBold, sans-serif;
-        color: #000;
-        text-shadow: 3px 3px #fff;
+        color: #fff;
+        text-shadow: 3px 3px #000;
         position: absolute;
-        top: 30%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
     }
     .descricao {
-      border-left: solid 1px #000;
+      border-top: solid 1px #000;
       background-color: #fff;
       position: relative;
       display: flex;
@@ -97,14 +153,13 @@ export const Container = styled.div`
     }
     .interacoes {
       border-top: solid 1px #000;
-      border-left: solid 1px #000;
       display: flex;
       justify-content: space-around;
       align-items: center;
       height: 15%;
       width: 100%;
       padding: 0 1em;
-      border-radius: 0 0 1em 1em;
+      border-radius: 0 0 0.5em 0.5em;
       background-color: #f9f9f9;
 
       button {

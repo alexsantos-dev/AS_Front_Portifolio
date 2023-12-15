@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Share from "../assets/share.webp";
 import Folder from "../assets/folder.webp";
 import Play from "../assets/play.webp";
+import { Color } from "./Projetos.styles";
 
 export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
@@ -91,6 +92,9 @@ export function Projetos(props) {
 
   return (
     <div className="item" key={props.id}>
+      <div className="status">
+        <Color status={props.status} />
+      </div>
       <div className="banner">
         <h3>{props.titulo}</h3>
         <img loading="lazy" src={bannerImage || Error} />
