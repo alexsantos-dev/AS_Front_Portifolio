@@ -4,9 +4,13 @@ const feixeDeLuz = keyframes`
    0% {
     background-position: 100% 0;
     transform: translate(-50%, -50%), rotate(45deg);
+   }
+  50%{
+    background-position: -50% 0;
+    transform: translate(-50%, -50%), rotate(45deg);
 
-
-  }
+  }  
+  
   100% {
     background-position: -100% 0;
     transform: translate(-50%, -50%), rotate(45deg);
@@ -43,7 +47,7 @@ export const LoadingScreen = styled.div`
       transparent 51%
     );
     background-size: 300% 100%;
-    animation: ${feixeDeLuz} 5s ease infinite;
+    animation: ${feixeDeLuz} 8s ease-in-out forwards;
   }
   img {
     width: 256px;
