@@ -50,6 +50,7 @@ export const LoadingScreen = styled.div`
     animation: ${feixeDeLuz} 8s ease-in-out forwards;
   }
   img {
+    color: transparent;
     width: 256px;
     height: 256px;
     position: absolute;
