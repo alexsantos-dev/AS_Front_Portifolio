@@ -3,6 +3,9 @@ import { SkeletonContainer } from "./ProjetoSkeleton.styles";
 export function ProjetoSkeleton(props) {
   return (
     <SkeletonContainer key={props.id}>
+      <div className="status">
+        <div className="skeleton"></div>
+      </div>
       <div className="banner">
         <div className="skeleton"></div>
       </div>

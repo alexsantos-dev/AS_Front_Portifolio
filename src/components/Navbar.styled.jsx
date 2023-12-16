@@ -251,11 +251,11 @@ export const Nav = styled.nav`
   }
 
   @media (max-width: 360px) {
-    height: 3em;
+    height: 4em;
 
     ul.logo {
       .logoIcon {
-        width: 2.5em;
+        width: 3.5em;
       }
     }
     ul.contato {
@@ -263,9 +263,14 @@ export const Nav = styled.nav`
       li {
         button,
         a {
-          height: 2em;
+          height: 2.5em;
           img {
-            width: 2em;
+            width: 2.5em;
+          }
+        }
+        button {
+          img {
+            transform: scale(0.85);
           }
         }
       }

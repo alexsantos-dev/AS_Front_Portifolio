@@ -10,8 +10,10 @@ const pulse = keyframes`
 `;
 
 export const SkeletonContainer = styled.div`
+  position: relative;
+  overflow: hidden;
   width: 360px;
-  height: 520px;
+  height: 600px;
   padding: 0.6em;
   display: flex;
   flex-direction: column;
@@ -20,11 +22,34 @@ export const SkeletonContainer = styled.div`
   border-radius: 0.5em;
   background-color: #da0251;
 
+  .status {
+    z-index: 1;
+    top: -6px;
+    right: -6px;
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: #424242;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .skeleton {
+      animation: ${pulse} 1.5s infinite;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #424242 25%, #ffffff 50%, #424242 75%);
+      background-size: 200% 100%;
+    }
+  }
+
   .banner {
     border-radius: 0.5em 0.5em 0 0;
     display: flex;
     width: 100%;
-    height: 40%;
+    height: 35%;
     background-color: #ff6ca2;
     .skeleton {
       animation: ${pulse} 1.5s infinite;
@@ -42,7 +67,7 @@ export const SkeletonContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 55%;
 
     h3,
     p {
@@ -102,7 +127,7 @@ export const SkeletonContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15%;
+    height: 10%;
     width: 100%;
     padding: 0 1em;
     border-radius: 0 0 0.5em 0.5em;

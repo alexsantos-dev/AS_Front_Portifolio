@@ -96,10 +96,11 @@ export function Projetos(props) {
         <Bubble status={props.status} />
       </div>
       <div className="banner">
-        <h3>{props.titulo}</h3>
-        <img loading="lazy" src={bannerImage || Error} />
+        <img loading="lazy" src={props.banner} />
       </div>
       <div className="descricao">
+        <h3>{props.titulo}</h3>
+
         <p>{props.resumo}</p>
         <div className="tecnologias">
           {props.tecnologiasUsadas.map((tecnologia) => (

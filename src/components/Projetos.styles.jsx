@@ -63,7 +63,7 @@ export const Container = styled.div`
     position: relative;
     overflow: hidden;
     width: 360px;
-    height: 500px;
+    height: 600px;
     padding: 0.6em;
     display: flex;
     flex-direction: column;
@@ -99,26 +99,11 @@ export const Container = styled.div`
       display: flex;
       position: relative;
       width: 100%;
-      height: 40%;
+      height: 35%;
 
       img {
-        opacity: 0.8;
-        filter: brightness(80%) blur(1px);
         border-radius: 0.5em 0.5em 0 0;
         width: 100%;
-      }
-      h3 {
-        z-index: 2;
-        opacity: 1;
-        font-size: 2em;
-        font-variant: small-caps;
-        font-family: Poppins-extraBold, sans-serif;
-        color: #fff;
-        text-shadow: 3px 3px #000;
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
       }
     }
     .descricao {
@@ -130,7 +115,13 @@ export const Container = styled.div`
       justify-content: center;
       align-items: center;
       width: 100%;
-      height: 50%;
+      height: 55%;
+
+      h3 {
+        font-size: 1.8em;
+        text-decoration: underline #49f2e1;
+        text-underline-offset: 0.15em;
+      }
 
       p {
         width: 95%;
@@ -172,7 +163,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 15%;
+      height: 10%;
       width: 100%;
       padding: 0 1em;
       border-radius: 0 0 0.5em 0.5em;
@@ -272,7 +263,17 @@ export const Container = styled.div`
       opacity: 0.7;
     }
   }
+  @media (max-width: 360px) {
+    .item {
+      height: 480px;
 
+      .descricao {
+        h3 {
+          font-size: 1.6em;
+        }
+      }
+    }
+  }
   @media (min-width: 1280px) {
     .item {
       width: 500px;
