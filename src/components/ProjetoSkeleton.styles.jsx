@@ -158,4 +158,12 @@ export const SkeletonContainer = styled.div`
       }
     }
   }
+  @media (min-width: 1280px) {
+    width: 500px;
+    height: 500px;
+
+    h3 {
+      width: 100%;
+    }
+  }
 `;

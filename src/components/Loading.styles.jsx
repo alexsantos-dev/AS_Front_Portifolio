@@ -43,10 +43,11 @@ export const LoadingScreen = styled.div`
       transparent 51%
     );
     background-size: 300% 100%;
-    animation: ${feixeDeLuz} 6s infinite;
+    animation: ${feixeDeLuz} 7s infinite;
   }
   img {
     color: transparent;
+    filter: drop-shadow(3px 3px 3px #0000008b);
     width: 256px;
     height: 256px;
     position: absolute;

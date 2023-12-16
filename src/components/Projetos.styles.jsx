@@ -1,35 +1,52 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-// const Pulse = keyframes`
-//   0%{
-//     transform: scale(1.3);
-//   }
-//   50%{
-//     transform: scale(1);
+const Pulse = keyframes`
+   0%{
+     transform: scale(1.3);
+   }
+   50%{
+     transform: scale(1);
 
-//   }
-//   100%{
-//     transform: scale(1.3);
+   }
+   100%{
+     transform: scale(1.3);
 
-//   }
-// `;
+   }
+ `;
 
-export const Color = styled.div`
+export const Bubble = styled.div`
   width: 18px;
   height: 18px;
   margin-right: 2px;
   margin-top: 2px;
   border-radius: 50%;
-  background-color: ${(props) => {
+  animation: ${Pulse}
+    ${(props) => {
+      switch (props.status) {
+        case "desenvolvimento":
+          return `2.5s infinite`;
+        default:
+          return "none";
+      }
+    }};
+  background: ${(props) => {
     switch (props.status) {
-      case "conceito":
-        return "#fff";
       case "desenvolvimento":
-        return "#4fff57";
+        return "radial-gradient(circle at 50% 50%, #9effa3, #4fff57);";
       case "concluido":
-        return "#54b2ff";
+        return "radial-gradient(circle at 50% 50%, #48a7ff , #004b92 );";
       default:
-        return "blue";
+        return "radial-gradient(circle at 50% 50%, #fff , #d8d8d8 );";
+    }
+  }};
+  filter: ${(props) => {
+    switch (props.status) {
+      case "desenvolvimento":
+        return "drop-shadow(0 0 10px #4fff57)";
+      case "conceito":
+        return "drop-shadow(0 0 4px #fff)";
+      default:
+        return "none";
     }
   }};
 `;
@@ -46,7 +63,7 @@ export const Container = styled.div`
     position: relative;
     overflow: hidden;
     width: 360px;
-    height: 520px;
+    height: 500px;
     padding: 0.6em;
     display: flex;
     flex-direction: column;
@@ -258,8 +275,16 @@ export const Container = styled.div`
 
   @media (min-width: 1280px) {
     .item {
-      width: 360px;
-      height: 480px;
+      width: 500px;
+      height: 500px;
+
+      .banner {
+        height: 50%;
+        h3 {
+          font-size: 2.2em;
+          width: 100%;
+        }
+      }
     }
   }
 `;

@@ -3,16 +3,38 @@ import styled, { keyframes } from "styled-components";
 // 6cf5f5
 
 const heartbeat = keyframes`
-  0% {
+  37% {
     transform: scale(1);
   }
-  50% {
-    transform: scale(1.2);
-    background: #0dff00 ;
-    box-shadow: #ff0000 0px 2px 10px;
+  40%{
+    transform: scale(1.1) rotate(2deg);
   }
-  100% {
-    transform: scale(1);
+  43%{
+    transform: scale(1.1) rotate(-2deg);
+  }
+  46%{
+    transform: scale(1.15) rotate(4deg);
+  }
+  49%{
+    transform: scale(1.15) rotate(-4deg);
+  }
+  52%{
+    transform: scale(1.2)  rotate(6deg);
+  }
+  55%{
+    transform: scale(1.15) rotate(-6deg);
+  }
+  58%{
+    transform: scale(1.15) rotate(4deg);
+  }
+  61%{
+    transform: scale(1.1) rotate(-4deg);
+  }
+  64%{
+    transform: scale(1.1) rotate(2deg);
+  }
+  67%{
+    transform: scale(1) rotate(-2deg);
   }
 `;
 
@@ -47,18 +69,17 @@ export const Nav = styled.nav`
 
   ul {
     display: flex;
-    /* width: 33%; */
     height: 100%;
     align-items: center;
     justify-content: space-around;
     gap: 1em;
 
     &.logo {
-      /* width: 26em; */
       align-self: center;
       .logoIcon {
         margin-top: 0.4em;
         width: 5em;
+        filter: drop-shadow(3px 3px 3px #0000008b);
       }
     }
 
@@ -108,16 +129,6 @@ export const Nav = styled.nav`
       width: 18em;
       border-radius: 6em;
 
-      &:hover > :not(:hover) {
-        opacity: 0.7;
-        transform: scale(1);
-      }
-      &:hover > :hover {
-        opacity: 1;
-        transform: scale(1.1);
-        box-shadow: #49f2e1 0px 2px 10px;
-      }
-
       li {
         transition: 0.2s ease-in;
         border-radius: 6em;
@@ -132,12 +143,9 @@ export const Nav = styled.nav`
           align-items: center;
           height: 3em;
         }
-      }
-      li:first-child {
-        display: none;
-      }
-      li:nth-child(3) {
-        background: #fff center center;
+        &:first-child {
+          display: none;
+        }
       }
     }
   }
@@ -161,8 +169,6 @@ export const Nav = styled.nav`
       transition: all 0.3s;
       border-radius: 6em;
       z-index: 10;
-      background: #f1f1f1;
-      border: solid 2px #0d0d0d;
       padding: 1.7em;
       flex-direction: row-reverse;
 
@@ -173,7 +179,6 @@ export const Nav = styled.nav`
       &:hover > :hover {
         opacity: 1;
         transform: scale(1.1);
-        box-shadow: #2e2473 0px 2px 10px;
       }
 
       li {
@@ -189,15 +194,23 @@ export const Nav = styled.nav`
       }
       li {
         button {
+          background: none;
           width: 2em;
+          height: 2em;
           display: flex;
           align-items: center;
           justify-content: center;
           border: none;
           border-radius: 50%;
+
+          img {
+            filter: drop-shadow(#000 1px 1px 0);
+          }
         }
         button.heartBeat {
-          animation: ${heartbeat} 2s infinite;
+          img {
+            animation: ${heartbeat} 2s infinite;
+          }
         }
       }
       li:not(:first-child) {
@@ -222,7 +235,14 @@ export const Nav = styled.nav`
         display: block;
       }
       li:first-child {
-        margin-right: 1.5em;
+        button {
+          img {
+            width: 3em;
+          }
+        }
+        &:hover {
+          transform: scale(1);
+        }
       }
     }
     ul.sections {
@@ -254,5 +274,17 @@ export const Nav = styled.nav`
 
   @media (min-width: 1280px) {
     justify-content: space-around;
+
+    .contato {
+      &:hover > :not(:hover) {
+        opacity: 0.7;
+        transform: scale(1);
+      }
+      &:hover > :hover {
+        opacity: 1;
+        transform: scale(1.1);
+        filter: drop-shadow(#590b28 0 0 4px);
+      }
+    }
   }
 `;

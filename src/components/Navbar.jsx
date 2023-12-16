@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
-import PhoneIcon from "../assets/telefone.png";
+import PhoneIcon from "../assets/telefone.webp";
 import LinkedInIcon from "../assets/linkedin.webp";
 import GithubIcon from "../assets/github.webp";
 import WhatsappIcon from "../assets/whatsapp.webp";
