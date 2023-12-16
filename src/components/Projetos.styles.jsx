@@ -1,18 +1,18 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
-export const Pulse = keyframes`
-  0%{
-    transform: scale(1.3);
-  }
-  50%{
-    transform: scale(1);
+// const Pulse = keyframes`
+//   0%{
+//     transform: scale(1.3);
+//   }
+//   50%{
+//     transform: scale(1);
 
-  }
-  100%{
-    transform: scale(1.3);
+//   }
+//   100%{
+//     transform: scale(1.3);
 
-  }
-`;
+//   }
+// `;
 
 export const Color = styled.div`
   width: 18px;
@@ -23,16 +23,15 @@ export const Color = styled.div`
   background-color: ${(props) => {
     switch (props.status) {
       case "conceito":
-        return "white";
+        return "#fff";
       case "desenvolvimento":
         return "#4fff57";
       case "concluido":
-        return "blue";
+        return "#54b2ff";
       default:
         return "blue";
     }
   }};
-  animation: ${Pulse} 1s ease-in-out infinite;
 `;
 
 export const Container = styled.div`
