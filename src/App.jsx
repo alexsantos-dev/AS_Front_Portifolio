@@ -2,25 +2,7 @@ import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { MobileFooter } from "./components/MobileFooter";
 import { Secoes } from "./components/Secoes";
-import { Loading } from "./components/Loading"; // Importa o componente de loading
-import axios from "axios";
-
-async function main() {
-  const accessUrl = async () => {
-    try {
-      await axios.get("https://alexsantos-fullstack.vercel.app/");
-    } catch (error) {
-      console.error(error.message);
-      setInterval(accessUrl, 5000);
-    }
-  };
-
-  setInterval(accessUrl, 900000);
-
-  await new Promise(() => {});
-}
-
-main();
+import { Loading } from "./components/Loading";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
