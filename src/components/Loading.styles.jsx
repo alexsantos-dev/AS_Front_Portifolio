@@ -5,11 +5,7 @@ const feixeDeLuz = keyframes`
     background-position: 100% 0;
     transform: translate(-50%, -50%), rotate(45deg);
    }
-  50%{
-    background-position: -50% 0;
-    transform: translate(-50%, -50%), rotate(45deg);
-
-  }  
+  
   
   100% {
     background-position: -100% 0;
@@ -47,7 +43,7 @@ export const LoadingScreen = styled.div`
       transparent 51%
     );
     background-size: 300% 100%;
-    animation: ${feixeDeLuz} 8s ease-in-out forwards;
+    animation: ${feixeDeLuz} 6s infinite;
   }
   img {
     color: transparent;

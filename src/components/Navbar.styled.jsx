@@ -58,7 +58,7 @@ export const Nav = styled.nav`
       align-self: center;
       .logoIcon {
         margin-top: 0.4em;
-        width: 4em;
+        width: 5em;
       }
     }
 
@@ -150,8 +150,7 @@ export const Nav = styled.nav`
 
       .logoIcon {
         margin-top: 0.4em;
-        /* margin-left: 1em; */
-        width: 3.8em;
+        width: 4.8em;
       }
     }
     ul.contato {
