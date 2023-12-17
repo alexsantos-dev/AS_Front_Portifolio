@@ -214,11 +214,11 @@ export function Secoes() {
         </div>
       </section>
       <section id="Projetos">
+        <h2>
+          <span>#</span>Projetos
+        </h2>
         <div className="opcoes">
-          <h2>
-            <span>#</span>Projetos
-          </h2>
-          <div className="status">
+          <div className="ContainerStatus">
             Status:<span className="conceito">conceito</span>
             <span className="desenvolvimento">em desenvolvimento</span>
             <span className="concluido">concluído</span>
@@ -256,6 +256,7 @@ export function Secoes() {
             ))}
         </Container>
       </section>
+      <footer>Alex Santos&copy; All Rights Reserved</footer>
     </SecoesContainer>
   );
 }

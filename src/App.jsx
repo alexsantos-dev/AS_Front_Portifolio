@@ -19,11 +19,11 @@ const App = () => {
     <>
       {loading && <Loading />}
       {!loading && (
-        <>
+        <body>
           <Navbar />
           <Secoes />
           <MobileFooter />
-        </>
+        </body>
       )}
     </>
   );

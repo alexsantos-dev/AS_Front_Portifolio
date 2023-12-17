@@ -12,9 +12,8 @@ const textReveal = keyframes`
 
 export const SecoesContainer = styled.div`
   position: relative;
-  width: 100vw;
-  top: 4.5em;
-  left: 0;
+  width: 100%;
+  margin-top: 3.8em;
   padding-bottom: 4em;
   background-color: #590b28;
 
@@ -24,7 +23,7 @@ export const SecoesContainer = styled.div`
     max-width: 1280px;
     border-radius: 1em;
     padding: 3em 0;
-    margin: 0 auto 2em auto;
+    margin: 0 auto 4em auto;
 
     h1 {
       color: #000;
@@ -77,19 +76,20 @@ export const SecoesContainer = styled.div`
   }
 
   #Projetos {
-    .opcoes {
-      gap: 4em;
+    margin-bottom: 8em;
+    div.opcoes {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      width: 70%;
-      margin-bottom: 4em;
-
-      .status {
-        width: 55%;
+      align-items: flex-end;
+      width: 78%;
+      margin-top: -2%;
+      margin-bottom: 2em;
+      .ContainerStatus {
+        width: 40%;
+        margin-left: 3em;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
 
         span {
           position: relative;
@@ -127,41 +127,37 @@ export const SecoesContainer = styled.div`
         font-size: 1em;
         font-weight: 500;
         padding: 0.2em 0.4em;
-        height: 2em;
         outline: none;
       }
     }
   }
 
-  #Projetos > * {
-    box-shadow: none;
-  }
-
-  section#bem-vindo {
-    margin-top: 1.3em;
-    border-radius: 0.4em;
-    min-width: 90%;
-    height: 10em;
-    width: 1280px;
-    max-width: 100%;
-    background-color: #fff;
-
-    h1 {
-      z-index: 1;
-      text-shadow: 1px 1px #bf0404;
-    }
-  }
   section:not(:first-child) {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .bg-nav-section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 1em 1em 0 1em;
     background-color: #49f2e1;
+
+    #bem-vindo {
+      margin-top: 2em;
+      border-radius: 0.4em;
+      min-width: 90%;
+      height: 10em;
+      width: 1280px;
+      max-width: 100%;
+      background-color: #fff;
+
+      h1 {
+        z-index: 1;
+        text-shadow: 1px 1px #bf0404;
+      }
+    }
   }
 
   div.container {
@@ -223,9 +219,21 @@ export const SecoesContainer = styled.div`
       }
     }
   }
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #001427;
+    height: 3em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media (max-width: 884px) {
-    top: 3.5em;
+    margin-top: 3.5em;
     section#bem-vindo {
       h1 {
         font-size: 1.8em;
@@ -244,13 +252,12 @@ export const SecoesContainer = styled.div`
         width: 100%;
         padding: 1em 0 0 1.5em;
         height: 8em;
-        align-items: flex-start;
+        align-items: left;
         flex-direction: column;
-        margin-bottom: 10em;
-        .status {
-          width: 60%;
-          height: 100%;
-          font-size: 0.8em;
+        margin-bottom: 6em;
+        .ContainerStatus {
+          width: 100%;
+          font-size: 1em;
           flex-direction: column;
           align-items: flex-start;
 
@@ -263,7 +270,7 @@ export const SecoesContainer = styled.div`
           width: 10em;
           margin-right: 0.7em;
           position: absolute;
-          top: 180%;
+          top: 120%;
           right: 0;
         }
       }
@@ -283,30 +290,13 @@ export const SecoesContainer = styled.div`
         width: 100%;
       }
     }
+    footer {
+      margin-bottom: 3.5em;
+    }
   }
   @media (min-width: 885px) {
     section#Sobre {
-      margin-top: 2em;
-    }
-    section#Projetos {
-      .opcoes {
-        height: 8em;
-        position: relative;
-        select {
-          margin-right: 2.5%;
-
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 10em;
-        }
-        .status {
-          margin-left: 2.5%;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-        }
-      }
+      margin-top: 3.5em;
     }
   }
 `;

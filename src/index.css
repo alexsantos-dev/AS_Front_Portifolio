@@ -55,6 +55,8 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-size: 16px;
+  width: 100vw;
+  height: auto;
   min-width: 300px;
   max-width: 100%;
   min-height: 100vh;
@@ -96,51 +98,4 @@ p {
   letter-spacing: 0.025em;
   margin-bottom: 1em;
   font-family: Poppins-regular;
-}
-
-/* Celulares pequenos*/
-
-@media (max-width: 320px) {
-  body {
-    max-width: 100vw;
-    height: 100dvb;
-  }
-}
-
-/* Celulares convencionais */
-
-@media (375px <=width <=884px) {
-  body {
-    max-width: 100vw;
-    height: 100dvb;
-  }
-}
-
-
-/* Celulares em modo paisagem*/
-
-@media (orientation: landscape) and (max-width: 576px) {
-  body {
-    max-width: 100%;
-    height: 100dvb;
-  }
-}
-
-/* Tablets */
-
-
-/* Desktops */
-@media (max-width: 992px) {
-  body {
-    max-width: 100vw;
-    height: 100vh;
-  }
-}
-
-/* Desktops grandes */
-@media (max-width: 1200px) {
-  body {
-    max-width: 100vw;
-    height: 100vh;
-  }
 }

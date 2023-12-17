@@ -88,10 +88,10 @@ const itemFade = keyframes`
 `;
 
 export const Nav = styled.nav`
-  width: 100%;
+  width: 100vw;
   background-color: #ffffff;
   padding: 1em;
-  height: 4.5em;
+  height: 3.8em;
   top: 0;
   left: 0;
   display: flex;
@@ -119,7 +119,7 @@ export const Nav = styled.nav`
       align-self: center;
       .logoIcon {
         margin-top: 0.4em;
-        width: 5em;
+        width: 4em;
         filter: drop-shadow(3px 3px 3px #0000008b);
       }
     }
@@ -177,7 +177,7 @@ export const Nav = styled.nav`
         width: 2.1em;
 
         img {
-          width: 3em;
+          width: 2.5em;
         }
         a {
           display: flex;
