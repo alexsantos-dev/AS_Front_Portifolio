@@ -16,21 +16,21 @@ axiosInstance.interceptors.request.use(config => {
 });
 
 export function getRecentes() {
-    return axiosInstance.get("/recentes");
+    return axiosInstance.get("projetos/recentes");
 }
 
 export function getRelevantes() {
-    return axiosInstance.get("/relevantes");
+    return axiosInstance.get("projetos/relevantes");
 }
 
 export function visualizar(projetoId) {
-    return axiosInstance.patch(`/visualizacoes/${projetoId}`);
+    return axiosInstance.patch(`projetos/visualizacoes/${projetoId}`);
 }
 
 export function compartilhar(projetoId) {
-    return axiosInstance.patch(`/compartilhar/${projetoId}`);
+    return axiosInstance.patch(`projetos/compartilhar/${projetoId}`);
 }
 
 export function acessarRep(projetoId) {
-    return axiosInstance.patch(`/acessRepositorio/${projetoId}`);
+    return axiosInstance.patch(`projetos/acessRepositorio/${projetoId}`);
 }
