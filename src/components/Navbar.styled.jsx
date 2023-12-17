@@ -201,6 +201,7 @@ export const Nav = styled.nav`
     }
   }
   @media (max-width: 884px) {
+    height: 3.5em;
     flex-direction: row-reverse;
 
     ul.logo {
@@ -210,7 +211,7 @@ export const Nav = styled.nav`
 
       .logoIcon {
         margin-top: 0.4em;
-        width: 4.8em;
+        width: 3.8em;
       }
     }
     ul.contato {
@@ -239,6 +240,7 @@ export const Nav = styled.nav`
         width: 2em;
 
         img {
+          width: 2.5em;
           filter: drop-shadow(#000 1px 1px 0);
         }
       }
@@ -252,7 +254,7 @@ export const Nav = styled.nav`
       li {
         button {
           background: none;
-          width: 2em;
+          width: 1.5em;
           height: 2em;
           display: flex;
           align-items: center;
@@ -288,11 +290,6 @@ export const Nav = styled.nav`
         display: block;
       }
       li:first-child {
-        button {
-          img {
-            width: 3em;
-          }
-        }
         &:hover {
           transform: scale(1);
         }
@@ -300,33 +297,6 @@ export const Nav = styled.nav`
     }
     ul.sections {
       display: none;
-    }
-  }
-
-  @media (max-width: 360px) {
-    height: 3em;
-
-    ul.logo {
-      .logoIcon {
-        width: 3em;
-      }
-    }
-    ul.contato {
-      padding: 1em;
-      li {
-        button,
-        a {
-          height: 2.5em;
-          img {
-            width: 2.5em;
-          }
-        }
-        button {
-          img {
-            transform: scale(0.85);
-          }
-        }
-      }
     }
   }
 

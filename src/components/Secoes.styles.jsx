@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const SecoesContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: 100vw;
   top: 4.5em;
+  left: 0;
   padding-bottom: 4em;
   background-color: #590b28;
 
@@ -72,13 +73,9 @@ export const SecoesContainer = styled.div`
       align-items: center;
       width: 90%;
       margin-bottom: 3em;
-      /* border: solid 1px red; */
-      > * {
-        width: 33%;
-      }
 
       h2 {
-        /* border: solid 1px green; */
+        width: 20%;
         padding: 0;
         display: flex;
         align-items: center;
@@ -90,7 +87,7 @@ export const SecoesContainer = styled.div`
       }
 
       .status {
-        width: 100%;
+        width: 45%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -148,7 +145,9 @@ export const SecoesContainer = styled.div`
 
   section#bem-vindo {
     border-radius: 0.4em;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
     height: 12em;
     margin-top: 1.4em;
@@ -157,7 +156,6 @@ export const SecoesContainer = styled.div`
     h1 {
       z-index: 1;
       text-shadow: 1px 1px #bf0404;
-      padding-bottom: 1em;
     }
   }
   section:not(:first-child) {
@@ -228,27 +226,14 @@ export const SecoesContainer = styled.div`
     }
   }
 
-  @media (max-width: 360px) {
-    top: 3em;
-
-    #Projetos {
-      .opcoes {
-        .status {
-          font-size: 0.8em;
-        }
-      }
-    }
-  }
-
-  @media (max-width: 400px) {
-    h1 {
-      font-size: 2em;
-    }
-  }
-
   @media (max-width: 884px) {
-    h1 {
-      font-size: 2em;
+    top: 3.5em;
+    section#bem-vindo {
+      h1 {
+        font-size: 2em;
+        width: 80%;
+        padding-bottom: 0.3em;
+      }
     }
     section#Projetos {
       flex-direction: column;
@@ -264,6 +249,7 @@ export const SecoesContainer = styled.div`
 
         .status {
           width: 60%;
+          font-size: 0.8em;
           flex-direction: column;
           align-items: flex-start;
 
@@ -303,8 +289,21 @@ export const SecoesContainer = styled.div`
     }
     section#Projetos {
       .opcoes {
+        height: 8em;
+        position: relative;
         select {
-          width: 16em;
+          margin-right: 2.5%;
+
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 10em;
+        }
+        .status {
+          margin-left: 2.5%;
+          position: absolute;
+          left: 0;
+          bottom: 0;
         }
       }
     }

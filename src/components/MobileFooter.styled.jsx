@@ -3,17 +3,15 @@ import styled, { keyframes } from "styled-components";
 const Reveal = keyframes`
   0%{
     transform: translateY(100%);
-    opacity: 0;
   }
   100%{
     transform: translateY(0);
-    opacity: 1;
   }
 `;
 
 export const MobileFootCont = styled.nav`
   width: 100%;
-  height: 4.5em;
+  height: 3.5em;
   bottom: 0;
   left: 0;
   z-index: 10;
@@ -27,7 +25,7 @@ export const MobileFootCont = styled.nav`
 
   div {
     width: 80%;
-    height: 4em;
+    height: 3em;
     max-width: 400px;
     display: flex;
     justify-content: space-between;
@@ -52,7 +50,7 @@ export const MobileFootCont = styled.nav`
       }
 
       a {
-        padding: 1em;
+        padding: 0.7em 1em;
         display: flex;
         align-items: center;
         justify-items: center;
@@ -62,7 +60,7 @@ export const MobileFootCont = styled.nav`
         color: #0d0d0d;
 
         img {
-          width: 2em;
+          width: 1.5em;
         }
       }
     }
@@ -90,8 +88,8 @@ export const MobileFootCont = styled.nav`
       top: 0.1em;
     }
   }
-  @media (max-width: 360px) {
-    height: 3em;
+  /* @media (dpi: 360px) {
+    height: 1em;
 
     div {
       height: 2.5em;
@@ -100,12 +98,12 @@ export const MobileFootCont = styled.nav`
         a {
           padding: 0.6em;
           img {
-            width: 1em;
+            width: 0.5em;
           }
         }
       }
     }
-  }
+  } */
 
   @media (min-width: 884px) {
     display: none;

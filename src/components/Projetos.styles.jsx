@@ -65,7 +65,7 @@ export const Container = styled.div`
     position: relative;
     overflow: hidden;
     width: 360px;
-    height: 600px;
+    height: 520px;
     padding: 0.6em;
     display: flex;
     flex-direction: column;
@@ -264,24 +264,10 @@ export const Container = styled.div`
       opacity: 0.7;
     }
   }
-  @media (max-width: 360px) {
-    .item {
-      height: 380px;
-
-      .descricao {
-        h3 {
-          font-size: 1.4em;
-        }
-      }
-      .interacoes {
-        height: 3em;
-      }
-    }
-  }
   @media (min-width: 1280px) {
     .item {
-      width: 500px;
-      height: 560px;
+      width: 400px;
+      height: 480px;
 
       .banner {
         height: 40%;
