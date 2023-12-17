@@ -73,7 +73,6 @@ export const Container = styled.div`
     justify-content: center;
     border-radius: 0.5em;
     background: linear-gradient(-40deg, #590b28 30%, #da0251 70%);
-    z-index: 2;
     box-shadow: rgb(0, 0, 0) 3px 1px 8px;
 
     .status {
@@ -226,11 +225,11 @@ export const Container = styled.div`
       padding: 20px;
       background-color: #fff;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      z-index: 1000;
-    }
+      z-index: 9999999;
 
-    .dialog p {
-      text-align: center;
+      p {
+        text-align: center;
+      }
     }
 
     button {

@@ -1,8 +1,47 @@
 import styled, { keyframes } from "styled-components";
 
-// 6cf5f5
+const logoAnim = keyframes`
+  0%{
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
-const heartbeat = keyframes`
+const itemList = keyframes`
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.2);
+  }
+  100%{
+    transform: scale(1);
+  }
+`;
+
+const ListRevealLeft = keyframes`
+  0%{
+    transform: translatex(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+`;
+
+const ListRevealRight = keyframes`
+  0%{
+    transform: translatex(100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+`;
+
+const trimmm = keyframes`
   37% {
     transform: scale(1);
   }
@@ -63,7 +102,6 @@ export const Nav = styled.nav`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-bottom: 2px solid #0d0d0d;
-
   div.btn {
     display: none;
   }
@@ -76,6 +114,8 @@ export const Nav = styled.nav`
     gap: 1em;
 
     &.logo {
+      animation: ${logoAnim} 1.5s forwards;
+
       align-self: center;
       .logoIcon {
         margin-top: 0.4em;
@@ -87,6 +127,7 @@ export const Nav = styled.nav`
     &.sections {
       justify-content: space-between;
       align-items: center;
+      animation: ${ListRevealRight} 1.5s forwards;
 
       a {
         transition: 0.3s ease-in;
@@ -129,7 +170,7 @@ export const Nav = styled.nav`
     &.contato {
       width: 18em;
       border-radius: 6em;
-
+      animation: ${ListRevealLeft} 1.5s forwards;
       li {
         transition: 0.2s ease-in;
         border-radius: 6em;
@@ -148,14 +189,24 @@ export const Nav = styled.nav`
           display: none;
         }
       }
+      li:nth-child(2) {
+        animation: ${itemList} 1.8s forwards;
+      }
+      li:nth-child(3) {
+        animation: ${itemList} 1.9s forwards;
+      }
+      li:nth-child(4) {
+        animation: ${itemList} 2s forwards;
+      }
     }
   }
   @media (max-width: 884px) {
     flex-direction: row-reverse;
 
     ul.logo {
-      width: 90%;
+      width: 10%;
       justify-content: left;
+      animation: ${ListRevealLeft} 1.5s forwards;
 
       .logoIcon {
         margin-top: 0.4em;
@@ -172,6 +223,7 @@ export const Nav = styled.nav`
       z-index: 10;
       padding: 1.7em;
       flex-direction: row-reverse;
+      animation: ${ListRevealRight} 1.5s forwards;
 
       &:hover > :not(:hover) {
         opacity: 1;
@@ -210,7 +262,7 @@ export const Nav = styled.nav`
         }
         button.heartBeat {
           img {
-            animation: ${heartbeat} 2s infinite;
+            animation: ${trimmm} 2s infinite;
           }
         }
       }

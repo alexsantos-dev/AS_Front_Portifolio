@@ -1,4 +1,15 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const Reveal = keyframes`
+  0%{
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
 export const MobileFootCont = styled.nav`
   width: 100%;
@@ -12,6 +23,7 @@ export const MobileFootCont = styled.nav`
   position: fixed;
   background-color: #ffffff;
   border-top: 2px solid #0d0d0d;
+  animation: ${Reveal} 1.5s forwards;
 
   div {
     width: 80%;

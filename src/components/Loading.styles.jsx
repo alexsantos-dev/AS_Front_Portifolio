@@ -14,6 +14,15 @@ const feixeDeLuz = keyframes`
   }
 `;
 
+const logoAnim = keyframes`
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+`;
+
 export const LoadingScreen = styled.div`
   position: relative;
   top: 0;
@@ -55,5 +64,6 @@ export const LoadingScreen = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    animation: ${logoAnim} 1.5s ease-in-out;
   }
 `;
