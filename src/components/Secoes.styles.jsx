@@ -1,4 +1,14 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const textReveal = keyframes`
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+`;
 
 export const SecoesContainer = styled.div`
   position: relative;
@@ -31,6 +41,7 @@ export const SecoesContainer = styled.div`
     h1,
     h2,
     p {
+      animation: ${textReveal} 1s ease-in-out;
       width: 90%;
       max-width: 800px;
     }
