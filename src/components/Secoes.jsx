@@ -221,7 +221,7 @@ export function Secoes() {
           <div className="status">
             Status:<span className="conceito">conceito</span>
             <span className="desenvolvimento">em desenvolvimento</span>
-            <span className="concluido">concluido</span>
+            <span className="concluido">concluído</span>
           </div>
           <select value={opcaoSelecionada} onChange={handleSelectChange}>
             <option value="recentes">Mais Recentes</option>

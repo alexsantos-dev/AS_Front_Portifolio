@@ -23,7 +23,7 @@ export const SecoesContainer = styled.div`
     min-width: 300px;
     max-width: 1280px;
     border-radius: 1em;
-    padding: 5em 0;
+    padding: 3em 0;
     margin: 0 auto 2em auto;
 
     h1 {
@@ -82,23 +82,11 @@ export const SecoesContainer = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 90%;
-      margin-bottom: 3em;
-
-      h2 {
-        width: 20%;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        margin: 0;
-
-        span {
-          margin: 0;
-        }
-      }
+      width: 70%;
+      margin-bottom: 4em;
 
       .status {
-        width: 45%;
+        width: 55%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -112,8 +100,8 @@ export const SecoesContainer = styled.div`
             height: 12px;
             border-radius: 50%;
             position: absolute;
-            left: -24px;
-            top: 25.5%;
+            left: -18px;
+            top: 25%;
           }
 
           &.conceito::before {
@@ -145,23 +133,17 @@ export const SecoesContainer = styled.div`
     }
   }
 
-  #Projetos {
-    h2 {
-      margin-bottom: 1em;
-    }
-  }
   #Projetos > * {
     box-shadow: none;
   }
 
   section#bem-vindo {
+    margin-top: 1.3em;
     border-radius: 0.4em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-width: 90%;
+    height: 40px;
+    width: 1280px;
     max-width: 100%;
-    height: 12em;
-    margin-top: 1.4em;
     background-color: #fff;
 
     h1 {
@@ -173,6 +155,11 @@ export const SecoesContainer = styled.div`
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
   .bg-nav-section {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
     background-color: #49f2e1;
   }
@@ -241,7 +228,7 @@ export const SecoesContainer = styled.div`
     top: 3.5em;
     section#bem-vindo {
       h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 80%;
         padding-bottom: 0.3em;
       }
@@ -252,14 +239,17 @@ export const SecoesContainer = styled.div`
       align-items: center;
 
       .opcoes {
-        width: 95%;
+        gap: 0;
         position: relative;
-        padding: 1em;
+        width: 100%;
+        padding: 1em 0 0 1.5em;
+        height: 8em;
         align-items: flex-start;
         flex-direction: column;
-
+        margin-bottom: 10em;
         .status {
           width: 60%;
+          height: 100%;
           font-size: 0.8em;
           flex-direction: column;
           align-items: flex-start;
@@ -273,7 +263,7 @@ export const SecoesContainer = styled.div`
           width: 10em;
           margin-right: 0.7em;
           position: absolute;
-          bottom: -2em;
+          top: 180%;
           right: 0;
         }
       }

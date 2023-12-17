@@ -24,11 +24,9 @@ const logoAnim = keyframes`
 `;
 
 export const LoadingScreen = styled.div`
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80vh;
+  position: fixed;
+  width: 100vw;
+  height: 100dvb;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -39,7 +37,7 @@ export const LoadingScreen = styled.div`
   }
   div {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: 2;
@@ -60,7 +58,7 @@ export const LoadingScreen = styled.div`
     width: 256px;
     height: 256px;
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;

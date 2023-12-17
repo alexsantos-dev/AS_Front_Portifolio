@@ -228,6 +228,7 @@ export const Container = styled.div`
       z-index: 9999999;
 
       p {
+        animation: none;
         text-align: center;
       }
     }
