@@ -20,6 +20,7 @@ const heartbeat = keyframes`
   }
   52%{
     transform: scale(1.2)  rotate(6deg);
+    filter: drop-shadow(0 0 10px #ff0000) drop-shadow();
   }
   55%{
     transform: scale(1.15) rotate(-6deg);
@@ -184,6 +185,10 @@ export const Nav = styled.nav`
       li {
         border-radius: 6em;
         width: 2em;
+
+        img {
+          filter: drop-shadow(#000 1px 1px 0);
+        }
       }
       li:not(:first-child) {
         margin-right: 0.6em;
@@ -202,10 +207,6 @@ export const Nav = styled.nav`
           justify-content: center;
           border: none;
           border-radius: 50%;
-
-          img {
-            filter: drop-shadow(#000 1px 1px 0);
-          }
         }
         button.heartBeat {
           img {

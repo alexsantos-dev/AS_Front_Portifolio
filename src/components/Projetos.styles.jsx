@@ -2,14 +2,16 @@ import styled, { keyframes } from "styled-components";
 
 const Pulse = keyframes`
    0%{
-     transform: scale(1.3);
+     transform: scale(1);
+     filter: brightness(70%) drop-shadow(0 0 2px #4fff57);
    }
    50%{
-     transform: scale(1);
-
+     transform: scale(1.2);
+     filter: brightness(100%) drop-shadow(0 0 10px #4fff57)
    }
    100%{
-     transform: scale(1.3);
+     transform: scale(1);
+     filter: brightness(70%) drop-shadow(0 0 2px #4fff57);
 
    }
  `;
@@ -24,7 +26,7 @@ export const Bubble = styled.div`
     ${(props) => {
       switch (props.status) {
         case "desenvolvimento":
-          return `2.5s infinite`;
+          return `2s infinite`;
         default:
           return "none";
       }
@@ -42,7 +44,7 @@ export const Bubble = styled.div`
   filter: ${(props) => {
     switch (props.status) {
       case "desenvolvimento":
-        return "drop-shadow(0 0 10px #4fff57)";
+        return "";
       case "conceito":
         return "drop-shadow(0 0 4px #fff)";
       default:
