@@ -304,11 +304,11 @@ export const Nav = styled.nav`
   }
 
   @media (max-width: 360px) {
-    height: 4em;
+    height: 3em;
 
     ul.logo {
       .logoIcon {
-        width: 3.5em;
+        width: 3em;
       }
     }
     ul.contato {

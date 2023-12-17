@@ -230,6 +230,14 @@ export const SecoesContainer = styled.div`
 
   @media (max-width: 360px) {
     top: 3em;
+
+    #Projetos {
+      .opcoes {
+        .status {
+          font-size: 0.8em;
+        }
+      }
+    }
   }
 
   @media (max-width: 400px) {

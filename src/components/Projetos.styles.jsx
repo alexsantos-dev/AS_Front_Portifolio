@@ -266,12 +266,15 @@ export const Container = styled.div`
   }
   @media (max-width: 360px) {
     .item {
-      height: 480px;
+      height: 380px;
 
       .descricao {
         h3 {
-          font-size: 1.6em;
+          font-size: 1.4em;
         }
+      }
+      .interacoes {
+        height: 3em;
       }
     }
   }

@@ -183,6 +183,9 @@ export const SkeletonContainer = styled.div`
       }
     }
   }
+  @media (max-width: 360px) {
+    height: 380px;
+  }
   @media (min-width: 1280px) {
     width: 500px;
     height: 560px;

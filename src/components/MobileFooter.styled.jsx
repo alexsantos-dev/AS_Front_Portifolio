@@ -91,16 +91,16 @@ export const MobileFootCont = styled.nav`
     }
   }
   @media (max-width: 360px) {
-    height: 3.5em;
+    height: 3em;
 
     div {
-      height: 3em;
+      height: 2.5em;
 
       button {
         a {
-          padding: 0.7em;
+          padding: 0.6em;
           img {
-            width: 1.5em;
+            width: 1em;
           }
         }
       }
