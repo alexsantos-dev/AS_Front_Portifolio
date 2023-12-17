@@ -8,7 +8,6 @@ export function Projetos(props) {
   const [imagensTecnologias, setImagensTecnologias] = useState({});
   const [deployText, setDeployText] = useState("");
   const [isDialogOpen, setDialogOpen] = useState(false);
-  const [bannerImage, setBannerImage] = useState(null);
   useEffect(() => {
     async function carregarImagensTecnologias() {
       const imagens = {};
@@ -29,25 +28,6 @@ export function Projetos(props) {
 
     carregarImagensTecnologias();
   }, [props.tecnologiasUsadas]);
-
-  useEffect(() => {
-    async function carregarImagemBanner() {
-      const bannerFormatado = props.banner.toLowerCase();
-      try {
-        const imagemBanner = await import(
-          `../assets/banners/${bannerFormatado}.webp`
-        );
-        setBannerImage(imagemBanner.default);
-      } catch (error) {
-        console.warn(
-          `Arquivo de imagem do banner não encontrado para o projeto com banner: ${props.banner}`
-        );
-        setBannerImage(null);
-      }
-    }
-
-    carregarImagemBanner();
-  }, [props.banner]);
 
   const handleCompartilharClick = async () => {
     const author = "Alex Santos";

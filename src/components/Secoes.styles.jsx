@@ -66,11 +66,62 @@ export const SecoesContainer = styled.div`
 
   #Projetos {
     .opcoes {
+      gap: 4em;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 82%;
-      margin-bottom: 1em;
+      width: 90%;
+      margin-bottom: 3em;
+      /* border: solid 1px red; */
+      > * {
+        width: 33%;
+      }
+
+      h2 {
+        /* border: solid 1px green; */
+        padding: 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        span {
+          margin: 0;
+        }
+      }
+
+      .status {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            left: -24px;
+            top: 25.5%;
+          }
+
+          &.conceito::before {
+            filter: drop-shadow(1px 1px 0 #000);
+            background: radial-gradient(circle at 50% 50%, #fff, #d8d8d8);
+          }
+          &.desenvolvimento::before {
+            background: radial-gradient(circle at 50% 50%, #9effa3, #4fff57);
+            filter: drop-shadow(1px 1px 0 #1c521f);
+          }
+          &.concluido::before {
+            background: radial-gradient(circle at 50% 50%, #48a7ff, #004b92);
+            filter: drop-shadow(1px 1px 0 #001427);
+          }
+        }
+      }
 
       select {
         transition: all 0.4s ease-in-out;
@@ -203,10 +254,21 @@ export const SecoesContainer = styled.div`
         align-items: flex-start;
         flex-direction: column;
 
+        .status {
+          width: 60%;
+          flex-direction: column;
+          align-items: flex-start;
+
+          & > * {
+            margin-left: 2em;
+          }
+        }
+
         select {
+          width: 40%;
           margin-right: 0.7em;
           position: absolute;
-          bottom: 0;
+          bottom: -2em;
           right: 0;
         }
       }

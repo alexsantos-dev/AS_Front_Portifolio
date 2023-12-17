@@ -277,10 +277,10 @@ export const Container = styled.div`
   @media (min-width: 1280px) {
     .item {
       width: 500px;
-      height: 500px;
+      height: 560px;
 
       .banner {
-        height: 50%;
+        height: 40%;
         h3 {
           font-size: 2.2em;
           width: 100%;

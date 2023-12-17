@@ -185,7 +185,11 @@ export const SkeletonContainer = styled.div`
   }
   @media (min-width: 1280px) {
     width: 500px;
-    height: 500px;
+    height: 560px;
+
+    .banner {
+      height: 40%;
+    }
 
     h3 {
       width: 100%;
