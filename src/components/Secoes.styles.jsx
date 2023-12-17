@@ -265,7 +265,7 @@ export const SecoesContainer = styled.div`
         }
 
         select {
-          width: 40%;
+          width: 10em;
           margin-right: 0.7em;
           position: absolute;
           bottom: -2em;
@@ -289,9 +289,16 @@ export const SecoesContainer = styled.div`
       }
     }
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 885px) {
     section#Sobre {
       margin-top: 2em;
+    }
+    section#Projetos {
+      .opcoes {
+        select {
+          width: 16em;
+        }
+      }
     }
   }
 `;
