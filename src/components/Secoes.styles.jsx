@@ -141,7 +141,7 @@ export const SecoesContainer = styled.div`
     margin-top: 1.3em;
     border-radius: 0.4em;
     min-width: 90%;
-    height: 40px;
+    height: 10em;
     width: 1280px;
     max-width: 100%;
     background-color: #fff;
