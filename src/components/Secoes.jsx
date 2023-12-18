@@ -75,13 +75,13 @@ export function Secoes() {
           <span>#</span>Sobre
         </h2>
         <p>
-          Olá, sou <span>Alex Santos</span>, um aspirante a desenvolvedor web
-          fullstack de 19 anos com 5 meses de experiência prática. Destaco-me
-          por participação ativa em projetos e treinamento de versionamento de
-          código com Git em equipe. Minha facilidade de aprendizado e dedicação
-          refletem confiança em contribuir para equipes profissionais. Com
-          determinação e mentalidade de aprendizado constante, busco oferecer
-          soluções de alta qualidade.
+          Olá, sou <span>Alex Santos</span>, desenvolvedor web fullstack de 19
+          anos com 5 meses de experiência prática. Destaco-me por participação
+          ativa em projetos e treinamento de versionamento de código com Git em
+          equipe. Minha facilidade de aprendizado e dedicação refletem confiança
+          em contribuir para equipes profissionais. Com determinação e
+          mentalidade de aprendizado constante, busco oferecer soluções de alta
+          qualidade.
         </p>
         <p>
           Explore a seção de <span>Projetos</span> para executar, compartilhar e

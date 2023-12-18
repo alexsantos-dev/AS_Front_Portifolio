@@ -22,7 +22,7 @@ export const SecoesContainer = styled.div`
     min-width: 300px;
     max-width: 1280px;
     border-radius: 1em;
-    padding: 3em 0;
+    padding: 3em 0 5em 0;
     margin: 0 auto 4em auto;
 
     h1 {
