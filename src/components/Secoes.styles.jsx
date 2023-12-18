@@ -145,7 +145,7 @@ export const SecoesContainer = styled.div`
     background-color: #49f2e1;
 
     #bem-vindo {
-      padding: 3em;
+      padding: 0;
       margin-top: 2em;
       border-radius: 0.4em;
       min-width: 90%;
