@@ -211,7 +211,7 @@ export const Nav = styled.nav`
 
       .logoIcon {
         margin-top: 0.4em;
-        width: 3.8em;
+        width: 3.5em;
       }
     }
     ul.contato {
