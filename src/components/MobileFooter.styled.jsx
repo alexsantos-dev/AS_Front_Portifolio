@@ -32,6 +32,7 @@ export const MobileFootCont = styled.nav`
     align-items: center;
 
     button {
+      -webkit-tap-highlight-color: transparent;
       position: relative;
       outline: none;
       border: none;

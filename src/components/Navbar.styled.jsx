@@ -205,6 +205,8 @@ export const Nav = styled.nav`
     flex-direction: row-reverse;
 
     ul.logo {
+      -webkit-tap-highlight-color: transparent;
+
       width: 10%;
       justify-content: left;
       animation: ${ListRevealLeft} 1.5s forwards;
@@ -215,6 +217,8 @@ export const Nav = styled.nav`
       }
     }
     ul.contato {
+      -webkit-tap-highlight-color: transparent;
+
       width: 1em;
       display: flex;
       align-items: center;
