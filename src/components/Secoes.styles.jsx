@@ -145,11 +145,12 @@ export const SecoesContainer = styled.div`
     background-color: #49f2e1;
 
     #bem-vindo {
+      outline: solid 4px #da0251;
       padding: 0;
       margin-top: 2em;
       border-radius: 0.4em;
       min-width: 90%;
-      height: 10em;
+      height: 12em;
       width: 1280px;
       max-width: 100%;
       background-color: #fff;
@@ -237,8 +238,8 @@ export const SecoesContainer = styled.div`
     margin-top: 3.5em;
     section#bem-vindo {
       h1 {
-        font-size: 1.8em;
-        width: 80%;
+        font-size: 2em;
+        width: 100%;
         padding-bottom: 0.3em;
       }
     }
