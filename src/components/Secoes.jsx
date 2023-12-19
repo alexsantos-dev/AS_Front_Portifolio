@@ -67,7 +67,7 @@ export function Secoes() {
     <SecoesContainer>
       <div className="bg-nav-section">
         <section id="bem-vindo">
-          <h1>Bem vindo(a) ao meu portifólio!</h1>
+          <h1>Bem-vindo(a) ao meu portifólio!</h1>
         </section>
       </div>
       <section id="Sobre">
