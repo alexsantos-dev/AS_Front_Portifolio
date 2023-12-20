@@ -238,7 +238,7 @@ export const SecoesContainer = styled.div`
     margin-top: 3.5em;
     section#bem-vindo {
       h1 {
-        font-size: 2em;
+        font-size: 1.8em;
         width: 100%;
         padding-bottom: 0.3em;
       }
