@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Nav } from "./Navbar.styled";
+
 import PhoneIcon from "../assets/telefone.webp";
 import LinkedInIcon from "../assets/linkedin.webp";
 import GithubIcon from "../assets/github.webp";
@@ -45,6 +46,7 @@ export function Navbar() {
           </button>
         </li>
         <li>
+          Link
           <a
             href="https://www.linkedin.com/in/alex-santos-b020b5296"
             target="blank">
@@ -57,11 +59,13 @@ export function Navbar() {
           </a>
         </li>
         <li>
+          Link
           <a href="https://github.com/alexsantos-dev" target="blank">
             <img loading="lazy" src={GithubIcon} alt="github" title="Github" />
           </a>
         </li>
         <li>
+          Link
           <a href="https://wa.me/+5598981630767" target="blank">
             <img
               loading="lazy"
@@ -75,6 +79,7 @@ export function Navbar() {
 
       <ul className="logo">
         <li>
+          Link
           <a href="#">
             <img
               loading="lazy"
@@ -88,6 +93,7 @@ export function Navbar() {
 
       <ul className="sections">
         <li>
+          Link
           <a
             href="#Sobre"
             onClick={HomeAtivo}
@@ -96,6 +102,7 @@ export function Navbar() {
           </a>
         </li>
         <li>
+          Link
           <a
             href="#Habilidades"
             onClick={HabAtivo}
