@@ -76,7 +76,7 @@ export function Secoes() {
         </h2>
         <p>
           Olá, sou <span>Alex Santos</span>, desenvolvedor web fullstack de 19
-          anos com 5 meses de experiência prática. Destaco-me por participação
+          anos com 6 meses de experiência prática. Destaco-me por participação
           ativa em projetos e treinamento de versionamento de código com Git em
           equipe no projeto <span>Sports Brasil</span>. Minha facilidade de
           aprendizado e dedicação refletem confiança em contribuir para equipes
