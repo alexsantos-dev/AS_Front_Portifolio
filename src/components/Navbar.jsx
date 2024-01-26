@@ -63,7 +63,7 @@ export function Navbar() {
           </a>
         </li>
         <li>
-          <a href="https://wa.me/+5598981630767" target="blank">
+          <a href="https://wa.me/+559870098601" target="blank">
             <img
               loading="lazy"
               src={WhatsappIcon}

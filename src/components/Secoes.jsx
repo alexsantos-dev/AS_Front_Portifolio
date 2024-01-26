@@ -1,30 +1,30 @@
-import { Projetos } from "./Projetos";
-import { SecoesContainer } from "./Secoes.styles";
-import { Container } from "./Projetos.styles";
-import { ProjetoSkeleton } from "./ProjetoSkeleton";
-import JsIcon from "../assets/javascript.webp";
-import ReactIcon from "../assets/react.webp";
-import NodeIcon from "../assets/node.webp";
-import ExpressIcon from "../assets/express.webp";
-import RestApiIcon from "../assets/rest-api.webp";
-import MongodbIcon from "../assets/mongodb.webp";
-import GitIcon from "../assets/git.webp";
-import StyledComponentsIcon from "../assets/styled-components.webp";
-import CssIcon from "../assets/css.webp";
-import HtmlIcon from "../assets/html.webp";
+import { Projetos } from './Projetos';
+import { SecoesContainer } from './Secoes.styles';
+import { Container } from './Projetos.styles';
+import { ProjetoSkeleton } from './ProjetoSkeleton';
+import JsIcon from '../assets/javascript.webp';
+import ReactIcon from '../assets/react.webp';
+import NodeIcon from '../assets/node.webp';
+import ExpressIcon from '../assets/express.webp';
+import RestApiIcon from '../assets/rest-api.webp';
+import MongodbIcon from '../assets/mongodb.webp';
+import GitIcon from '../assets/git.webp';
+import StyledComponentsIcon from '../assets/styled-components.webp';
+import CssIcon from '../assets/css.webp';
+import HtmlIcon from '../assets/html.webp';
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback } from 'react';
 import {
   getRecentes,
   getRelevantes,
   compartilhar,
   visualizar,
   acessarRep,
-} from "../services/projetos.service";
+} from '../services/projetos.service';
 
 export function Secoes() {
   const [projetos, setProjetos] = useState([]);
-  const [opcaoSelecionada, setOpcaoSelecionada] = useState("recentes");
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState('recentes');
   const [exibirSkeleton, setExibirSkeleton] = useState(true);
   const [carregando, setCarregando] = useState(false);
 
@@ -39,9 +39,9 @@ export function Secoes() {
       const inicioChamada = new Date().getTime();
       let response;
 
-      if (opcaoSelecionada === "recentes") {
+      if (opcaoSelecionada === 'recentes') {
         response = await getRecentes();
-      } else if (opcaoSelecionada === "relevantes") {
+      } else if (opcaoSelecionada === 'relevantes') {
         response = await getRelevantes();
       }
 
@@ -54,7 +54,7 @@ export function Secoes() {
         setProjetos(response.data);
       }, tempoResposta);
     } catch (error) {
-      console.error("Erro na requisição:", error);
+      console.error('Erro na requisição:', error);
       setCarregando(false);
     }
   }, [opcaoSelecionada, setProjetos]);
@@ -65,18 +65,18 @@ export function Secoes() {
 
   return (
     <SecoesContainer>
-      <div className="bg-nav-section">
-        <section id="bem-vindo">
+      <div className='bg-nav-section'>
+        <section id='bem-vindo'>
           <h1>Bem-vindo(a) ao meu portifólio!</h1>
         </section>
       </div>
-      <section id="Sobre">
+      <section id='Sobre'>
         <h2>
           <span>#</span>Sobre
         </h2>
         <p>
           Olá, sou <span>Alex Santos</span>, desenvolvedor web fullstack de 19
-          anos com 6 meses de experiência prática. Destaco-me por participação
+          anos com 7 meses de experiência prática. Destaco-me por participação
           ativa em projetos e treinamento de versionamento de código com Git em
           equipe no projeto <span>Sports Brasil</span>. Minha facilidade de
           aprendizado e dedicação refletem confiança em contribuir para equipes
@@ -90,15 +90,15 @@ export function Secoes() {
           &quot;Mais Relevantes&quot;.
         </p>
       </section>
-      <section id="Habilidades">
+      <section id='Habilidades'>
         <h2>
           <span>#</span>Habilidades
         </h2>
 
-        <div className="container">
-          <div className="item">
+        <div className='container'>
+          <div className='item'>
             <figure>
-              <img src={JsIcon} alt="javascript logo" />
+              <img src={JsIcon} alt='javascript logo' />
               <figcaption>Javascript</figcaption>
             </figure>
             <p>
@@ -107,9 +107,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={ReactIcon} alt="react logo" />
+              <img src={ReactIcon} alt='react logo' />
               <figcaption>React</figcaption>
             </figure>
             <p>
@@ -118,9 +118,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={NodeIcon} alt="node logo" />
+              <img src={NodeIcon} alt='node logo' />
               <figcaption>Node</figcaption>
             </figure>
             <p>
@@ -129,9 +129,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={ExpressIcon} alt="express logo" />
+              <img src={ExpressIcon} alt='express logo' />
               <figcaption>Express</figcaption>
             </figure>
             <p>
@@ -140,37 +140,37 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={RestApiIcon} alt="rest api logo" />
+              <img src={RestApiIcon} alt='rest api logo' />
               <figcaption>REST API</figcaption>
             </figure>
             <p>
               Arquitetura de comunicação entre sistemas, baseada em princípios
-              como{" "}
-              <a href="https://restfulapi.net/statelessness/" target="_blanck">
+              como{' '}
+              <a href='https://restfulapi.net/statelessness/' target='_blanck'>
                 statelessness
-              </a>{" "}
+              </a>{' '}
               e recursos representacionais.
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={MongodbIcon} alt="mongodb  logo" />
+              <img src={MongodbIcon} alt='mongodb  logo' />
               <figcaption>MongoDB</figcaption>
             </figure>
             <p>
-              Banco de dados{" "}
-              <span title="Banco de dados não relacional">NoSQL</span> orientado
+              Banco de dados{' '}
+              <span title='Banco de dados não relacional'>NoSQL</span> orientado
               a documentos, adequado para armazenar grandes volumes de dados sem
               esquema fixo.
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={GitIcon} alt="git logo" />
+              <img src={GitIcon} alt='git logo' />
               <figcaption>Git</figcaption>
             </figure>
             <p>
@@ -179,9 +179,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={StyledComponentsIcon} alt="styled components logo" />
+              <img src={StyledComponentsIcon} alt='styled components logo' />
               <figcaption>Styled Components</figcaption>
             </figure>
             <p>
@@ -190,9 +190,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={CssIcon} alt="css3 logo" />
+              <img src={CssIcon} alt='css3 logo' />
               <figcaption>CSS3</figcaption>
             </figure>
             <p>
@@ -201,9 +201,9 @@ export function Secoes() {
             </p>
           </div>
           <hr />
-          <div className="item">
+          <div className='item'>
             <figure>
-              <img src={HtmlIcon} alt="html5 logo" />
+              <img src={HtmlIcon} alt='html5 logo' />
               <figcaption>HTML5</figcaption>
             </figure>
             <p>
@@ -213,19 +213,19 @@ export function Secoes() {
           </div>
         </div>
       </section>
-      <section id="Projetos">
+      <section id='Projetos'>
         <h2>
           <span>#</span>Projetos
         </h2>
-        <div className="opcoes">
-          <div className="ContainerStatus">
-            Status:<span className="conceito">conceito</span>
-            <span className="desenvolvimento">em desenvolvimento</span>
-            <span className="concluido">concluído</span>
+        <div className='opcoes'>
+          <div className='ContainerStatus'>
+            Status:<span className='conceito'>conceito</span>
+            <span className='desenvolvimento'>em desenvolvimento</span>
+            <span className='concluido'>concluído</span>
           </div>
           <select value={opcaoSelecionada} onChange={handleSelectChange}>
-            <option value="recentes">Mais Recentes</option>
-            <option value="relevantes">Mais Relevantes</option>
+            <option value='recentes'>Mais Recentes</option>
+            <option value='relevantes'>Mais Relevantes</option>
           </select>
         </div>
         <Container>
